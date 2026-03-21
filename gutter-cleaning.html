@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Gutter Cleaning Mornington Peninsula | L&B Exterior Cleaning</title>
+  <meta name="description" content="Professional gutter cleaning on the Mornington Peninsula. Residential, commercial and body corporate. Protect your property from water damage. Free quotes."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --white:    #FFFFFF;
+      --off:      #EBF2FA;
+      --border:   #c8d8e8;
+      --blue:     #427AA1;
+      --blue-dk:  #356585;
+      --blue-lt:  #EBF2FA;
+      --accent:   #427AA1;
+      --accent-dk:#064789;
+      --navy:     #064789;
+      --body:     #334155;
+      --muted:    #64748B;
+      --dim:      #94A3B8;
+      --font-body:'Inter',sans-serif;
+      --font-mono:'IBM Plex Mono',monospace;
+      --font-display:'Inter',sans-serif;
+      --ease:cubic-bezier(.25,.46,.45,.94);
+      --ease-out:cubic-bezier(0,0,.2,1);
+      --r:12px;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);background:var(--white);color:var(--body);line-height:1.6;overflow-x:hidden}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1160px;margin:0 auto;padding:0 40px}
+
+    /* ── Reveal ── */
+    [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease-out),transform .65s var(--ease-out)}
+    [data-reveal].visible{opacity:1;transform:none}
+    [data-d="1"]{transition-delay:.08s}[data-d="2"]{transition-delay:.16s}
+    [data-d="3"]{transition-delay:.24s}[data-d="4"]{transition-delay:.32s}
+
+    /* ── Buttons ── */
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:.88rem;font-weight:600;padding:13px 26px;border-radius:var(--r);border:none;cursor:pointer;transition:all .22s var(--ease)}
+    .btn svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
+    .btn-blue{background:var(--accent);color:#fff}
+    .btn-blue:hover{background:var(--accent-dk);transform:translateY(-1px);box-shadow:0 8px 24px rgba(66,122,161,.32)}
+    .btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.5)}
+    .btn-outline:hover{background:var(--white);color:var(--navy)}
+
+    /* ── NAV ── */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:76px;display:flex;align-items:center;background:#fff;border-bottom:1px solid #d5d5d5;padding:0 36px}
+    .nav-left{display:flex;align-items:center;height:100%;flex:1;gap:0;max-width:calc(50% - 90px)}
+    .nav-left>a{display:flex;align-items:center;height:100%;padding:0 9px;font-family:var(--font-mono);font-size:.62rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
+    .nav-left>a:hover{color:#111;background:#f7f7f7}
+    .nav-logo{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-decoration:none;gap:0;user-select:none}
+    .nav-logo-mark{font-family:var(--font-mono);font-size:1.16rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#111;line-height:1.1}
+    .nav-logo-rule{width:110%;height:1px;background:linear-gradient(90deg,transparent,rgba(66,122,161,.6),transparent);margin:3px 0}
+    .nav-logo-sub{font-family:var(--font-mono);font-size:.53rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#427AA1;white-space:nowrap}
+    .nav-right{display:flex;align-items:center;gap:14px;flex:1;justify-content:flex-end}
+    .nav-phone{font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.06em;color:#666;white-space:nowrap;transition:color .18s}
+    .nav-phone:hover{color:#111}
+    .nav-cta{background:var(--accent);color:#fff;font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:9px 20px;border-radius:8px;white-space:nowrap;transition:background .18s,transform .18s}
+    .nav-cta:hover{background:var(--accent-dk);transform:translateY(-1px)}
+    .nav-dropdown-wrap{position:relative;display:flex;align-items:center;height:100%}
+    .nav-dropdown-wrap>a{display:flex;align-items:center;gap:5px;height:100%;padding:0 9px;font-family:var(--font-mono);font-size:.62rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
+    .nav-dropdown-wrap>a:hover{color:#111;background:#f7f7f7}
+    .nav-dropdown-wrap>a .chev{width:9px;height:9px;fill:#888;transition:transform .2s;flex-shrink:0}
+    .nav-dropdown-wrap:hover>a .chev{transform:rotate(180deg)}
+    .nav-dropdown{position:absolute;top:100%;left:0;min-width:215px;background:#fff;border:1px solid #e0e0e0;border-top:2px solid var(--accent);z-index:200;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s var(--ease),transform .18s var(--ease);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .nav-dropdown-wrap:hover .nav-dropdown{opacity:1;pointer-events:auto;transform:none}
+    .nav-dropdown a{display:flex;align-items:center;gap:9px;padding:11px 16px;font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#444;border-bottom:1px solid #f0f0f0;white-space:nowrap;transition:color .15s,background .15s}
+    .nav-dropdown a:last-child{border-bottom:none}
+    .nav-dropdown a:hover{color:var(--accent);background:#f5f8ff}
+    .nav-dropdown a .dd-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;opacity:.5}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:10px;margin-left:12px}
+    .hamburger span{display:block;width:22px;height:1.5px;background:#333;transition:all .3s}
+    .mobile-nav{position:fixed;inset:0;background:#fff;z-index:99;display:flex;flex-direction:column;align-items:stretch;justify-content:center;transform:translateX(100%);transition:transform .4s var(--ease)}
+    .mobile-nav.open{transform:none}
+    .mobile-nav-logo{text-align:center;padding:28px 36px 20px;border-bottom:1px solid #ececec;margin-bottom:8px}
+    .mobile-nav a{font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#555;padding:20px 36px;border-bottom:1px solid #ececec;transition:color .18s,background .18s}
+    .mobile-nav a:hover{color:#111;background:#f9f9f9}
+    .mobile-nav .nav-cta{background:var(--accent);color:#fff;text-align:center;border-bottom:none;padding:22px 36px;font-weight:600}
+
+    /* ── SERVICE HERO ── */
+    .svc-hero{position:relative;min-height:62vh;display:flex;align-items:center;overflow:hidden;background:var(--navy);padding-top:76px}
+    .svc-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 50%,rgba(66,122,161,.18) 0%,transparent 60%),linear-gradient(135deg,#032554 0%,#064789 50%,#0d3d7a 100%)}
+    .svc-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(66,122,161,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(66,122,161,.04) 1px,transparent 1px);background-size:80px 80px}
+    .svc-hero-inner{position:relative;z-index:2;padding:80px 0;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px}
+    .svc-breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:20px}
+    .svc-breadcrumb a{color:rgba(255,255,255,.35);transition:color .2s}
+    .svc-breadcrumb a:hover{color:var(--accent)}
+    .svc-breadcrumb span{color:rgba(255,255,255,.2)}
+    .svc-tag{display:inline-block;font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+    .svc-hero h1{font-family:var(--font-display);font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:800;line-height:1.08;color:var(--white);max-width:640px;margin-bottom:20px}
+    .svc-hero h1 em{font-style:normal;color:var(--accent)}
+    .svc-hero-desc{font-size:1.1rem;color:rgba(255,255,255,.6);max-width:520px;line-height:1.75;margin-bottom:36px}
+    .svc-hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .svc-hero-icon{width:420px;flex-shrink:0}
+    .svc-hero-icon .ba-wrap{width:100%;aspect-ratio:4/3;max-width:none;margin:0;box-shadow:0 32px 80px rgba(0,0,0,.35)}
+
+    /* ── TRUST BAR ── */
+    .trust-bar{background:var(--navy);padding:28px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .trust-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:12px}
+    .trust-icon{width:40px;height:40px;background:rgba(66,122,161,.15);border:1px solid rgba(66,122,161,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .trust-icon svg{width:20px;height:20px;fill:var(--accent)}
+    .trust-label{font-size:.82rem;font-weight:700;color:#fff}
+    .trust-sub{font-size:.72rem;color:rgba(255,255,255,.5)}
+
+    /* ── OVERVIEW ── */
+    .svc-overview{padding:100px 0;background:var(--white);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    .svc-overview-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .svc-overview h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.15;color:var(--navy);margin-bottom:20px}
+    .svc-overview p{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:16px}
+    .bullet-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+    .bullet-list li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
+    .bullet-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+    .svc-benefits{display:flex;flex-direction:column;gap:16px}
+    .svc-benefit{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--off);border-radius:14px;transition:background .3s}
+    .svc-benefit:hover{background:var(--blue-lt)}
+    .svc-benefit-icon{width:44px;height:44px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .svc-benefit-icon svg{width:20px;height:20px;fill:var(--white)}
+    .svc-benefit-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:2px}
+    .svc-benefit-desc{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+    /* ── PROCESS SECTION ── */
+    .process-svc{padding:100px 0;background:var(--blue);position:relative;overflow:hidden;background-image:radial-gradient(circle,rgba(66,122,161,.18) 1px,transparent 1px);background-size:36px 36px}
+    .process-svc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 90% 50%,rgba(255,255,255,.04) 0%,transparent 60%)}
+    .process-header{text-align:center;margin-bottom:72px}
+    .process-header .svc-tag{color:rgba(255,255,255,.55)}
+    .process-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;margin-bottom:12px}
+    .process-header p{font-size:1rem;color:rgba(255,255,255,.55);max-width:480px;margin:0 auto}
+    .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative}
+    .process-steps::before{content:'';position:absolute;top:28px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:1px;background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,.1))}
+    .process-step{text-align:center;position:relative}
+    .process-num{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);color:var(--white);font-family:var(--font-mono);font-size:.9rem;font-weight:500;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;position:relative;z-index:1;transition:all .3s}
+    .process-step:hover .process-num{background:var(--accent);border-color:var(--accent)}
+    .process-title{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:10px}
+    .process-desc{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.65}
+
+    /* ── RES-COM ── */
+    .res-com{padding:100px 0;background:var(--off);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    .res-com-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .res-com-card{padding:48px 44px;border-radius:20px;border:1px solid var(--border);background:var(--white)}
+    .res-com-card.dark{background:var(--navy);border-color:var(--navy)}
+    .res-com-icon{width:52px;height:52px;border-radius:14px;background:var(--blue-lt);border:1px solid rgba(66,122,161,.2);display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+    .res-com-card.dark .res-com-icon{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)}
+    .res-com-icon svg{width:26px;height:26px;fill:var(--blue)}
+    .res-com-card.dark .res-com-icon svg{fill:rgba(255,255,255,.7)}
+    .res-com-card h3{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--navy);margin-bottom:14px;line-height:1.2}
+    .res-com-card.dark h3{color:var(--white)}
+    .res-com-card p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:16px}
+    .res-com-card.dark p{color:rgba(255,255,255,.55)}
+    .res-com-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .res-com-list li{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)}
+    .res-com-card.dark .res-com-list li{color:rgba(255,255,255,.5)}
+    .res-com-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+    /* ── FREQ CALLOUT ── */
+    .freq-callout{padding:72px 0;background:var(--navy);position:relative;overflow:hidden;background-image:radial-gradient(circle,rgba(66,122,161,.18) 1px,transparent 1px);background-size:36px 36px}
+    .freq-callout::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(66,122,161,.12) 0%,transparent 60%)}
+    .freq-callout-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .freq-callout h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:16px}
+    .freq-callout h2 em{font-style:normal;color:var(--accent)}
+    .freq-callout p{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:12px}
+    .freq-grid{display:flex;flex-direction:column;gap:16px}
+    .freq-item{padding:20px 24px;background:rgba(255,255,255,.05);border-radius:14px;border:1px solid rgba(255,255,255,.08)}
+    .freq-label{font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+    .freq-title{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:4px}
+    .freq-desc{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6}
+
+    /* ── SERVICE AREAS ── */
+    .service-areas{padding:80px 0;background:var(--white);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    .service-areas-header{text-align:center;margin-bottom:48px}
+    .service-areas-header .svc-tag{display:block;margin-bottom:12px}
+    .service-areas-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--navy)}
+    .areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .area-chip{padding:12px 16px;background:var(--off);border-radius:10px;border:1px solid var(--border);text-align:center;font-size:.82rem;font-weight:600;color:var(--navy);transition:all .25s var(--ease)}
+    .area-chip:hover{background:var(--accent);border-color:var(--accent);color:var(--white)}
+    .areas-note{text-align:center;margin-top:24px;font-size:.85rem;color:var(--muted)}
+    .areas-note a{color:var(--accent);font-weight:600}
+
+    /* ── FAQ ── */
+    .faq{padding:100px 0;background:var(--off);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    .faq-header{text-align:center;margin-bottom:60px}
+    .faq-header .svc-tag{display:block;margin-bottom:12px}
+    .faq-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--navy);margin-bottom:8px}
+    .faq-header p{font-size:1rem;color:var(--muted)}
+    .faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+    .faq-item{background:var(--white);border-radius:14px;border:1px solid var(--border);overflow:hidden}
+    .faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;font-size:.95rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;text-align:left;gap:16px}
+    .faq-question svg{width:20px;height:20px;stroke:var(--muted);flex-shrink:0;transition:transform .3s}
+    .faq-item.open .faq-question svg{transform:rotate(45deg)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+    .faq-item.open .faq-answer{max-height:300px}
+    .faq-answer p{padding:0 28px 22px;font-size:.9rem;color:var(--muted);line-height:1.75}
+
+    /* ── OTHER SERVICES ── */
+    .other-services{padding:80px 0;background:var(--white);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    .other-services-header{text-align:center;margin-bottom:48px}
+    .other-services-header .svc-tag{display:block;margin-bottom:12px}
+    .other-services-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--navy)}
+    .other-services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .other-svc-card{display:block;padding:28px;background:var(--off);border-radius:16px;border:1px solid var(--border);transition:all .3s var(--ease)}
+    .other-svc-card:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-4px)}
+    .other-svc-card:hover .other-svc-name{color:var(--white)}
+    .other-svc-card:hover .other-svc-desc{color:rgba(255,255,255,.55)}
+    .other-svc-card:hover .other-svc-link{color:var(--accent)}
+    .other-svc-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-lt);border:1px solid rgba(66,122,161,.2);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .other-svc-icon svg{width:20px;height:20px;fill:var(--blue)}
+    .other-svc-name{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px;transition:color .3s}
+    .other-svc-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:12px;transition:color .3s}
+    .other-svc-link{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);transition:color .3s}
+
+    /* ── CTA ── */
+    .cta{padding:100px 0;background:var(--navy);position:relative;overflow:hidden;text-align:center;background-image:radial-gradient(circle,rgba(66,122,161,.18) 1px,transparent 1px);background-size:36px 36px}
+    .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(66,122,161,.15) 0%,transparent 60%)}
+    .cta::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--accent))}
+    .cta-inner{position:relative;z-index:1}
+    .cta h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);margin-bottom:16px}
+    .cta p{font-size:1.05rem;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 40px;line-height:1.7}
+    .cta-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+    .cta-note{margin-top:20px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+
+    /* ── FOOTER ── */
+    .footer{background:#032554;border-top:1px solid rgba(255,255,255,.06);padding:80px 0 36px}
+    .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .f-logo-name{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:4px}
+    .f-logo-tag{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+    .f-desc{font-size:.84rem;color:rgba(255,255,255,.3);line-height:1.75;max-width:270px;margin-bottom:26px}
+    .f-social{display:flex;gap:8px}
+    .fsoc{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .2s}
+    .fsoc:hover{background:var(--accent);border-color:var(--accent)}
+    .fsoc svg{width:15px;height:15px;fill:rgba(255,255,255,.4)}
+    .fsoc:hover svg{fill:#fff}
+    .f-col-title{font-family:var(--font-mono);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:18px}
+    .f-links{list-style:none;display:flex;flex-direction:column;gap:11px}
+    .f-links a{font-size:.84rem;color:rgba(255,255,255,.35);transition:color .2s}
+    .f-links a:hover{color:#fff}
+    .f-contact-row{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px}
+    .f-contact-row svg{width:13px;height:13px;fill:var(--accent);flex-shrink:0;margin-top:3px}
+    .f-contact-row span{font-size:.83rem;color:rgba(255,255,255,.35);line-height:1.55}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;gap:16px;flex-wrap:wrap}
+    .f-copy{font-family:var(--font-mono);font-size:.63rem;letter-spacing:.04em;color:rgba(255,255,255,.2)}
+    .f-copy a{color:rgba(66,122,161,.6);transition:color .2s}
+    .f-copy a:hover{color:var(--accent)}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){
+      .svc-hero-inner{grid-template-columns:1fr}
+      .svc-hero-icon{width:100%;margin-top:32px}
+      .svc-overview-inner{grid-template-columns:1fr;gap:48px}
+      .res-com-grid{grid-template-columns:1fr}
+      .freq-callout-inner{grid-template-columns:1fr;gap:48px}
+      .areas-grid{grid-template-columns:repeat(3,1fr)}
+      .other-services-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-top{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:768px){
+      .nav-left{display:none}
+      .nav-right{display:none}
+      .hamburger{display:flex}
+      .process-steps{grid-template-columns:1fr 1fr;gap:40px}
+      .process-steps::before{display:none}
+      .areas-grid{grid-template-columns:repeat(2,1fr)}
+      .other-services-grid{grid-template-columns:1fr 1fr}
+      .footer-top{grid-template-columns:1fr;gap:40px}
+      .footer-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 20px}
+      .nav{padding:0 20px;justify-content:space-between}
+      .nav-logo{position:static;transform:none}
+    }
+    @media(max-width:500px){
+      .process-steps{grid-template-columns:1fr}
+      .other-services-grid{grid-template-columns:1fr}
+    }
+
+    /* ── QUOTE MODAL ── */
+    .modal-overlay{position:fixed;inset:0;background:rgba(6,71,137,.55);backdrop-filter:blur(4px);z-index:500;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
+    .modal-overlay.open{opacity:1;pointer-events:auto}
+    .modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);z-index:501;background:#fff;border-radius:20px;padding:48px 44px;width:min(560px,calc(100vw - 32px));box-shadow:0 32px 80px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+    .modal.open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+    .modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.1rem;transition:all .2s}
+    .modal-close:hover{background:var(--off);color:var(--navy)}
+    .modal-eyebrow{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+    .modal-title{font-size:1.6rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:6px}
+    .modal-sub{font-size:.88rem;color:var(--muted);margin-bottom:28px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+    .form-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+    .form-field label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--body);font-weight:500}
+    .form-field input,.form-field textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--font-body);font-size:.9rem;color:var(--navy);background:#fff;transition:border-color .2s,box-shadow .2s;outline:none;resize:none}
+    .form-field input:focus,.form-field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(66,122,161,.1)}
+    .form-field textarea{height:90px}
+    .form-submit{width:100%;padding:14px;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:var(--font-body);font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .2s;margin-top:6px}
+    .form-submit:hover{background:var(--accent-dk);transform:translateY(-1px)}
+    .form-note{text-align:center;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:12px}
+    .form-success{display:none;text-align:center;padding:16px 0}
+    .form-success-icon{font-size:2.5rem;margin-bottom:12px}
+    .form-success h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+    .form-success p{font-size:.88rem;color:var(--muted)}
+    @media(max-width:500px){.form-row{grid-template-columns:1fr}.modal{padding:32px 24px}}
+    /* ── BEFORE / AFTER SLIDER ── */
+    .results{padding:100px 0;background:var(--white);border-bottom:1px solid var(--border);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    .results-hdr{text-align:center;margin-bottom:56px}
+    .ba-wrap{max-width:860px;margin:0 auto;border-radius:24px;overflow:hidden;aspect-ratio:16/9;position:relative;box-shadow:0 24px 64px rgba(6,71,137,.15)}
+    .ba-slider{position:absolute;inset:0;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+    .ba-before,.ba-after{position:absolute;inset:0;background-size:cover;background-position:center}
+    .ba-after{clip-path:inset(0 0 0 50%)}
+    .ba-div{position:absolute;top:0;bottom:0;left:50%;width:2px;background:rgba(255,255,255,.92);transform:translateX(-50%);z-index:4;pointer-events:none}
+    .ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.22)}
+    .ba-tag{position:absolute;bottom:14px;padding:4px 10px;background:rgba(6,71,137,.7);color:#fff;border-radius:100px;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;z-index:5;pointer-events:none}
+    .ba-tag-b{left:14px}
+    .ba-tag-a{right:14px}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-left">
+    <div class="nav-dropdown-wrap">
+      <a href="index.html#services">Services <svg class="chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+      <div class="nav-dropdown">
+        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning</a>
+        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning</a>
+        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning</a>
+        <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing</a>
+        <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning</a>
+      </div>
+    </div>
+    <a href="index.html#process">Our Process</a>
+    <a href="index.html#why">About Us</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a class="nav-logo" href="index.html">
+    <span class="nav-logo-mark">L&amp;B Exterior Cleaning</span>
+    <span class="nav-logo-rule"></span>
+    <span class="nav-logo-sub">Mornington Peninsula</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+61406580520">0406 580 520</a>
+    <a class="nav-cta" href="#" data-quote>Get a Quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-logo">
+    <div class="nav-logo-mark" style="font-family:'IBM Plex Mono',monospace;font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111">L&amp;B Exterior Cleaning</div>
+    <div class="nav-logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#427AA1;margin-top:4px">Mornington Peninsula</div>
+  </div>
+  <a href="index.html#services" class="ml">Services</a>
+  <a href="gutter-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Gutter Cleaning</a>
+  <a href="solar-panel-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Solar Panel Cleaning</a>
+  <a href="window-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Window Cleaning</a>
+  <a href="pressure-washing.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Pressure Washing</a>
+  <a href="facade-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Façade Cleaning</a>
+  <a href="index.html#process" class="ml">Our Process</a>
+  <a href="index.html#why" class="ml">About Us</a>
+  <a href="index.html#reviews" class="ml">Reviews</a>
+  <a href="contact.html" class="ml">Contact</a>
+  <a href="tel:+61406580520" class="ml">0406 580 520</a>
+  <a class="nav-cta" href="index.html#contact">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section class="svc-hero">
+  <div class="svc-hero-bg"></div>
+  <div class="svc-hero-grid"></div>
+  <div class="container svc-hero-inner">
+    <div>
+      <div class="svc-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Gutter Cleaning</span></div>
+      <span class="svc-tag">Mornington Peninsula</span>
+      <h1>Clear Gutters.<br/><em>Protected Property.</em></h1>
+      <p class="svc-hero-desc">Blocked gutters can cause serious and expensive damage to your home or commercial property. Our professional gutter cleaning service keeps your system clear and flowing — protecting your investment for the long term.</p>
+      <div class="svc-hero-actions">
+        <a class="btn btn-blue" href="#" data-quote>Get a Free Quote</a>
+        <a class="btn btn-outline" href="tel:+61406580520">Call 0406 580 520</a>
+      </div>
+    </div>
+    <div class="svc-hero-icon">
+      <div class="ba-wrap">
+        <div class="ba-before" style="background-image:url('photos 2/Empty Gutter.jpeg')"></div>
+        <div class="ba-after"  style="background-image:url('components/Photos/IMG_8855.jpeg')"></div>
+        <div class="ba-div"><div class="ba-handle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#064789" stroke-width="2.2" stroke-linecap="round"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div></div>
+        <div class="ba-slider" id="heroSlider"></div>
+        <span class="ba-tag ba-tag-b">Before</span>
+        <span class="ba-tag ba-tag-a">After</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M public liability</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div><div><div class="trust-label">Downpipes Included</div><div class="trust-sub">Full system clear, every time</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">Google &amp; local reviews</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><div class="trust-label">Satisfaction Guaranteed</div><div class="trust-sub">We're not done till you're happy</div></div></div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="svc-overview">
+  <div class="container svc-overview-inner">
+    <div data-reveal>
+      <span class="svc-tag">Why It Matters</span>
+      <h2>Blocked Gutters Are a Silent Threat to Your Property</h2>
+      <p>Gutters are designed to safely direct rainwater away from your roof, walls, and foundations. When they become clogged with leaves, dirt, moss, and debris, water overflows and causes a range of serious problems:</p>
+      <ul class="bullet-list">
+        <li>Roof and fascia damage</li>
+        <li>Water leaks into ceilings and walls</li>
+        <li>Foundation and soil erosion</li>
+        <li>Mould and mildew growth</li>
+        <li>Pest and vermin infestations</li>
+        <li>Premature gutter rust and corrosion</li>
+      </ul>
+      <p>Regular professional gutter cleaning helps prevent these problems, extending the lifespan of your guttering system and protecting the overall structure of your property. A small maintenance cost now avoids far larger repair bills down the line.</p>
+    </div>
+    <div class="svc-benefits" data-reveal data-d="2">
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="svc-benefit-title">Prevent Costly Water Damage</div><div class="svc-benefit-desc">Overflowing gutters can seep into ceilings, walls, and foundations. Regular cleaning stops the problem before it starts.</div></div></div>
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="svc-benefit-title">Extend Gutter Lifespan</div><div class="svc-benefit-desc">Debris holds moisture against metal guttering and accelerates corrosion. Keeping gutters clean dramatically extends their usable life.</div></div></div>
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="white" stroke-width="2"/></svg></div><div><div class="svc-benefit-title">Protect Foundations &amp; Structure</div><div class="svc-benefit-desc">Water pooling around your home's base erodes soil and stresses foundations. Properly flowing gutters direct water safely away.</div></div></div>
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div><div><div class="svc-benefit-title">Reduce Pest Attraction</div><div class="svc-benefit-desc">Leaf-filled gutters are prime nesting habitat for birds, possums, and insects. Clean gutters remove the conditions that attract them.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-svc">
+  <div class="container">
+    <div class="process-header" data-reveal>
+      <span class="svc-tag">How It Works</span>
+      <h2>Our Gutter Cleaning Process</h2>
+      <p>A thorough, no-corners-cut approach that leaves your entire system clear and flowing.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step" data-reveal data-d="1"><div class="process-num">01</div><div class="process-title">Full Debris Removal</div><div class="process-desc">All leaves, sludge, moss, and built-up debris are cleared from every section of gutter — nothing is left behind.</div></div>
+      <div class="process-step" data-reveal data-d="2"><div class="process-num">02</div><div class="process-title">Downpipe Clearing</div><div class="process-desc">Every downpipe is checked and cleared to ensure proper water flow from gutter to ground — included as standard.</div></div>
+      <div class="process-step" data-reveal data-d="3"><div class="process-num">03</div><div class="process-title">Visual Inspection</div><div class="process-desc">We check for rust, cracking, loose brackets, or damaged sections and report anything that needs attention.</div></div>
+      <div class="process-step" data-reveal data-d="4"><div class="process-num">04</div><div class="process-title">Clean-Up &amp; Report</div><div class="process-desc">All waste is properly disposed of, surrounds are tidied, and we brief you on the condition of your guttering system.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RES-COM -->
+<section class="res-com">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px" data-reveal>
+      <span class="svc-tag">Who We Service</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--navy)">Residential, Commercial &amp; Body Corporate</h2>
+    </div>
+    <div class="res-com-grid">
+      <div class="res-com-card" data-reveal data-d="1">
+        <div class="res-com-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M9 22V12h6v10" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div>
+        <h3>Residential Gutter Cleaning</h3>
+        <p>Homes across the Mornington Peninsula are often surrounded by trees, making gutters particularly vulnerable to blockages. Our residential service is ideal for homeowners wanting to protect their property and maintain its value.</p>
+        <p>We service all types of homes — single-storey and multi-storey — and work carefully to avoid damage to roofs, gutters, and landscaping. Whether it's a seasonal clean or overdue maintenance, we deliver a premium finish every time.</p>
+      </div>
+      <div class="res-com-card dark" data-reveal data-d="2">
+        <div class="res-com-icon"><svg viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2z" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"/><path d="M8 22h8M12 18v4" stroke="rgba(255,255,255,.5)" stroke-width="2"/></svg></div>
+        <h3>Commercial &amp; Body Corporate</h3>
+        <p>Blocked gutters on commercial buildings can pose safety risks and lead to expensive structural damage. We provide professional cleaning for strata complexes and body corporates, ensuring systems stay compliant and functional.</p>
+        <p>We're fully equipped for larger buildings and complex gutter systems. Properties we service include:</p>
+        <ul class="res-com-list">
+          <li>Retail and office buildings</li>
+          <li>Apartment and strata complexes</li>
+          <li>Industrial facilities</li>
+          <li>Schools and shared facilities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREQ CALLOUT -->
+<section class="freq-callout">
+  <div class="container freq-callout-inner">
+    <div data-reveal>
+      <span class="svc-tag" style="color:var(--accent)">Maintenance Frequency</span>
+      <h2>How Often Should Gutters<br/><em>Be Cleaned?</em></h2>
+      <p>Every property is different, but here are our general recommendations for the Mornington Peninsula. We can assess your property and provide a tailored maintenance schedule based on your surroundings.</p>
+    </div>
+    <div class="freq-grid" data-reveal data-d="2">
+      <div class="freq-item">
+        <div class="freq-label">Standard Properties</div>
+        <div class="freq-title">At least once per year</div>
+        <div class="freq-desc">Suitable for most homes with moderate tree coverage and typical exposure.</div>
+      </div>
+      <div class="freq-item">
+        <div class="freq-label">Tree-Heavy Properties</div>
+        <div class="freq-title">Twice per year</div>
+        <div class="freq-desc">Homes surrounded by trees — especially deciduous species — benefit from cleaning in both spring and autumn.</div>
+      </div>
+      <div class="freq-item">
+        <div class="freq-label">Commercial &amp; High-Risk</div>
+        <div class="freq-title">As needed — we advise</div>
+        <div class="freq-desc">Commercial buildings or complex gutter systems may require more regular maintenance to remain safe and compliant.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas">
+  <div class="container">
+    <div class="service-areas-header" data-reveal>
+      <span class="svc-tag">Where We Work</span>
+      <h2>Servicing the Mornington Peninsula &amp; More</h2>
+    </div>
+    <div class="areas-grid" data-reveal data-d="1">
+      <div class="area-chip">Brighton</div><div class="area-chip">Hampton</div><div class="area-chip">Sandringham</div><div class="area-chip">Mentone</div><div class="area-chip">Mordialloc</div>
+      <div class="area-chip">Aspendale</div><div class="area-chip">Chelsea</div><div class="area-chip">Carrum</div><div class="area-chip">Seaford</div><div class="area-chip">Frankston</div>
+      <div class="area-chip">Frankston South</div><div class="area-chip">Mount Eliza</div><div class="area-chip">Mornington</div><div class="area-chip">Mount Martha</div><div class="area-chip">Safety Beach</div>
+      <div class="area-chip">Dromana</div><div class="area-chip">Rosebud</div><div class="area-chip">Rye</div><div class="area-chip">Blairgowrie</div><div class="area-chip">Sorrento</div>
+      <div class="area-chip">Portsea</div><div class="area-chip">Flinders</div><div class="area-chip">Red Hill</div><div class="area-chip">Somerville</div><div class="area-chip">Hastings</div>
+      <div class="area-chip">Tyabb</div><div class="area-chip">Baxter</div>
+    </div>
+    <p class="areas-note" data-reveal data-d="2">Located nearby? <a href="index.html#contact">Get in touch</a> — chances are we service your area.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-header" data-reveal>
+      <span class="svc-tag">Common Questions</span>
+      <h2>Gutter Cleaning FAQs</h2>
+      <p>Everything you need to know before booking.</p>
+    </div>
+    <div class="faq-list" data-reveal data-d="1">
+      <div class="faq-item"><button class="faq-question">Do you clean downpipes as well?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes — clearing downpipes is included as part of every gutter clean. We check and clear every downpipe to ensure proper water flow from gutter to ground before we leave.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Is gutter cleaning safe for my roof?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Absolutely. We use safe, proven methods and professional equipment designed to protect your roof, gutters, and surrounding areas. We're careful around tiles, metal roofing, and fragile surfaces throughout the job.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Can you clean gutters on double-storey homes?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes. We're fully equipped to handle multi-storey properties safely and efficiently. If your property has particularly complex access, let us know when booking so we can arrive fully prepared.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What do you do with the debris you remove?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>All debris is collected and properly disposed of. We clean up the surrounding area before leaving — no piles of leaves left on your lawn or paths.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do you offer regular maintenance plans?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes. We can arrange scheduled gutter cleaning — annual, bi-annual, or more frequent — to keep your system in excellent condition year-round without you having to remember to book.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section class="other-services">
+  <div class="container">
+    <div class="other-services-header" data-reveal>
+      <span class="svc-tag">What Else We Do</span>
+      <h2>Other Services</h2>
+    </div>
+    <div class="other-services-grid">
+      <a class="other-svc-card" href="solar-panel-cleaning.html" data-reveal data-d="1"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 110 10A5 5 0 0112 7zm0-5v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="#427AA1" stroke-width="2" stroke-linecap="round"/></svg></div><div class="other-svc-name">Solar Panel Cleaning</div><div class="other-svc-desc">Restore efficiency with safe, streak-free solar cleaning.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="window-cleaning.html" data-reveal data-d="2"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#427AA1" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="#427AA1" stroke-width="2"/><line x1="12" y1="3" x2="12" y2="21" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Window Cleaning</div><div class="other-svc-desc">Crystal-clear results inside and out.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="pressure-washing.html" data-reveal data-d="3"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M9 22V12h6v10" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Pressure Washing</div><div class="other-svc-desc">Remove years of grime from driveways and surfaces.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="facade-cleaning.html" data-reveal data-d="4"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2" fill="none" stroke="#427AA1" stroke-width="2"/><line x1="8" y1="3" x2="8" y2="21" stroke="#427AA1" stroke-width="2"/><line x1="16" y1="3" x2="16" y2="21" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Façade Cleaning</div><div class="other-svc-desc">Restore your building exterior with surface-safe techniques.</div><div class="other-svc-link">Learn More →</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container cta-inner">
+    <div data-reveal>
+      <span class="svc-tag" style="color:var(--accent)">Book Today</span>
+      <h2>Protect Your Property.<br/>Book a Gutter Clean Today.</h2>
+      <p>Call us or submit a quote request online. We service all areas of the Mornington Peninsula — residential and commercial.</p>
+      <div class="cta-actions">
+        <a class="btn btn-blue" href="tel:+61406580520"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Ben — 0406 580 520</a>
+        <a class="btn" href="tel:+61416551923" style="background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Lilli — 0416 551 923</a>
+        <a class="btn" href="#" data-quote style="flex-basis:100%;justify-content:center;background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Request a Quote</a>
+      </div>
+      <div class="cta-note">No commitment required — free estimates always</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="f-logo-name">L&amp;B Exterior</div>
+        <div class="f-logo-tag">Cleaning Co.</div>
+        <p class="f-desc">Professional exterior cleaning across the Mornington Peninsula. Trusted by hundreds of homeowners and businesses for spotless results.</p>
+        <div class="f-social">
+          <a class="fsoc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a class="fsoc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="fsoc" href="#" aria-label="Google"><svg viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Services</div>
+        <ul class="f-links">
+          <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
+          <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+          <li><a href="window-cleaning.html">Window Cleaning</a></li>
+          <li><a href="pressure-washing.html">Pressure Washing</a></li>
+          <li><a href="facade-cleaning.html">Façade Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Company</div>
+        <ul class="f-links">
+          <li><a href="index.html#why">About Us</a></li>
+          <li><a href="index.html#process">Our Process</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Contact</div>
+        <div class="f-contact-row">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>Ben: 0406 580 520<br/>Lilli: 0416 551 923</span>
+        </div>
+        <div class="f-contact-row">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>LB.exteriorservicing@gmail.com</span>
+        </div>
+        <div class="f-contact-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Mornington Peninsula &amp; surrounds, VIC</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2026 L&amp;B Exterior Cleaning. All rights reserved.</span>
+      <span class="f-copy"><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── QUOTE MODAL ── -->
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
+  <p class="modal-eyebrow">Free Quote</p>
+  <h2 class="modal-title" id="modalTitle">Request a Quote</h2>
+  <p class="modal-sub">We'll get back to you within a few hours — usually same day.</p>
+  <form id="quoteForm" novalidate>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="qName">Your Name</label>
+        <input type="text" id="qName" name="name" placeholder="Jane Smith" required>
+      </div>
+      <div class="form-field">
+        <label for="qPhone">Phone Number</label>
+        <input type="tel" id="qPhone" name="phone" placeholder="04xx xxx xxx" required>
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="qAddress">Property Address</label>
+      <input type="text" id="qAddress" name="address" placeholder="123 Beach Rd, Mornington" required>
+    </div>
+    <div class="form-field">
+      <label for="qDesc">What are you looking for?</label>
+      <textarea id="qDesc" name="description" placeholder="e.g. Gutter clean + solar panels, 2-storey home..." required></textarea>
+    </div>
+    <button type="submit" class="form-submit">Send Quote Request</button>
+    <p class="form-note">No commitment required &nbsp;·&nbsp; We'll contact you to confirm details</p>
+  </form>
+  <div class="form-success" id="formSuccess">
+    <div class="form-success-icon">✓</div>
+    <h3>Request Sent!</h3>
+    <p>Thanks — Ben or Lilli will be in touch shortly.<br>Or call us directly on <strong>0406 580 520</strong>.</p>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  document.querySelectorAll('.ml, .mobile-nav .nav-cta').forEach(el =>
+    el.addEventListener('click', () => mobileNav.classList.remove('open'))
+  );
+  const observer = new IntersectionObserver(entries =>
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+  document.querySelectorAll('.faq-question').forEach(btn => btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }));
+
+  // Quote modal
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('quoteModal');
+  const closeBtn = document.getElementById('modalClose');
+  function openModal(){overlay.classList.add('open');modal.classList.add('open');document.body.style.overflow='hidden'}
+  function closeModal(){overlay.classList.remove('open');modal.classList.remove('open');document.body.style.overflow=''}
+  document.querySelectorAll('[data-quote]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();openModal()}));
+  closeBtn.addEventListener('click',closeModal);
+  overlay.addEventListener('click',closeModal);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+  document.getElementById('quoteForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const n=document.getElementById('qName').value.trim();
+    const p=document.getElementById('qPhone').value.trim();
+    const a=document.getElementById('qAddress').value.trim();
+    const d=document.getElementById('qDesc').value.trim();
+    if(!n||!p||!a){alert('Please fill in your name, phone and address.');return;}
+    const subject=encodeURIComponent('Quote Request — L&B Exterior Cleaning');
+    const body=encodeURIComponent('Name: '+n+'\nPhone: '+p+'\nAddress: '+a+'\n\nDetails:\n'+d);
+    window.location.href='mailto:LB.exteriorservicing@gmail.com?subject='+subject+'&body='+body;
+    this.style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  });
+
+  // ── BEFORE/AFTER SLIDER ──
+  document.querySelectorAll('.ba-wrap').forEach(wrap => {
+    const after = wrap.querySelector('.ba-after');
+    const div   = wrap.querySelector('.ba-div');
+    let dragging = false;
+    function setPos(x) {
+      const r = wrap.getBoundingClientRect();
+      const pct = Math.min(100, Math.max(0, (x - r.left) / r.width * 100));
+      after.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      div.style.left = pct + '%';
+    }
+    setPos(wrap.getBoundingClientRect().left + wrap.getBoundingClientRect().width * 0.5);
+    wrap.querySelector('.ba-slider').addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); e.preventDefault(); });
+    wrap.querySelector('.ba-slider').addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, {passive:true});
+    document.addEventListener('mousemove',  e => { if(dragging) setPos(e.clientX); });
+    document.addEventListener('touchmove',  e => { if(dragging) setPos(e.touches[0].clientX); }, {passive:true});
+    document.addEventListener('mouseup',  () => dragging = false);
+    document.addEventListener('touchend', () => dragging = false);
+  });
+</script>
+</body>
+</html>

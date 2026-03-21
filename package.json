@@ -1,0 +1,17 @@
+{
+  "name": "lb-exterior-cleaning",
+  "version": "1.0.0",
+  "description": "L&B Exterior Cleaning website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "serve": "npx http-server . -p 3000 -c-1"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "puppeteer": "^24.39.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
