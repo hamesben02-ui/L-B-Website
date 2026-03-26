@@ -494,11 +494,8 @@
   document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 
   // ── CONTACT FORM ──
-  // ─────────────────────────────────────────────────────────────────────────────
-  // SETUP: Replace the URL below with your Google Apps Script Web App URL.
-  // See google-apps-script.gs for the backend code and deployment instructions.
-  // ─────────────────────────────────────────────────────────────────────────────
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLfopYsjJ78h-IMZeW7uesHYBK14u_Pxuwp4gwPWRDXsfbR6IsowDsz5E17KSZNEZi3A/exec';
+  const FORMSPREE_URL  = 'https://formspree.io/f/mgopelja';
+  const EXODIA_URL     = 'https://lb-intelligence.vercel.app/api/lead-ingest';
 
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
@@ -532,17 +529,28 @@
     submitBtn.textContent = 'Sending…';
 
     try {
-      const res = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, suburb, service, message })
-      });
-      const data = await res.json();
-      if (data.status === 'success') {
+      const payload = { name, email, phone, suburb, service, message };
+
+      // Send to Formspree (email notification) and Exodia (lead pipeline) in parallel
+      const [formspreeRes] = await Promise.all([
+        fetch(FORMSPREE_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        }),
+        fetch(EXODIA_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(() => {}) // non-fatal if Exodia is unreachable
+      ]);
+
+      const data = await formspreeRes.json();
+      if (formspreeRes.ok) {
         form.style.display = 'none';
         formSuccess.style.display = 'block';
       } else {
-        throw new Error(data.message || 'Unknown error');
+        throw new Error(data.error || 'Unknown error');
       }
     } catch (err) {
       formError.textContent = 'Something went wrong — please try again or call us on 0406 580 520.';
