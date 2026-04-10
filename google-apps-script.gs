@@ -31,6 +31,10 @@
 // Destination email — change if needed
 var RECIPIENT = 'LB.exteriorservicing@gmail.com';
 
+// Exodia lead ingest endpoint — replace with your deployed Vercel URL
+// e.g. 'https://your-app.vercel.app/api/lead-ingest'
+var EXODIA_INGEST_URL = 'https://lb-intelligence.vercel.app/api/lead-ingest';
+
 /**
  * Handles form POST requests from contact.html
  */
@@ -87,6 +91,19 @@ function doPost(e) {
       replyTo: email,
       name: 'L&B Website'
     });
+
+    // Forward to Exodia so the lead appears in the pipeline
+    try {
+      UrlFetchApp.fetch(EXODIA_INGEST_URL, {
+        method: 'post',
+        contentType: 'application/json',
+        payload: JSON.stringify({ name: name, email: email, phone: phone, suburb: suburb, service: service, message: message }),
+        muteHttpExceptions: true
+      });
+    } catch (exodiaErr) {
+      Logger.log('Exodia ingest warning: ' + exodiaErr.toString());
+      // Non-fatal — email was already sent
+    }
 
     return respond({ status: 'success' });
 
