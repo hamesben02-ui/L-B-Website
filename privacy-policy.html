@@ -135,6 +135,9 @@
       .pp-section h2{font-size:1.1rem}
     }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YQJ3XQ829"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');</script>
 </head>
 <body>
 
@@ -149,6 +152,7 @@
         <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning</a>
         <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing</a>
         <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning</a>
+        <a href="interior-cleaning.html"><span class="dd-dot"></span>Interior &amp; Home Cleaning</a>
       </div>
     </div>
     <a href="index.html#process">Our Process</a>
@@ -337,6 +341,48 @@
     if(mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !hamburger.contains(e.target))
       mobileNav.classList.remove('open');
   });
+</script>
+<!-- Step 2: L&B Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', {'send_to': 'AW-17970733561/yPakCJ72npwcEPnDjvlC', 'value': 1.0, 'currency': 'AUD', 'event_callback': callback});
+  return false;
+}
+(function() {
+  var API = 'https://exodia-seven.vercel.app/api/conversion-event';
+  function getParam(name) { return new URLSearchParams(window.location.search).get(name); }
+  function gtagConversion(conversionLabel, value) {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'conversion', { send_to: 'AW-17970733561/' + conversionLabel, value: value || 1.0, currency: 'AUD' });
+  }
+  function track(type, extra) {
+    fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.assign({ type: type, page: window.location.pathname, source: getParam('utm_source') || (document.referrer ? new URL(document.referrer).hostname : 'direct'), medium: getParam('utm_medium') || 'none', campaign: getParam('utm_campaign') || 'none', gclid: getParam('gclid') || null }, extra || {})) }).catch(function() {});
+  }
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="tel:"]');
+    if (!a) return;
+    gtag_report_conversion(a.href);
+    gtagConversion('O61BCMO5nZkcEPnDjvlC', 1.0);
+    track('phone_call');
+  });
+  document.addEventListener('submit', function(e) {
+    var form = e.target;
+    var id = (form.id || form.className || '').toLowerCase();
+    var action = (form.action || '').toLowerCase();
+    var type;
+    if (id.includes('quote') || action.includes('quote')) { type = 'quote_request'; }
+    else if (id.includes('book') || id.includes('appoint') || action.includes('book')) { type = 'booking'; }
+    else { type = 'form_submission'; }
+    gtagConversion('G0fCCLHFnZkcEPnDjvlC', 1.0);
+    track(type);
+  });
+  window._lbTrack = function(type, opts) {
+    track(type, opts);
+    if (type === 'phone_call') gtagConversion('O61BCMO5nZkcEPnDjvlC', 1.0);
+    if (type === 'form_submission' || type === 'quote_request' || type === 'booking') gtagConversion('G0fCCLHFnZkcEPnDjvlC', 1.0);
+  };
+})();
 </script>
 </body>
 </html>

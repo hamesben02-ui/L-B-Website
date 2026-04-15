@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Solar Panel Cleaning Mornington Peninsula | L&B Exterior Cleaning</title>
-  <meta name="description" content="Professional solar panel cleaning on the Mornington Peninsula. Restore lost efficiency with safe, streak-free cleaning. Residential and commercial. Free quotes available."/>
+  <title>Interior & Home Cleaning Mornington Peninsula | L&B Cleaning</title>
+  <meta name="description" content="Professional interior and home cleaning on the Mornington Peninsula. Deep cleans, regular housekeeping, end-of-lease and move-in cleans. Fully insured. Free quotes."/>
+  <link rel="canonical" href="https://www.lbexteriorcleaning.com.au/interior-cleaning.html"/>
+  <meta property="og:title" content="Interior & Home Cleaning Mornington Peninsula | L&B Cleaning"/>
+  <meta property="og:description" content="Professional interior and home cleaning on the Mornington Peninsula. Deep cleans, regular housekeeping, end-of-lease and move-in cleans. Free quotes."/>
+  <meta property="og:url" content="https://www.lbexteriorcleaning.com.au/interior-cleaning.html"/>
+  <meta property="og:type" content="website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -36,18 +41,21 @@
     a{text-decoration:none;color:inherit}
     .container{max-width:1160px;margin:0 auto;padding:0 40px}
 
+    /* ── Reveal ── */
     [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease-out),transform .65s var(--ease-out)}
     [data-reveal].visible{opacity:1;transform:none}
     [data-d="1"]{transition-delay:.08s}[data-d="2"]{transition-delay:.16s}
     [data-d="3"]{transition-delay:.24s}[data-d="4"]{transition-delay:.32s}
 
+    /* ── Buttons ── */
     .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:.88rem;font-weight:600;padding:13px 26px;border-radius:var(--r);border:none;cursor:pointer;transition:all .22s var(--ease)}
+    .btn svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
     .btn-blue{background:var(--accent);color:#fff}
     .btn-blue:hover{background:var(--accent-dk);transform:translateY(-1px);box-shadow:0 8px 24px rgba(66,122,161,.32)}
     .btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.5)}
     .btn-outline:hover{background:var(--white);color:var(--navy)}
 
-    /* NAV */
+    /* ── NAV ── */
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:76px;display:flex;align-items:center;background:#fff;border-bottom:1px solid #d5d5d5;padding:0 36px}
     .nav-left{display:flex;align-items:center;height:100%;flex:1;gap:0;max-width:calc(50% - 90px)}
     .nav-left>a{display:flex;align-items:center;height:100%;padding:0 9px;font-family:var(--font-mono);font-size:.62rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
@@ -82,7 +90,7 @@
     .mobile-nav a:hover{color:#111;background:#f9f9f9}
     .mobile-nav .nav-cta{background:var(--accent);color:#fff;text-align:center;border-bottom:none;padding:22px 36px;font-weight:600}
 
-    /* SERVICE HERO */
+    /* ── SERVICE HERO ── */
     .svc-hero{position:relative;min-height:62vh;display:flex;align-items:center;overflow:hidden;background:var(--navy);padding-top:76px}
     .svc-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 50%,rgba(66,122,161,.18) 0%,transparent 60%),linear-gradient(135deg,#032554 0%,#064789 50%,#0d3d7a 100%)}
     .svc-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(66,122,161,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(66,122,161,.04) 1px,transparent 1px);background-size:80px 80px}
@@ -97,9 +105,10 @@
     .svc-hero-desc{font-size:1.1rem;color:rgba(255,255,255,.6);max-width:520px;line-height:1.75;margin-bottom:36px}
     .svc-hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
     .svc-hero-icon{width:420px;flex-shrink:0}
-    .svc-hero-icon img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 32px 80px rgba(0,0,0,.35);display:block}
+    .svc-hero-icon-box{width:100%;aspect-ratio:4/3;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.35)}
+    .svc-hero-icon-box img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* TRUST BAR */
+    /* ── TRUST BAR ── */
     .trust-bar{background:var(--navy);padding:28px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
     .trust-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
     .trust-item{display:flex;align-items:center;gap:12px}
@@ -108,14 +117,14 @@
     .trust-label{font-size:.82rem;font-weight:700;color:#fff}
     .trust-sub{font-size:.72rem;color:rgba(255,255,255,.5)}
 
-    /* OVERVIEW */
+    /* ── OVERVIEW ── */
     .svc-overview{padding:100px 0;background:var(--white);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
     .svc-overview-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
     .svc-overview h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.15;color:var(--navy);margin-bottom:20px}
     .svc-overview p{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:16px}
-    .contaminant-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
-    .contaminant-list li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
-    .contaminant-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+    .bullet-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+    .bullet-list li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
+    .bullet-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
     .svc-benefits{display:flex;flex-direction:column;gap:16px}
     .svc-benefit{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--off);border-radius:14px;transition:background .3s}
     .svc-benefit:hover{background:var(--blue-lt)}
@@ -124,7 +133,22 @@
     .svc-benefit-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:2px}
     .svc-benefit-desc{font-size:.85rem;color:var(--muted);line-height:1.6}
 
-    /* PROCESS */
+    /* ── SERVICES GRID ── */
+    .svc-types{padding:100px 0;background:var(--off);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    .svc-types-header{text-align:center;margin-bottom:60px}
+    .svc-types-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--navy)}
+    .svc-types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .svc-type-card{background:var(--white);border-radius:18px;border:1px solid var(--border);padding:36px 32px;transition:all .3s var(--ease)}
+    .svc-type-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 48px rgba(66,122,161,.12)}
+    .svc-type-icon{width:52px;height:52px;border-radius:14px;background:var(--blue-lt);border:1px solid rgba(66,122,161,.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+    .svc-type-icon svg{width:26px;height:26px;fill:var(--blue)}
+    .svc-type-name{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+    .svc-type-desc{font-size:.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px}
+    .svc-type-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+    .svc-type-list li{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted)}
+    .svc-type-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+    /* ── PROCESS SECTION ── */
     .process-svc{padding:100px 0;background:var(--blue);position:relative;overflow:hidden;background-image:radial-gradient(circle,rgba(66,122,161,.18) 1px,transparent 1px);background-size:36px 36px}
     .process-svc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 90% 50%,rgba(255,255,255,.04) 0%,transparent 60%)}
     .process-header{text-align:center;margin-bottom:72px}
@@ -139,8 +163,8 @@
     .process-title{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:10px}
     .process-desc{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.65}
 
-    /* RES-COM */
-    .res-com{padding:100px 0;background:var(--off);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
+    /* ── RES-COM ── */
+    .res-com{padding:100px 0;background:var(--white);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
     .res-com-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
     .res-com-card{padding:48px 44px;border-radius:20px;border:1px solid var(--border);background:var(--white)}
     .res-com-card.dark{background:var(--navy);border-color:var(--navy)}
@@ -150,27 +174,27 @@
     .res-com-card.dark .res-com-icon svg{fill:rgba(255,255,255,.7)}
     .res-com-card h3{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--navy);margin-bottom:14px;line-height:1.2}
     .res-com-card.dark h3{color:var(--white)}
-    .res-com-card p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:20px}
+    .res-com-card p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:16px}
     .res-com-card.dark p{color:rgba(255,255,255,.55)}
     .res-com-list{list-style:none;display:flex;flex-direction:column;gap:8px}
     .res-com-list li{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)}
     .res-com-card.dark .res-com-list li{color:rgba(255,255,255,.5)}
     .res-com-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
 
-    /* COASTAL CALLOUT */
-    .coastal-callout{padding:72px 0;background:var(--navy);position:relative;overflow:hidden;background-image:radial-gradient(circle,rgba(66,122,161,.18) 1px,transparent 1px);background-size:36px 36px}
-    .coastal-callout::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(66,122,161,.12) 0%,transparent 60%)}
-    .coastal-callout-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-    .coastal-callout h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:16px}
-    .coastal-callout h2 em{font-style:normal;color:var(--accent)}
-    .coastal-callout p{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:12px}
+    /* ── FREQ CALLOUT ── */
+    .freq-callout{padding:72px 0;background:var(--navy);position:relative;overflow:hidden;background-image:radial-gradient(circle,rgba(66,122,161,.18) 1px,transparent 1px);background-size:36px 36px}
+    .freq-callout::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(66,122,161,.12) 0%,transparent 60%)}
+    .freq-callout-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .freq-callout h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:16px}
+    .freq-callout h2 em{font-style:normal;color:var(--accent)}
+    .freq-callout p{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:12px}
     .freq-grid{display:flex;flex-direction:column;gap:16px}
     .freq-item{padding:20px 24px;background:rgba(255,255,255,.05);border-radius:14px;border:1px solid rgba(255,255,255,.08)}
     .freq-label{font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
     .freq-title{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:4px}
     .freq-desc{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6}
 
-    /* SERVICE AREAS */
+    /* ── SERVICE AREAS ── */
     .service-areas{padding:80px 0;background:var(--white);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
     .service-areas-header{text-align:center;margin-bottom:48px}
     .service-areas-header .svc-tag{display:block;margin-bottom:12px}
@@ -181,7 +205,7 @@
     .areas-note{text-align:center;margin-top:24px;font-size:.85rem;color:var(--muted)}
     .areas-note a{color:var(--accent);font-weight:600}
 
-    /* FAQ */
+    /* ── FAQ ── */
     .faq{padding:100px 0;background:var(--off);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
     .faq-header{text-align:center;margin-bottom:60px}
     .faq-header .svc-tag{display:block;margin-bottom:12px}
@@ -196,12 +220,12 @@
     .faq-item.open .faq-answer{max-height:300px}
     .faq-answer p{padding:0 28px 22px;font-size:.9rem;color:var(--muted);line-height:1.75}
 
-    /* OTHER SERVICES */
+    /* ── OTHER SERVICES ── */
     .other-services{padding:80px 0;background:var(--white);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
     .other-services-header{text-align:center;margin-bottom:48px}
     .other-services-header .svc-tag{display:block;margin-bottom:12px}
     .other-services-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--navy)}
-    .other-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .other-services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .other-svc-card{display:block;padding:28px;background:var(--off);border-radius:16px;border:1px solid var(--border);transition:all .3s var(--ease)}
     .other-svc-card:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-4px)}
     .other-svc-card:hover .other-svc-name{color:var(--white)}
@@ -213,7 +237,7 @@
     .other-svc-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:12px;transition:color .3s}
     .other-svc-link{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);transition:color .3s}
 
-    /* CTA */
+    /* ── CTA ── */
     .cta{padding:100px 0;background:var(--navy);position:relative;overflow:hidden;text-align:center;background-image:radial-gradient(circle,rgba(66,122,161,.18) 1px,transparent 1px);background-size:36px 36px}
     .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(66,122,161,.15) 0%,transparent 60%)}
     .cta::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--accent))}
@@ -223,7 +247,7 @@
     .cta-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
     .cta-note{margin-top:20px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.25)}
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     .footer{background:#032554;border-top:1px solid rgba(255,255,255,.06);padding:80px 0 36px}
     .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.07)}
     .f-logo-name{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:4px}
@@ -246,16 +270,17 @@
     .f-copy a{color:rgba(66,122,161,.6);transition:color .2s}
     .f-copy a:hover{color:var(--accent)}
 
-    /* RESPONSIVE */
+    /* ── RESPONSIVE ── */
     @media(max-width:1024px){
       .svc-hero-inner{grid-template-columns:1fr}
       .svc-hero-icon{width:100%;margin-top:32px}
       .svc-overview-inner{grid-template-columns:1fr;gap:48px}
       .res-com-grid{grid-template-columns:1fr}
-      .coastal-callout-inner{grid-template-columns:1fr;gap:48px}
+      .freq-callout-inner{grid-template-columns:1fr;gap:48px}
       .areas-grid{grid-template-columns:repeat(3,1fr)}
       .other-services-grid{grid-template-columns:repeat(2,1fr)}
       .footer-top{grid-template-columns:1fr 1fr}
+      .svc-types-grid{grid-template-columns:1fr 1fr}
     }
     @media(max-width:768px){
       .nav-left{display:none}
@@ -264,15 +289,17 @@
       .process-steps{grid-template-columns:1fr 1fr;gap:40px}
       .process-steps::before{display:none}
       .areas-grid{grid-template-columns:repeat(2,1fr)}
-      .other-services-grid{grid-template-columns:1fr}
+      .other-services-grid{grid-template-columns:1fr 1fr}
       .footer-top{grid-template-columns:1fr;gap:40px}
       .footer-bottom{flex-direction:column;text-align:center}
       .container{padding:0 20px}
       .nav{padding:0 20px;justify-content:space-between}
       .nav-logo{position:static;transform:none}
+      .svc-types-grid{grid-template-columns:1fr}
     }
     @media(max-width:500px){
       .process-steps{grid-template-columns:1fr}
+      .other-services-grid{grid-template-columns:1fr}
     }
 
     /* ── QUOTE MODAL ── */
@@ -299,6 +326,11 @@
     .form-success h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:8px}
     .form-success p{font-size:.88rem;color:var(--muted)}
     @media(max-width:500px){.form-row{grid-template-columns:1fr}.modal{padding:32px 24px}}
+
+    /* ── STICKY CALL BAR ── */
+    .sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--accent);color:#fff}
+    .sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;color:#fff;font-weight:700;font-size:1rem;text-decoration:none}
+    @media(max-width:768px){.sticky-call{display:block}}
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YQJ3XQ829"></script>
@@ -351,6 +383,7 @@
   <a href="window-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Window Cleaning</a>
   <a href="pressure-washing.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Pressure Washing</a>
   <a href="facade-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Façade Cleaning</a>
+  <a href="interior-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Interior &amp; Home Cleaning</a>
   <a href="index.html#process" class="ml">Our Process</a>
   <a href="index.html#why" class="ml">About Us</a>
   <a href="index.html#reviews" class="ml">Reviews</a>
@@ -365,17 +398,19 @@
   <div class="svc-hero-grid"></div>
   <div class="container svc-hero-inner">
     <div>
-      <div class="svc-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Solar Panel Cleaning</span></div>
+      <div class="svc-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Interior &amp; Home Cleaning</span></div>
       <span class="svc-tag">Mornington Peninsula</span>
-      <h1>Maximise Your Solar Output.<br/><em>Safe, Streak-Free Results.</em></h1>
-      <p class="svc-hero-desc">Dirty solar panels can lose up to 20% or more of their efficiency. Our specialist cleaning removes dust, salt spray, bird droppings, and coastal grime — safely, without damaging your panels or voiding your warranty.</p>
+      <h1>A Spotless Home.<br/><em>Done Properly.</em></h1>
+      <p class="svc-hero-desc">From regular housekeeping to deep cleans and end-of-lease cleans, L&amp;B delivers thorough, professional interior cleaning across the Mornington Peninsula. We treat your home with the same care we'd want for our own.</p>
       <div class="svc-hero-actions">
         <a class="btn btn-blue" href="#" data-quote>Get a Free Quote</a>
         <a class="btn btn-outline" href="tel:+61406580520">Call 0406 580 520</a>
       </div>
     </div>
     <div class="svc-hero-icon">
-      <img src="photos 2/IMG_1818.jpeg" alt="Solar panel cleaning — Mornington Peninsula">
+      <div class="svc-hero-icon-box">
+        <img src="house cleaning.jpg" alt="Professional interior home cleaning service on the Mornington Peninsula" loading="lazy"/>
+      </div>
     </div>
   </div>
 </section>
@@ -384,9 +419,9 @@
 <div class="trust-bar">
   <div class="container trust-bar-inner">
     <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M public liability</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.82L5.71 21l1-1.9C7 19.7 7.5 20 8 20c4-5 6-8 17-9l-8 3z"/></svg></div><div><div class="trust-label">Panel-Safe Methods</div><div class="trust-sub">Non-abrasive, approved techniques</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><div><div class="trust-label">Trusted &amp; Vetted</div><div class="trust-sub">Background-checked team</div></div></div>
     <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">Google &amp; local reviews</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><div class="trust-label">Satisfaction Guaranteed</div><div class="trust-sub">We're not done till you're happy</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div><div><div class="trust-label">Satisfaction Guaranteed</div><div class="trust-sub">We're not done till you're happy</div></div></div>
   </div>
 </div>
 
@@ -395,34 +430,106 @@
   <div class="container svc-overview-inner">
     <div data-reveal>
       <span class="svc-tag">Why It Matters</span>
-      <h2>Dirty Panels Are Costing You Money Every Day</h2>
-      <p>Solar panels are a smart investment — but without proper maintenance, their performance can significantly decline. Properties across the Mornington Peninsula are constantly exposed to:</p>
-      <ul class="contaminant-list">
-        <li>Salt spray from sea air</li>
-        <li>Fine dust and airborne debris</li>
-        <li>Bird droppings and tree sap</li>
-        <li>Pollen and organic build-up</li>
-        <li>Pollution and coastal grime</li>
+      <h2>Your Home Deserves More Than a Quick Wipe-Down</h2>
+      <p>A genuinely clean home goes beyond surfaces. Dust, allergens, mould, and grime build up in places that routine cleaning misses — and over time, that affects your air quality, your health, and the condition of your property.</p>
+      <p>Whether you need a thorough one-off deep clean, reliable weekly or fortnightly housekeeping, or a spotless end-of-lease clean that gets your bond back, L&amp;B delivers every time. We service all areas of the Mornington Peninsula including Mornington, Mount Martha, Frankston, Rosebud, Sorrento, and Mount Eliza.</p>
+      <ul class="bullet-list">
+        <li>Detailed cleaning of kitchens, bathrooms, bedrooms and living areas</li>
+        <li>Oven, cooktop, and appliance cleaning</li>
+        <li>Skirting boards, window sills, and light fittings</li>
+        <li>Inside cupboards and wardrobes on request</li>
+        <li>Walls, doors, and high-touch surfaces sanitised</li>
+        <li>Carpet vacuuming and hard floor mopping</li>
       </ul>
-      <p>Over time, this debris blocks sunlight reaching the photovoltaic cells and reduces energy output — meaning higher power bills and a longer payback period on your system. Our professional cleaning restores clarity to the panel surface and helps your system operate at peak efficiency.</p>
-      <p>We use only manufacturer-approved, non-abrasive methods, so your panels and warranty remain fully protected throughout the process.</p>
     </div>
     <div class="svc-benefits" data-reveal data-d="2">
-      <div class="svc-benefit">
-        <div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div><div class="svc-benefit-title">Restore Up to 20%+ Lost Output</div><div class="svc-benefit-desc">Dirt and grime block sunlight and reduce efficiency. Cleaning restores your system to its full generating potential — lowering your bills.</div></div>
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="svc-benefit-title">Healthier Living Environment</div><div class="svc-benefit-desc">Deep cleaning removes allergens, mould spores, bacteria, and dust mites — improving the air quality inside your home for your family.</div></div></div>
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><div class="svc-benefit-title">Protect Your Property Value</div><div class="svc-benefit-desc">Regular professional cleaning preserves fixtures, surfaces, grout, and flooring — preventing premature wear and keeping your home in showroom condition.</div></div></div>
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="svc-benefit-title">Time Back in Your Day</div><div class="svc-benefit-desc">Stop spending your weekends cleaning. Hand it to the professionals and spend that time on what matters to you — knowing the job is done properly.</div></div></div>
+      <div class="svc-benefit"><div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div><div><div class="svc-benefit-title">Bond-Back Guarantee Ready</div><div class="svc-benefit-desc">Our end-of-lease cleans are thorough enough to meet real estate agent inspection standards — giving you the best chance of getting your full bond returned.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE TYPES -->
+<section class="svc-types">
+  <div class="container">
+    <div class="svc-types-header" data-reveal>
+      <span class="svc-tag">What We Offer</span>
+      <h2>Interior Cleaning Services on the Mornington Peninsula</h2>
+    </div>
+    <div class="svc-types-grid">
+      <div class="svc-type-card" data-reveal data-d="1">
+        <div class="svc-type-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M9 22V12h6v10" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div>
+        <div class="svc-type-name">Regular Home Cleaning</div>
+        <div class="svc-type-desc">Reliable weekly or fortnightly housekeeping to keep your home consistently clean without the effort. Ideal for busy families and professionals.</div>
+        <ul class="svc-type-list">
+          <li>Kitchen benches, sink and appliance surfaces</li>
+          <li>Bathrooms, toilets and vanities</li>
+          <li>Vacuuming carpets and mopping floors</li>
+          <li>Dusting and surface wipe-downs throughout</li>
+          <li>Bins emptied and fresh liners fitted</li>
+        </ul>
       </div>
-      <div class="svc-benefit">
-        <div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
-        <div><div class="svc-benefit-title">Warranty-Safe Cleaning</div><div class="svc-benefit-desc">We use only manufacturer-approved, non-abrasive methods — purified water systems and soft equipment that keep your warranty intact.</div></div>
+      <div class="svc-type-card" data-reveal data-d="2">
+        <div class="svc-type-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div>
+        <div class="svc-type-name">Deep Home Cleaning</div>
+        <div class="svc-type-desc">A comprehensive, top-to-bottom clean that goes far beyond the surface. Perfect for seasonal cleans, pre-sale preparation, or homes that haven't been professionally cleaned in a while.</div>
+        <ul class="svc-type-list">
+          <li>Inside oven, fridge and dishwasher</li>
+          <li>Grout scrubbing in bathrooms and kitchens</li>
+          <li>Skirting boards, doors, light switches and fittings</li>
+          <li>Inside all cupboards and wardrobes</li>
+          <li>Window sills, tracks and internal glass</li>
+        </ul>
       </div>
-      <div class="svc-benefit">
-        <div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
-        <div><div class="svc-benefit-title">Visual Damage Inspection</div><div class="svc-benefit-desc">We inspect each panel as we clean and flag any visible cracks, delamination, or wiring concerns — so you can follow up with your installer.</div></div>
+      <div class="svc-type-card" data-reveal data-d="3">
+        <div class="svc-type-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div>
+        <div class="svc-type-name">End-of-Lease &amp; Bond Clean</div>
+        <div class="svc-type-desc">Moving out? Our end-of-lease clean covers everything your property manager will inspect — giving you the best possible chance of getting your full bond back.</div>
+        <ul class="svc-type-list">
+          <li>Full kitchen deep clean including oven and rangehood</li>
+          <li>Bathroom, toilet and laundry scrubbed and sanitised</li>
+          <li>All walls, doors and skirtings wiped down</li>
+          <li>Carpets vacuumed, hard floors mopped</li>
+          <li>Windows, blinds and fly screens cleaned</li>
+        </ul>
       </div>
-      <div class="svc-benefit">
-        <div class="svc-benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
-        <div><div class="svc-benefit-title">Streak-Free, Spot-Free Finish</div><div class="svc-benefit-desc">Purified water and professional technique leave panels spotless — no streaks, no residue, no re-soiling agents left behind.</div></div>
+      <div class="svc-type-card" data-reveal data-d="1">
+        <div class="svc-type-icon"><svg viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2z" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M8 22h8M12 18v4" stroke="#427AA1" stroke-width="2"/></svg></div>
+        <div class="svc-type-name">Move-In Cleaning</div>
+        <div class="svc-type-desc">Starting fresh in a new home? We clean the property from top to bottom before you move in so you know exactly what standard your new space is at from day one.</div>
+        <ul class="svc-type-list">
+          <li>Full internal clean of all rooms</li>
+          <li>Kitchen appliances and cupboards</li>
+          <li>Bathrooms and laundry disinfected</li>
+          <li>Floors cleaned and ready for furniture</li>
+          <li>Customised to your specific requirements</li>
+        </ul>
+      </div>
+      <div class="svc-type-card" data-reveal data-d="2">
+        <div class="svc-type-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" fill="none" stroke="#427AA1" stroke-width="2"/><circle cx="9" cy="7" r="4" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div>
+        <div class="svc-type-name">NDIS Cleaning</div>
+        <div class="svc-type-desc">We provide professional, respectful home cleaning for NDIS participants across the Mornington Peninsula. Our team understands the importance of consistency, dignity, and care when working in a participant's home.</div>
+        <ul class="svc-type-list">
+          <li>Regular home cleaning as part of support plans</li>
+          <li>Bathroom and toilet cleaning and sanitisation</li>
+          <li>Kitchen cleaning and surface disinfection</li>
+          <li>Vacuuming, mopping and general tidying</li>
+          <li>Flexible scheduling to suit participant needs</li>
+        </ul>
+      </div>
+      <div class="svc-type-card" data-reveal data-d="3">
+        <div class="svc-type-icon"><svg viewBox="0 0 24 24"><path d="M19 9l-7 3-7-3M5 21V9l7 3 7-3v12" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div>
+        <div class="svc-type-name">Post-Construction Clean</div>
+        <div class="svc-type-desc">Renovations leave behind dust, debris, and residue that standard cleaning can't handle. Our post-construction clean prepares your home for occupancy safely and thoroughly.</div>
+        <ul class="svc-type-list">
+          <li>Fine dust removal from all surfaces and vents</li>
+          <li>Paint splatter and adhesive removal</li>
+          <li>Window frames and glass cleaned inside</li>
+          <li>Floors and tiles cleaned to move-in standard</li>
+          <li>Rubbish and packaging disposed of</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -433,14 +540,14 @@
   <div class="container">
     <div class="process-header" data-reveal>
       <span class="svc-tag">How It Works</span>
-      <h2>Our Solar Panel Cleaning Process</h2>
-      <p>A careful, professional process designed to maximise output without risking your panels or warranty.</p>
+      <h2>Our Interior Cleaning Process</h2>
+      <p>A consistent, room-by-room method that covers everything — not just the easy stuff.</p>
     </div>
     <div class="process-steps">
-      <div class="process-step" data-reveal data-d="1"><div class="process-num">01</div><div class="process-title">Safe Roof Access</div><div class="process-desc">We establish safe access and work positioning on your roof, following all relevant safety procedures before touching a panel.</div></div>
-      <div class="process-step" data-reveal data-d="2"><div class="process-num">02</div><div class="process-title">Gentle Pre-Rinse</div><div class="process-desc">A gentle pre-rinse with purified water loosens surface dust, debris, and bird droppings without abrasion or high pressure.</div></div>
-      <div class="process-step" data-reveal data-d="3"><div class="process-num">03</div><div class="process-title">Soft Wash &amp; Wipe</div><div class="process-desc">Non-abrasive, panel-safe equipment lifts stubborn grime and salt residue without scratching glass or damaging cells.</div></div>
-      <div class="process-step" data-reveal data-d="4"><div class="process-num">04</div><div class="process-title">Purified Rinse &amp; Inspect</div><div class="process-desc">A final purified water rinse leaves a streak-free finish. We inspect every panel and report any damage or concerns found.</div></div>
+      <div class="process-step" data-reveal data-d="1"><div class="process-num">01</div><div class="process-title">Free Quote &amp; Scope</div><div class="process-desc">We assess the size of your home, the type of clean required, and any specific areas you want prioritised. No surprises on the day.</div></div>
+      <div class="process-step" data-reveal data-d="2"><div class="process-num">02</div><div class="process-title">Systematic Room-by-Room Clean</div><div class="process-desc">We work top-to-bottom and room-by-room, using professional-grade products safe for your surfaces, family, and pets.</div></div>
+      <div class="process-step" data-reveal data-d="3"><div class="process-num">03</div><div class="process-title">Detail Check</div><div class="process-desc">Before we're done, we walk through a checklist to ensure nothing has been missed — skirting boards, behind appliances, inside cupboards and all the spots that matter.</div></div>
+      <div class="process-step" data-reveal data-d="4"><div class="process-num">04</div><div class="process-title">Handover &amp; Follow-Up</div><div class="process-desc">We brief you on what was completed, note anything that needs attention, and follow up to make sure you're completely satisfied.</div></div>
     </div>
   </div>
 </section>
@@ -449,56 +556,61 @@
 <section class="res-com">
   <div class="container">
     <div style="text-align:center;margin-bottom:56px" data-reveal>
-      <span class="svc-tag">Who We Service</span>
-      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--navy)">Residential &amp; Commercial Solar Cleaning</h2>
+      <span class="svc-tag">Who We Clean For</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--navy)">Homeowners, Renters &amp; Property Managers</h2>
     </div>
     <div class="res-com-grid">
       <div class="res-com-card" data-reveal data-d="1">
         <div class="res-com-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M9 22V12h6v10" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div>
-        <h3>Residential Solar Cleaning</h3>
-        <p>Many homeowners across the Mornington Peninsula are investing in solar energy. To ensure you're getting the full benefit of your system, routine cleaning is essential.</p>
-        <p>We service residential properties of all sizes — single and double-storey homes alike. Whether your panels are newly installed or haven't been cleaned in years, our team delivers a safe and thorough clean designed to restore performance.</p>
+        <h3>Residential Home Cleaning</h3>
+        <p>Whether you're a homeowner wanting a regular clean, a renter needing an end-of-lease shine, or someone who's just moved in and wants a fresh start — we have a service to suit.</p>
+        <p>We service all types of residential properties across the Mornington Peninsula, from apartments in Frankston to holiday homes in Sorrento and family homes in Mount Martha and Mornington.</p>
+        <ul class="res-com-list">
+          <li>Houses, townhouses and apartments</li>
+          <li>NDIS participant homes</li>
+          <li>Investment and rental properties</li>
+          <li>Pre-sale property preparation</li>
+        </ul>
       </div>
       <div class="res-com-card dark" data-reveal data-d="2">
         <div class="res-com-icon"><svg viewBox="0 0 24 24"><path d="M4 2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2z" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"/><path d="M8 22h8M12 18v4" stroke="rgba(255,255,255,.5)" stroke-width="2"/></svg></div>
-        <h3>Commercial Solar Cleaning</h3>
-        <p>Commercial properties often operate large-scale solar systems where even minor efficiency losses can significantly impact overall energy output and operating costs.</p>
-        <p>We provide professional solar panel cleaning for:</p>
+        <h3>Property Managers &amp; Landlords</h3>
+        <p>We work regularly with property managers and landlords across the peninsula who need reliable, consistent cleaning between tenancies — delivered on schedule with no follow-up required.</p>
+        <p>Our end-of-lease and bond cleans meet the standards expected by real estate agents, and we also support NDIS participants with regular, plan-managed cleaning services.</p>
         <ul class="res-com-list">
-          <li>Retail and industrial buildings</li>
-          <li>Office and body corporate complexes</li>
-          <li>Educational institutions</li>
-          <li>Large-scale residential developments</li>
+          <li>End-of-lease and bond cleans</li>
+          <li>NDIS participant home cleaning</li>
+          <li>Routine property maintenance cleans</li>
+          <li>Pre-inspection preparation</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COASTAL CALLOUT -->
-<section class="coastal-callout">
-  <div class="container coastal-callout-inner">
+<!-- FREQ CALLOUT -->
+<section class="freq-callout">
+  <div class="container freq-callout-inner">
     <div data-reveal>
-      <span class="svc-tag" style="color:var(--accent)">Coastal Properties</span>
-      <h2>Peninsula Properties Need<br/><em>More Frequent Care</em></h2>
-      <p>Due to the Peninsula's coastal climate, properties near the water are more heavily exposed to salt spray. Salt residue creates a film on solar panels that reduces efficiency and, over time, may contribute to surface wear if left untreated.</p>
-      <p>We assess your property and provide a tailored maintenance recommendation based on your location, exposure level, and system size.</p>
+      <span class="svc-tag" style="color:var(--accent)">Cleaning Frequency</span>
+      <h2>How Often Should You<br/><em>Book a Home Clean?</em></h2>
+      <p>Every household is different, but here are our general recommendations for maintaining a clean, healthy home on the Mornington Peninsula. We'll tailor a schedule to suit your lifestyle and budget.</p>
     </div>
     <div class="freq-grid" data-reveal data-d="2">
       <div class="freq-item">
-        <div class="freq-label">Standard Residential</div>
-        <div class="freq-title">Once every 12 months</div>
-        <div class="freq-desc">Suitable for most inland Peninsula properties with moderate tree and bird exposure.</div>
+        <div class="freq-label">Couples &amp; Singles</div>
+        <div class="freq-title">Once a fortnight</div>
+        <div class="freq-desc">Keeps the home consistently clean with minimal effort. A fortnightly service is the most popular choice for smaller households.</div>
       </div>
       <div class="freq-item">
-        <div class="freq-label">Coastal Locations</div>
-        <div class="freq-title">Every 6–9 months</div>
-        <div class="freq-desc">Recommended for properties near the water — areas like Rye, Mount Martha, and Safety Beach where salt spray is heavier.</div>
+        <div class="freq-label">Families with Children or Pets</div>
+        <div class="freq-title">Weekly</div>
+        <div class="freq-desc">Busy family homes benefit from a weekly service to keep on top of mess, dust, allergens and the inevitable mess that comes with kids and pets.</div>
       </div>
       <div class="freq-item">
-        <div class="freq-label">Commercial &amp; Heavy Exposure</div>
-        <div class="freq-title">More frequently as needed</div>
-        <div class="freq-desc">Larger systems or properties with heavy tree coverage may benefit from more regular visits to maintain peak output.</div>
+        <div class="freq-label">NDIS Participants</div>
+        <div class="freq-title">Weekly or fortnightly</div>
+        <div class="freq-desc">We work flexibly around your support plan schedule, providing consistent, reliable cleaning that meets NDIS quality and safety standards.</div>
       </div>
     </div>
   </div>
@@ -509,38 +621,17 @@
   <div class="container">
     <div class="service-areas-header" data-reveal>
       <span class="svc-tag">Where We Work</span>
-      <h2>Servicing the Mornington Peninsula &amp; More</h2>
+      <h2>Interior Cleaning Across the Mornington Peninsula</h2>
     </div>
     <div class="areas-grid" data-reveal data-d="1">
-      <div class="area-chip">Brighton</div>
-      <div class="area-chip">Hampton</div>
-      <div class="area-chip">Sandringham</div>
-      <div class="area-chip">Mentone</div>
-      <div class="area-chip">Mordialloc</div>
-      <div class="area-chip">Aspendale</div>
-      <div class="area-chip">Chelsea</div>
-      <div class="area-chip">Carrum</div>
-      <div class="area-chip">Seaford</div>
-      <div class="area-chip">Frankston</div>
-      <div class="area-chip">Frankston South</div>
-      <div class="area-chip">Mount Eliza</div>
-      <div class="area-chip">Mornington</div>
-      <div class="area-chip">Mount Martha</div>
-      <div class="area-chip">Safety Beach</div>
-      <div class="area-chip">Dromana</div>
-      <div class="area-chip">Rosebud</div>
-      <div class="area-chip">Rye</div>
-      <div class="area-chip">Blairgowrie</div>
-      <div class="area-chip">Sorrento</div>
-      <div class="area-chip">Portsea</div>
-      <div class="area-chip">Flinders</div>
-      <div class="area-chip">Red Hill</div>
-      <div class="area-chip">Somerville</div>
-      <div class="area-chip">Hastings</div>
-      <div class="area-chip">Tyabb</div>
-      <div class="area-chip">Baxter</div>
+      <div class="area-chip">Brighton</div><div class="area-chip">Hampton</div><div class="area-chip">Sandringham</div><div class="area-chip">Mentone</div><div class="area-chip">Mordialloc</div>
+      <div class="area-chip">Aspendale</div><div class="area-chip">Chelsea</div><div class="area-chip">Carrum</div><div class="area-chip">Seaford</div><div class="area-chip">Frankston</div>
+      <div class="area-chip">Frankston South</div><div class="area-chip">Mount Eliza</div><div class="area-chip">Mornington</div><div class="area-chip">Mount Martha</div><div class="area-chip">Safety Beach</div>
+      <div class="area-chip">Dromana</div><div class="area-chip">Rosebud</div><div class="area-chip">Rye</div><div class="area-chip">Blairgowrie</div><div class="area-chip">Sorrento</div>
+      <div class="area-chip">Portsea</div><div class="area-chip">Flinders</div><div class="area-chip">Red Hill</div><div class="area-chip">Somerville</div><div class="area-chip">Hastings</div>
+      <div class="area-chip">Tyabb</div><div class="area-chip">Baxter</div>
     </div>
-    <p class="areas-note" data-reveal data-d="2">Located elsewhere on the Peninsula? <a href="index.html#contact">Contact us</a> to confirm coverage.</p>
+    <p class="areas-note" data-reveal data-d="2">Located nearby? <a href="index.html#contact">Get in touch</a> — chances are we service your area.</p>
   </div>
 </section>
 
@@ -549,16 +640,15 @@
   <div class="container">
     <div class="faq-header" data-reveal>
       <span class="svc-tag">Common Questions</span>
-      <h2>Solar Panel Cleaning FAQs</h2>
+      <h2>Interior &amp; Home Cleaning FAQs</h2>
       <p>Everything you need to know before booking.</p>
     </div>
     <div class="faq-list" data-reveal data-d="1">
-      <div class="faq-item"><button class="faq-question">Will cleaning improve my panel performance?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes. Removing dirt, salt, and debris allows more sunlight to reach the photovoltaic cells, which can improve energy efficiency by 20% or more depending on the level of soiling. Most customers see a measurable difference in their next billing cycle.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Will cleaning void my solar panel warranty?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>No — we use only manufacturer-approved, non-abrasive cleaning methods. Purified water systems and soft brushes are the industry standard for safe panel cleaning and will not void your warranty. We never use high-pressure washing directly on panels.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Is high-pressure washing safe for solar panels?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>No. High pressure can damage the panel surface and void manufacturer warranties. We use low-pressure, purified water systems specifically designed for solar panel cleaning — effective on grime without any risk to your system.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Do you clean panels on double-storey homes?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes. Our team is fully equipped to safely access and clean elevated solar systems on single and double-storey homes. If your property has a particularly complex roofline, let us know when booking so we can come fully prepared.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Can you set up a regular maintenance schedule?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes. We offer scheduled maintenance to keep your panels operating at peak efficiency year-round. We'll recommend a suitable frequency based on your location and system size, and handle the rest.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Can you spot damage to my panels while cleaning?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes — we inspect each panel as we clean and will flag any visible cracks, delamination, hotspots, or wiring concerns so you can follow up with your installer. Think of it as a health check included with every clean.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do I need to be home during the clean?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Not at all. Many of our clients are out at work or running errands during their clean. We just need access to the property — whether that's a key, code, or someone at home to let us in. We're fully insured, and your home is always in safe hands.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do you bring your own cleaning products and equipment?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes — we arrive fully equipped with all products and equipment needed. We use professional-grade, surface-safe products. If you have specific preferences or sensitivities (e.g. eco-friendly or fragrance-free products), just let us know when you book.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Will my end-of-lease clean meet real estate agent standards?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>We clean to a standard specifically designed to pass property manager inspections. Our end-of-lease checklist covers every item typically on a real estate agent's inspection report — from inside the oven to the tops of door frames. If something is missed on inspection, we'll return to fix it.</p></div></div>
+      <div class="faq-item"><button class="faq-question">How long does a home clean take?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>It depends on the size of the property and the type of clean. A standard 3-bedroom home typically takes 2.5–4 hours. A deep clean or end-of-lease clean on the same property may take 4–7 hours. We'll give you an accurate estimate when you book based on your specific property.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Can I book a one-off clean, or do I need a regular schedule?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Both. We welcome one-off deep cleans, end-of-lease cleans, and move-in cleans alongside our regular weekly and fortnightly service. There's no obligation to lock into a schedule — though many clients find a regular booking easier and more cost-effective in the long run.</p></div></div>
     </div>
   </div>
 </section>
@@ -568,12 +658,13 @@
   <div class="container">
     <div class="other-services-header" data-reveal>
       <span class="svc-tag">What Else We Do</span>
-      <h2>Other Services</h2>
+      <h2>Our Exterior Cleaning Services</h2>
     </div>
     <div class="other-services-grid">
-      <a class="other-svc-card" href="gutter-cleaning.html" data-reveal data-d="1"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Gutter Cleaning</div><div class="other-svc-desc">Clear blockages and protect your home from water damage.</div><div class="other-svc-link">Learn More →</div></a>
-      <a class="other-svc-card" href="window-cleaning.html" data-reveal data-d="2"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#427AA1" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="#427AA1" stroke-width="2"/><line x1="12" y1="3" x2="12" y2="21" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Window Cleaning</div><div class="other-svc-desc">Crystal-clear windows inside and out — letting the light back in.</div><div class="other-svc-link">Learn More →</div></a>
-      <a class="other-svc-card" href="pressure-washing.html" data-reveal data-d="3"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M9 22V12h6v10" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Pressure Washing</div><div class="other-svc-desc">Remove years of grime from driveways, decks, and outdoor surfaces.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="gutter-cleaning.html" data-reveal data-d="1"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Gutter Cleaning</div><div class="other-svc-desc">Clear gutters and downpipes to protect your property from water damage.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="window-cleaning.html" data-reveal data-d="2"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#427AA1" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="#427AA1" stroke-width="2"/><line x1="12" y1="3" x2="12" y2="21" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Window Cleaning</div><div class="other-svc-desc">Crystal-clear results inside and out for homes and businesses.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="pressure-washing.html" data-reveal data-d="3"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" fill="#427AA1"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="#427AA1"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z" fill="#427AA1"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z" fill="#427AA1"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z" fill="#427AA1"/><path d="M15.5 9H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S16.33 9 15.5 9zM3 9.5C3 8.67 3.67 8 4.5 8h5c.83 0 1.5.67 1.5 1.5S10.33 11 9.5 11h-5C3.67 11 3 10.33 3 9.5z" fill="#427AA1"/></svg></div><div class="other-svc-name">Pressure Washing</div><div class="other-svc-desc">Remove years of grime from driveways, paths and outdoor surfaces.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="solar-panel-cleaning.html" data-reveal data-d="4"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 110 10A5 5 0 0112 7zm0-5v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="#427AA1" stroke-width="2" stroke-linecap="round"/></svg></div><div class="other-svc-name">Solar Panel Cleaning</div><div class="other-svc-desc">Restore efficiency with safe, streak-free professional solar cleaning.</div><div class="other-svc-link">Learn More →</div></a>
     </div>
   </div>
 </section>
@@ -583,12 +674,12 @@
   <div class="container cta-inner">
     <div data-reveal>
       <span class="svc-tag" style="color:var(--accent)">Book Today</span>
-      <h2>Protect Your Investment.<br/>Maximise Your Output.</h2>
-      <p>Call us or submit a quote request online. We service all areas across the Mornington Peninsula — residential and commercial.</p>
+      <h2>A Cleaner Home Starts<br/>with One Call.</h2>
+      <p>Serving homeowners, renters and property managers across the Mornington Peninsula. Get a free, no-obligation quote today.</p>
       <div class="cta-actions">
-        <a class="btn btn-blue" href="tel:+61406580520"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Ben — 0406 580 520</a>
-        <a class="btn" href="tel:+61416551923" style="background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Lilli — 0416 551 923</a>
-        <a class="btn" href="#" data-quote style="flex-basis:100%;justify-content:center;background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Request a Quote</a>
+        <a class="btn btn-blue" href="tel:+61406580520"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Ben — 0406 580 520</a>
+        <a class="btn" href="tel:+61416551923" style="background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Lilli — 0416 551 923</a>
+        <a class="btn" href="#" data-quote style="flex-basis:100%;justify-content:center;background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Request a Quote Online</a>
       </div>
       <div class="cta-note">No commitment required — free estimates always</div>
     </div>
@@ -602,10 +693,10 @@
       <div>
         <div class="f-logo-name">L&amp;B Exterior</div>
         <div class="f-logo-tag">Cleaning Co.</div>
-        <p class="f-desc">Professional exterior cleaning across the Mornington Peninsula. Trusted by hundreds of homeowners and businesses for spotless results.</p>
+        <p class="f-desc">Professional cleaning across the Mornington Peninsula. Trusted by hundreds of homeowners and businesses for spotless results, inside and out.</p>
         <div class="f-social">
-          <a class="fsoc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-          <a class="fsoc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a class="fsoc" href="https://www.facebook.com/lbexteriorcleaning" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a class="fsoc" href="https://www.instagram.com/lbexteriorcleaning" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
           <a class="fsoc" href="#" aria-label="Google"><svg viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg></a>
         </div>
       </div>
@@ -617,6 +708,7 @@
           <li><a href="window-cleaning.html">Window Cleaning</a></li>
           <li><a href="pressure-washing.html">Pressure Washing</a></li>
           <li><a href="facade-cleaning.html">Façade Cleaning</a></li>
+          <li><a href="interior-cleaning.html">Interior &amp; Home Cleaning</a></li>
         </ul>
       </div>
       <div>
@@ -625,7 +717,7 @@
           <li><a href="index.html#why">About Us</a></li>
           <li><a href="index.html#process">Our Process</a></li>
           <li><a href="index.html#reviews">Reviews</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -636,7 +728,7 @@
         </div>
         <div class="f-contact-row">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <span>LB.exteriorservicing@gmail.com</span>
+          <span>LB.exteriorservicing&#64;gmail.com</span>
         </div>
         <div class="f-contact-row">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -646,12 +738,12 @@
     </div>
     <div class="footer-bottom">
       <span class="f-copy">&copy; 2026 L&amp;B Exterior Cleaning. All rights reserved.</span>
-      <span class="f-copy"><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms</a></span>
+      <span class="f-copy"><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="privacy-policy.html">Terms</a></span>
     </div>
   </div>
 </footer>
 
-<!-- ── QUOTE MODAL ── -->
+<!-- QUOTE MODAL -->
 <div class="modal-overlay" id="modalOverlay"></div>
 <div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
@@ -670,21 +762,39 @@
       </div>
     </div>
     <div class="form-field">
-      <label for="qAddress">Property Address</label>
-      <input type="text" id="qAddress" name="address" placeholder="123 Beach Rd, Mornington" required>
+      <label for="qEmail">Email Address *</label>
+      <input type="email" id="qEmail" name="email" placeholder="jane@example.com" required>
+    </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="qAddress">Street Address</label>
+        <input type="text" id="qAddress" name="address" placeholder="123 Beach Rd">
+      </div>
+      <div class="form-field">
+        <label for="qSuburb">Suburb *</label>
+        <input type="text" id="qSuburb" name="suburb" placeholder="Mornington" required>
+      </div>
     </div>
     <div class="form-field">
       <label for="qDesc">What are you looking for?</label>
-      <textarea id="qDesc" name="description" placeholder="e.g. Gutter clean + solar panels, 2-storey home..." required></textarea>
+      <textarea id="qDesc" name="description" placeholder="e.g. Weekly house clean, 3 bed 2 bath in Mornington..."></textarea>
     </div>
     <button type="submit" class="form-submit">Send Quote Request</button>
     <p class="form-note">No commitment required &nbsp;·&nbsp; We'll contact you to confirm details</p>
   </form>
   <div class="form-success" id="formSuccess">
-    <div class="form-success-icon">✓</div>
+    <div class="form-success-icon">&#10003;</div>
     <h3>Request Sent!</h3>
     <p>Thanks — Ben or Lilli will be in touch shortly.<br>Or call us directly on <strong>0406 580 520</strong>.</p>
   </div>
+</div>
+
+<!-- STICKY CALL BAR -->
+<div class="sticky-call">
+  <a href="tel:+61406580520">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    Call Now — 0406 580 520
+  </a>
 </div>
 
 <script>
@@ -718,23 +828,23 @@
   closeBtn.addEventListener('click',closeModal);
   overlay.addEventListener('click',closeModal);
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-  document.getElementById('quoteForm').addEventListener('submit',async function(e){
+  document.getElementById('quoteForm').addEventListener('submit',function(e){
     e.preventDefault();
     const n=document.getElementById('qName').value.trim();
     const p=document.getElementById('qPhone').value.trim();
+    const em=document.getElementById('qEmail').value.trim();
     const a=document.getElementById('qAddress').value.trim();
+    const s=document.getElementById('qSuburb').value.trim();
     const d=document.getElementById('qDesc').value.trim();
-    if(!n||!p||!a){alert('Please fill in your name, phone and address.');return;}
-    const btn=this.querySelector('button[type=submit]');
-    btn.disabled=true;btn.textContent='Sending…';
-    const payload={name:n,phone:p,address:a,message:d};
-    try{await Promise.all([
-      fetch('https://formspree.io/f/mgopelja',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)}),
-      fetch('https://lb-intelligence.vercel.app/api/lead-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{})
-    ]);}catch(err){}
-    this.style.display='none';
-    document.getElementById('formSuccess').style.display='block';
-    if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17970733561/t-6kCLT2m5kcEPnDjvlC','value':1.0,'currency':'AUD'});}
+    if(!n||!p||!em||!s){alert('Please fill in all required fields (name, phone, email and suburb).');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){alert('Please enter a valid email address.');return;}
+    const btn=document.querySelector('#quoteForm button[type=submit]');
+    btn.disabled=true;btn.textContent='Sending\u2026';
+    fetch('https://formspree.io/f/mgopelja',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:n,phone:p,email:em,address:a,suburb:s,message:d,_subject:'Quote Request \u2014 L&B Interior Cleaning'})})
+    .then(function(r){
+      if(r.ok){document.getElementById('quoteForm').style.display='none';document.getElementById('formSuccess').style.display='block';if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17970733561/t-6kCLT2m5kcEPnDjvlC','value':1.0,'currency':'AUD'});}}
+      else{btn.disabled=false;btn.textContent='Send Quote Request';alert('Something went wrong. Please try again or call us on 0406 580 520.');}
+    }).catch(function(){btn.disabled=false;btn.textContent='Send Quote Request';alert('Something went wrong. Please try again or call us on 0406 580 520.');});
   });
 </script>
 <!-- Step 2: L&B Conversion Tracking -->
