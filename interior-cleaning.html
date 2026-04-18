@@ -334,7 +334,7 @@
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YQJ3XQ829"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');gtag('config','GT-5N5F66XZ');</script>
 </head>
 <body>
 
@@ -842,7 +842,7 @@
     btn.disabled=true;btn.textContent='Sending\u2026';
     fetch('https://formspree.io/f/mgopelja',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:n,phone:p,email:em,address:a,suburb:s,message:d,_subject:'Quote Request \u2014 L&B Interior Cleaning'})})
     .then(function(r){
-      if(r.ok){document.getElementById('quoteForm').style.display='none';document.getElementById('formSuccess').style.display='block';if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17970733561/t-6kCLT2m5kcEPnDjvlC','value':1.0,'currency':'AUD'});}}
+      if(r.ok){document.getElementById('quoteForm').style.display='none';document.getElementById('formSuccess').style.display='block';if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-17970733561/t-6kCLT2m5kcEPnDjvlC','value':1.0,'currency':'AUD'});gtag('event','conversion',{'send_to':'AW-17970733561/pqr_CKa8lp4cEPnDjvlC'});}}
       else{btn.disabled=false;btn.textContent='Send Quote Request';alert('Something went wrong. Please try again or call us on 0406 580 520.');}
     }).catch(function(){btn.disabled=false;btn.textContent='Send Quote Request';alert('Something went wrong. Please try again or call us on 0406 580 520.');});
   });
