@@ -356,6 +356,25 @@
     /* btn-form trigger */
     .btn-form{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.2);font-weight:500}
     .btn-form:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35);transform:translateY(-1px)}
+    /* ── Photo Strip ── */
+    .photo-strip-wrap{padding:56px 0 60px;background:#fff;border-bottom:1px solid var(--border)}
+    .photo-strip-hdr{text-align:center;margin-bottom:28px}
+    .photo-strip-hdr .eyebrow{display:inline-block}
+    .photo-strip-hdr h3{font-family:var(--font-body);font-size:1.2rem;font-weight:700;color:var(--navy);margin-top:6px;letter-spacing:-.015em}
+    .photo-strip{display:flex;gap:10px;overflow-x:auto;padding:0 40px 10px;scrollbar-width:thin;scrollbar-color:var(--border) transparent;-webkit-overflow-scrolling:touch}
+    .photo-strip::-webkit-scrollbar{height:3px}
+    .photo-strip::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+    .photo-strip img{height:220px;min-width:290px;width:auto;object-fit:cover;border-radius:12px;flex-shrink:0;display:block}
+    /* ── Sticky mobile CTA ── */
+    #stickyCta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;border-top:1px solid var(--border);padding:12px 20px 16px;box-shadow:0 -4px 20px rgba(0,0,0,.1);transform:translateY(100%);transition:transform .3s ease}
+    #stickyCta.up{transform:none}
+    #stickyCta-btn{flex:1;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:.85rem;font-weight:700;border:none;border-radius:10px;padding:13px;cursor:pointer;text-align:center}
+    @media(max-width:768px){
+      #stickyCta{display:flex;align-items:center;gap:12px}
+      .photo-strip{padding:0 20px 10px}
+      .photo-strip img{height:180px;min-width:240px}
+      #promoFloat{bottom:82px}
+    }
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
@@ -410,11 +429,6 @@
     <div class="nav-logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#427AA1;margin-top:4px">Mornington Peninsula</div>
   </div>
   <a href="#services" class="ml">Services</a>
-  <a href="gutter-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Gutter Cleaning</a>
-  <a href="solar-panel-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Solar Panel Cleaning</a>
-  <a href="window-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Window Cleaning</a>
-  <a href="pressure-washing.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Pressure Washing</a>
-  <a href="facade-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Façade Cleaning</a>
   <a href="#process" class="ml">Our Process</a>
   <a href="#why" class="ml">About Us</a>
   <a href="#reviews" class="ml">Reviews</a>
@@ -496,6 +510,24 @@
       <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
       <span>Peninsula Locals</span>
     </div>
+  </div>
+</div>
+
+<!-- ── PHOTO STRIP ── -->
+<div class="photo-strip-wrap">
+  <div class="photo-strip-hdr">
+    <span class="eyebrow">Our Work</span>
+    <h3>Real Results on the Mornington Peninsula</h3>
+  </div>
+  <div class="photo-strip">
+    <img src="photos%202/Facade%20Clean.jpeg" alt="Facade after cleaning" loading="lazy">
+    <img src="photos%202/Decking%20Contrast.jpeg" alt="Decking before and after" loading="lazy">
+    <img src="photos%202/Rye%20Windows.jpeg" alt="Window cleaning result Rye" loading="lazy">
+    <img src="photos%202/Laser%20Lite%2C%20Clean.jpeg" alt="Laser Lite roof clean" loading="lazy">
+    <img src="photos%202/Facade%20Wash%20and%20Pressure%20Wash.jpeg" alt="Facade and pressure wash" loading="lazy">
+    <img src="photos%202/Empty%20Gutter.jpeg" alt="Clean gutters after service" loading="lazy">
+    <img src="photos%202/IMG_1818.jpeg" alt="Exterior cleaning result" loading="lazy">
+    <img src="photos%202/IMG_8494%20(3).jpeg" alt="Exterior cleaning result" loading="lazy">
   </div>
 </div>
 
@@ -987,6 +1019,16 @@ function gtag_report_conversion(url) {
     if (type === 'phone_call') gtagConversion('O61BCMO5nZkcEPnDjvlC', 1.0);
     if (type === 'form_submission' || type === 'quote_request' || type === 'booking') gtagConversion('G0fCCLHFnZkcEPnDjvlC', 1.0);
   };
+})();
+</script>
+<!-- ── Sticky Mobile CTA ── -->
+<div id="stickyCta">
+  <button id="stickyCta-btn" onclick="openModal()">Get a Free Quote</button>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('stickyCta');
+  window.addEventListener('scroll',function(){bar.classList.toggle('up',window.scrollY>300);},{ passive:true });
 })();
 </script>
 <!-- ── Promo Float Button ── -->
