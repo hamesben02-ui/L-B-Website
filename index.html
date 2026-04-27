@@ -989,6 +989,11 @@ function gtag_report_conversion(url) {
   };
 })();
 </script>
+<!-- ── Promo Float Button ── -->
+<button id="promoFloat" title="Claim 20% off your first clean" style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#0EA5E9;color:#fff;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none;border-radius:99px;padding:11px 18px 11px 14px;cursor:pointer;box-shadow:0 6px 24px rgba(14,165,233,.45);display:flex;align-items:center;gap:8px;transition:background .2s,transform .2s,box-shadow .2s">
+  <span style="background:rgba(255,255,255,.22);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0">%</span>
+  <span>20% Off — Claim Offer</span>
+</button>
 <!-- ── Promo Popup ── -->
 <div id="promoOverlay" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:9999;opacity:0;transition:opacity .35s ease;align-items:center;justify-content:center">
   <div id="promoCard" style="background:#fff;border-radius:16px;padding:40px 36px 32px;max-width:440px;width:calc(100% - 32px);text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.22);position:relative">
@@ -1027,6 +1032,10 @@ function gtag_report_conversion(url) {
   cta.addEventListener('mouseout',function(){this.style.background='#0EA5E9';this.style.transform='none';});
   dismiss.addEventListener('mouseover',function(){this.style.color='#475569';});
   dismiss.addEventListener('mouseout',function(){this.style.color='#94A3B8';});
+  var floatBtn=document.getElementById('promoFloat');
+  floatBtn.addEventListener('click',function(){overlay.style.display='flex';requestAnimationFrame(function(){requestAnimationFrame(function(){overlay.style.opacity='1';})});document.body.style.overflow='hidden';});
+  floatBtn.addEventListener('mouseover',function(){this.style.background='#0284C7';this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(14,165,233,.55)';});
+  floatBtn.addEventListener('mouseout',function(){this.style.background='#0EA5E9';this.style.transform='none';this.style.boxShadow='0 6px 24px rgba(14,165,233,.45)';});
 })();
 </script>
 </body>
