@@ -989,5 +989,45 @@ function gtag_report_conversion(url) {
   };
 })();
 </script>
+<!-- ── Promo Popup ── -->
+<div id="promoOverlay" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:9999;opacity:0;transition:opacity .35s ease;align-items:center;justify-content:center">
+  <div id="promoCard" style="background:#fff;border-radius:16px;padding:40px 36px 32px;max-width:440px;width:calc(100% - 32px);text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.22);position:relative">
+    <!-- Badge -->
+    <div style="display:inline-block;background:#EFF6FF;color:#1D4ED8;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:18px">Limited Autumn Offer</div>
+    <!-- Headline -->
+    <h2 style="font-family:'Inter',sans-serif;font-size:1.45rem;font-weight:800;line-height:1.18;letter-spacing:-.025em;color:#0F172A;margin-bottom:10px">Claim Your 20% First Clean Discount</h2>
+    <!-- Subheadline -->
+    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#475569;margin-bottom:22px;line-height:1.55">Plus a FREE Roof Health Check — <strong style="color:#0F172A">Limited Autumn Slots</strong></p>
+    <!-- Bullets -->
+    <ul style="list-style:none;padding:0;margin:0 0 26px;text-align:left;display:inline-block">
+      <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> 20% off your first clean</li>
+      <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> Free roof health check included</li>
+      <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> 30-day blockage guarantee</li>
+    </ul>
+    <!-- CTA -->
+    <button id="promoCta" style="display:block;width:100%;background:#0EA5E9;color:#fff;font-family:'Inter',sans-serif;font-size:.92rem;font-weight:700;letter-spacing:.04em;padding:15px 24px;border-radius:10px;border:none;cursor:pointer;margin-bottom:14px;transition:background .2s,transform .2s">Get My Free Quote</button>
+    <!-- Dismiss -->
+    <a id="promoDismiss" href="#" style="font-family:'Inter',sans-serif;font-size:.75rem;color:#94A3B8;text-decoration:none;display:block;transition:color .2s">No thanks, I'll pay full price</a>
+  </div>
+</div>
+<script>
+(function(){
+  if(sessionStorage.getItem('lb_promo_seen'))return;
+  var overlay=document.getElementById('promoOverlay');
+  var cta=document.getElementById('promoCta');
+  var dismiss=document.getElementById('promoDismiss');
+  function closePromo(){overlay.style.opacity='0';setTimeout(function(){overlay.style.display='none';document.body.style.overflow=''},350);}
+  function showPromo(){overlay.style.display='flex';requestAnimationFrame(function(){requestAnimationFrame(function(){overlay.style.opacity='1';})});document.body.style.overflow='hidden';sessionStorage.setItem('lb_promo_seen','1');}
+  setTimeout(showPromo,500);
+  cta.addEventListener('click',function(){closePromo();if(typeof openModal==='function'){openModal();}});
+  dismiss.addEventListener('click',function(e){e.preventDefault();closePromo();});
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closePromo();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.style.display==='flex')closePromo();});
+  cta.addEventListener('mouseover',function(){this.style.background='#0284C7';this.style.transform='translateY(-1px)';});
+  cta.addEventListener('mouseout',function(){this.style.background='#0EA5E9';this.style.transform='none';});
+  dismiss.addEventListener('mouseover',function(){this.style.color='#475569';});
+  dismiss.addEventListener('mouseout',function(){this.style.color='#94A3B8';});
+})();
+</script>
 </body>
 </html>
