@@ -298,7 +298,12 @@
     .ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.22)}
     .ba-tag{position:absolute;bottom:14px;padding:4px 10px;background:rgba(6,71,137,.7);color:#fff;border-radius:100px;font-family:var(--font-body);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;z-index:5;pointer-events:none}
     .ba-tag-b{left:14px}.ba-tag-a{right:14px}
-  </style>
+  
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(66,122,161,.13);border:1px solid rgba(66,122,161,.32);border-radius:100px;padding:6px 16px 6px 8px;margin-bottom:20px}
+    .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:badgePulse 2.5s ease infinite}
+    .badge-text{font-family:var(--font-body);font-size:.67rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+    @keyframes badgePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+    </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');</script>
