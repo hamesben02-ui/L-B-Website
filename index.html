@@ -333,7 +333,7 @@
     /* ── QUOTE MODAL ── */
     .modal-overlay{position:fixed;inset:0;background:rgba(6,71,137,.55);backdrop-filter:blur(4px);z-index:500;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
     .modal-overlay.open{opacity:1;pointer-events:auto}
-    .modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);z-index:501;background:#fff;border-radius:20px;padding:48px 44px;width:min(560px,calc(100vw - 32px));box-shadow:0 32px 80px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+    .modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);z-index:501;background:#fff;border-radius:20px;padding:48px 44px;width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 48px);overflow-y:auto;box-shadow:0 32px 80px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
     .modal.open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
     .modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.1rem;transition:all .2s}
     .modal-close:hover{background:var(--off);color:var(--navy)}
