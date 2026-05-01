@@ -935,12 +935,18 @@
       </div>
     </div>
     <div class="form-field">
-      <label for="qAddress">Property Address</label>
-      <input type="text" id="qAddress" name="address" placeholder="123 Beach Rd, Mornington" required>
+      <label for="qAddress">Suburb</label>
+      <input type="text" id="qAddress" name="suburb" placeholder="e.g. Mornington, Frankston, Mount Eliza" required>
     </div>
     <div class="form-field">
-      <label for="qDesc">What are you looking for?</label>
-      <textarea id="qDesc" name="description" placeholder="e.g. Gutter clean + solar panels, 2-storey home..." required></textarea>
+      <label>Services Needed</label>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:4px" id="qServicesGroup">
+        <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Gutter Cleaning" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Gutter Cleaning</label>
+        <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Window Cleaning" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Window Cleaning</label>
+        <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Pressure Washing" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Pressure Washing</label>
+        <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Roof Cleaning" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Roof Cleaning</label>
+        <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Other" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Other</label>
+      </div>
     </div>
     <button type="submit" class="form-submit">Send Quote Request</button>
     <p class="form-note">No commitment required &nbsp;·&nbsp; We'll contact you to confirm details</p>
@@ -1002,8 +1008,8 @@
     const n=document.getElementById('qName').value.trim();
     const p=document.getElementById('qPhone').value.trim();
     const a=document.getElementById('qAddress').value.trim();
-    const d=document.getElementById('qDesc').value.trim();
-    if(!n||!p||!a){alert('Please fill in your name, phone and address.');return;}
+    const d=Array.from(document.querySelectorAll('#qServicesGroup input[type=checkbox]:checked')).map(c=>c.value).join(', ');
+    if(!n||!p||!a){alert('Please fill in your name, phone and suburb.');return;}
     const btn=this.querySelector('button[type=submit]');
     btn.disabled=true; btn.textContent='Sending…';
     // Fire conversion immediately — before any async work so the hit is never lost.
@@ -1014,7 +1020,7 @@
       gtag('event','conversion',{'send_to':'AW-17970733561/t-6kCLT2m5kcEPnDjvlC','value':300,'currency':'AUD'});
       gtag('event','conversion',{'send_to':'AW-17970733561/pqr_CKa8lp4cEPnDjvlC','value':300,'currency':'AUD'});
     }
-    const payload={name:n,phone:p,address:a,message:d,source:'quote_modal'};
+    const payload={name:n,phone:p,suburb:a,services:d,source:'quote_modal'};
     try {
       await Promise.all([
         fetch('https://formspree.io/f/mgopelja',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)}),
