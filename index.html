@@ -947,8 +947,9 @@
         <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Roof Cleaning" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Roof Cleaning</label>
         <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Solar Panel Cleaning" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Solar Panel Cleaning</label>
         <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Façade Cleaning" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Façade Cleaning</label>
-        <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Other" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Other</label>
+        <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Other" id="cbOther" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Other</label>
       </div>
+      <input type="text" id="qOtherDesc" placeholder="Please describe what you need…" style="display:none;margin-top:10px;width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);background:#fff;outline:none;transition:border-color .2s,box-shadow .2s">
     </div>
     <button type="submit" class="form-submit">Send Quote Request</button>
     <p class="form-note">No commitment required &nbsp;·&nbsp; We'll contact you to confirm details</p>
@@ -1005,12 +1006,18 @@
   closeBtn.addEventListener('click',closeModal);
   overlay.addEventListener('click',closeModal);
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+  document.getElementById('cbOther').addEventListener('change',function(){
+    const f=document.getElementById('qOtherDesc');
+    f.style.display=this.checked?'block':'none';
+    if(this.checked)f.focus();else f.value='';
+  });
   document.getElementById('quoteForm').addEventListener('submit', async function(e){
     e.preventDefault();
     const n=document.getElementById('qName').value.trim();
     const p=document.getElementById('qPhone').value.trim();
     const a=document.getElementById('qAddress').value.trim();
-    const d=Array.from(document.querySelectorAll('#qServicesGroup input[type=checkbox]:checked')).map(c=>c.value).join(', ');
+    const otherDesc=document.getElementById('qOtherDesc').value.trim();
+    const d=Array.from(document.querySelectorAll('#qServicesGroup input[type=checkbox]:checked')).map(c=>c.value==='Other'&&otherDesc?'Other: '+otherDesc:c.value).join(', ');
     if(!n||!p||!a){alert('Please fill in your name, phone and suburb.');return;}
     const btn=this.querySelector('button[type=submit]');
     btn.disabled=true; btn.textContent='Sending…';
