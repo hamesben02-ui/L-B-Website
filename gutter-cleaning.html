@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"/>
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css"/>
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
@@ -44,7 +47,7 @@
 
     /* ── Buttons ── */
     .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:.88rem;font-weight:600;padding:13px 26px;border-radius:var(--r);border:none;cursor:pointer;transition:all .22s var(--ease)}
-    .btn svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
+    .btn i{font-size:16px;line-height:1;flex-shrink:0}
     .btn-blue{background:var(--accent);color:#fff}
     .btn-blue:hover{background:var(--accent-dk);transform:translateY(-1px);box-shadow:0 8px 24px rgba(14,165,233,.32)}
     .btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.5)}
@@ -76,7 +79,7 @@
     .nav-dropdown-wrap{position:relative;display:flex;align-items:center;height:100%}
     .nav-dropdown-wrap>a{display:flex;align-items:center;gap:5px;height:100%;padding:0 9px;font-family:var(--font-body);font-size:.65rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
     .nav-dropdown-wrap>a:hover{color:#111;background:#E0F2FE}
-    .nav-dropdown-wrap>a .chev{width:9px;height:9px;fill:#888;transition:transform .2s;flex-shrink:0}
+    .nav-dropdown-wrap>a .chev{font-size:10px;color:#888;transition:transform .2s;flex-shrink:0;line-height:1}
     .nav-dropdown-wrap:hover>a .chev{transform:rotate(180deg)}
     .nav-dropdown{position:absolute;top:100%;left:0;min-width:215px;background:#fff;border:1px solid #e0e0e0;border-top:2px solid var(--accent);z-index:200;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s var(--ease),transform .18s var(--ease);box-shadow:0 8px 24px rgba(0,0,0,.08)}
     .nav-dropdown-wrap:hover .nav-dropdown{opacity:1;pointer-events:auto;transform:none}
@@ -104,7 +107,7 @@
     .sticky-btn-primary:hover{background:var(--accent-dk)}
     .sticky-btn-call{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);color:#fff;border-radius:10px;padding:11px 20px;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer;transition:background .2s;white-space:nowrap}
     .sticky-btn-call:hover{background:rgba(255,255,255,.14)}
-    .sticky-btn-call svg,.sticky-btn-primary svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
+    .sticky-btn-call i,.sticky-btn-primary i{font-size:13px;flex-shrink:0;line-height:1}
     @media(max-width:640px){.sticky-cta-left{display:none}.sticky-cta{justify-content:center}}
 
     /* ── URGENCY HERO ── */
@@ -125,11 +128,11 @@
     .hero-divider{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:2px;margin-bottom:28px}
     .hero-trust-row{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
     .hero-trust-item{display:flex;align-items:center;gap:11px;font-size:.875rem;color:rgba(255,255,255,.72);font-weight:500}
-    .hero-trust-item svg{width:15px;height:15px;fill:var(--accent);flex-shrink:0}
+    .hero-trust-item i{font-size:15px;color:var(--accent);flex-shrink:0;line-height:1}
     .hero-phone-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
     .hero-phone-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:12px 22px;font-size:.88rem;font-weight:600;color:rgba(255,255,255,.85);transition:all .22s var(--ease)}
     .hero-phone-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff}
-    .hero-phone-btn svg{width:14px;height:14px;fill:var(--accent);flex-shrink:0}
+    .hero-phone-btn i{font-size:14px;color:var(--accent);flex-shrink:0;line-height:1}
     .hero-phone-sep{font-size:.75rem;color:rgba(255,255,255,.2)}
 
     /* BA slider in hero */
@@ -157,7 +160,7 @@
     .hfc-includes-title{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0369A1;margin-bottom:10px}
     .hfc-include-item{display:flex;align-items:center;gap:9px;font-size:.82rem;color:var(--navy);margin-bottom:7px;font-weight:500}
     .hfc-include-item:last-child{margin-bottom:0}
-    .hfc-include-item svg{width:13px;height:13px;fill:#0EA5E9;flex-shrink:0}
+    .hfc-include-item i{font-size:13px;color:#0EA5E9;flex-shrink:0;line-height:1}
     .hf-field{display:flex;flex-direction:column;gap:5px;margin-bottom:11px}
     .hf-field label{font-size:.58rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#475569}
     .hf-field input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--font-body);font-size:.9rem;color:var(--navy);background:#fff;transition:border-color .2s,box-shadow .2s;outline:none}
@@ -175,7 +178,7 @@
     .trust-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .trust-item{display:flex;align-items:center;gap:12px;flex:1;min-width:200px}
     .trust-icon{width:38px;height:38px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .trust-icon svg{width:18px;height:18px;fill:var(--accent)}
+    .trust-icon i{font-size:18px;color:var(--accent)}
     .trust-label{font-size:.8rem;font-weight:700;color:#fff}
     .trust-sub{font-size:.7rem;color:rgba(255,255,255,.4)}
 
@@ -193,7 +196,7 @@
     .review-card::before{content:'\\201C';position:absolute;top:16px;right:22px;font-size:5rem;font-weight:800;color:rgba(14,165,233,.08);line-height:1;pointer-events:none;font-family:Georgia,serif}
     .review-card:hover{box-shadow:0 16px 48px rgba(15,28,46,.1);transform:translateY(-4px);background:#fff}
     .review-stars{display:flex;gap:3px;margin-bottom:16px}
-    .review-stars svg{width:15px;height:15px;fill:#FBBF24}
+    .review-stars i{font-size:15px;color:#FBBF24;line-height:1}
     .review-text{font-size:.9rem;color:#374151;line-height:1.8;flex:1;margin-bottom:20px}
     .review-text em{font-style:normal;font-weight:700;color:var(--navy)}
     .review-author{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--border)}
@@ -224,7 +227,7 @@
     .damage-vs-good .dvg-cost{font-family:var(--font-display);font-size:3rem;font-weight:800;color:#34D399;margin-bottom:6px;letter-spacing:-.03em;line-height:1}
     .damage-vs-good .dvg-name{font-size:.85rem;color:rgba(255,255,255,.45)}
     .damage-vs-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 36px;flex-shrink:0}
-    .damage-vs-arrow svg{width:28px;height:28px;fill:rgba(255,255,255,.2)}
+    .damage-vs-arrow i{font-size:28px;color:rgba(255,255,255,.2);line-height:1}
     .damage-vs-arrow span{font-size:.6rem;color:rgba(255,255,255,.25);margin-top:8px;text-transform:uppercase;letter-spacing:.1em}
 
     /* ── GUARANTEE ── */
@@ -269,8 +272,8 @@
     .faq-item{background:var(--off);border-radius:14px;border:1px solid var(--border);overflow:hidden;transition:border-color .2s}
     .faq-item.open{border-color:rgba(14,165,233,.35)}
     .faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;font-size:.95rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;text-align:left;gap:16px}
-    .faq-question svg{width:20px;height:20px;stroke:var(--muted);flex-shrink:0;transition:transform .3s,stroke .2s}
-    .faq-item.open .faq-question svg{transform:rotate(45deg);stroke:var(--accent)}
+    .faq-question i{font-size:16px;color:var(--muted);flex-shrink:0;transition:transform .3s,color .2s;line-height:1}
+    .faq-item.open .faq-question i{transform:rotate(45deg);color:var(--accent)}
     .faq-item.open .faq-question{color:var(--accent)}
     .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
     .faq-item.open .faq-answer{max-height:300px}
@@ -286,7 +289,8 @@
     .other-svc-card:hover .other-svc-desc{color:rgba(255,255,255,.55)}
     .other-svc-card:hover .other-svc-link{color:var(--accent)}
     .other-svc-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-lt);border:1px solid rgba(66,122,161,.2);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-    .other-svc-icon svg{width:20px;height:20px;fill:var(--blue)}
+    .other-svc-icon i{font-size:20px;color:var(--blue);line-height:1}
+    .other-svc-card:hover .other-svc-icon i{color:var(--accent)}
     .other-svc-name{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px;transition:color .3s}
     .other-svc-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:12px;transition:color .3s}
     .other-svc-link{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);transition:color .3s}
@@ -310,14 +314,14 @@
     .f-social{display:flex;gap:8px}
     .fsoc{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .2s}
     .fsoc:hover{background:var(--accent);border-color:var(--accent)}
-    .fsoc svg{width:15px;height:15px;fill:rgba(255,255,255,.4)}
-    .fsoc:hover svg{fill:#fff}
+    .fsoc i{font-size:15px;color:rgba(255,255,255,.4)}
+    .fsoc:hover i{color:#fff}
     .f-col-title{font-family:var(--font-body);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:18px}
     .f-links{list-style:none;display:flex;flex-direction:column;gap:11px}
     .f-links a{font-size:.84rem;color:rgba(255,255,255,.35);transition:color .2s}
     .f-links a:hover{color:#fff}
     .f-contact-row{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px}
-    .f-contact-row svg{width:13px;height:13px;fill:var(--accent);flex-shrink:0;margin-top:3px}
+    .f-contact-row i{font-size:13px;color:var(--accent);flex-shrink:0;margin-top:3px;line-height:1}
     .f-contact-row span{font-size:.83rem;color:rgba(255,255,255,.35);line-height:1.55}
     .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;gap:16px;flex-wrap:wrap}
     .f-copy{font-family:var(--font-body);font-size:.63rem;letter-spacing:.04em;color:rgba(255,255,255,.2)}
@@ -391,6 +395,102 @@
     .form-success h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:8px}
     .form-success p{font-size:.88rem;color:var(--muted)}
     @media(max-width:500px){.form-row{grid-template-columns:1fr}.modal{padding:32px 24px}}
+
+    /* ── INVERTED COLOUR PREVIEW (local only — not deployed) ── */
+    /* Announce bar */
+    .announce{background:#0F1C2E}
+    /* Nav → dark */
+    .nav{background:rgba(15,28,46,.97);border-bottom-color:rgba(255,255,255,.08)}
+    .nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.35);border-bottom-color:transparent}
+    .nav-left>a,.nav-dropdown-wrap>a{color:rgba(255,255,255,.65)}
+    .nav-left>a:hover,.nav-dropdown-wrap>a:hover{color:#fff;background:rgba(255,255,255,.06)}
+    .nav-logo-mark{color:#fff}
+    .nav-logo-rule{background:linear-gradient(90deg,transparent,rgba(14,165,233,.5),transparent)}
+    .nav-logo-sub{color:var(--accent)}
+    .nav-phone{color:rgba(255,255,255,.45)}
+    .nav-phone:hover{color:#fff}
+    .nav-dropdown{background:#0F1C2E;border-color:#1E3A5F;border-top-color:var(--accent)}
+    .nav-dropdown a{color:rgba(255,255,255,.65);border-bottom-color:rgba(255,255,255,.06)}
+    .nav-dropdown a:hover{color:var(--accent);background:rgba(255,255,255,.05)}
+    .hamburger span{background:#fff}
+    @media(max-width:768px){.mobile-nav{background:#0F1C2E}.mobile-nav a{color:rgba(255,255,255,.65);border-bottom-color:rgba(255,255,255,.06)}.mobile-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}.mobile-nav-logo{border-bottom-color:rgba(255,255,255,.08)}.nav{background:rgba(15,28,46,.97)}}
+    /* Hero → light */
+    .hero{background:#F8FAFC}
+    .hero-bg{background:radial-gradient(ellipse 70% 90% at -5% 60%,rgba(14,165,233,.07) 0%,transparent 50%),radial-gradient(ellipse 60% 60% at 110% 20%,rgba(66,122,161,.05) 0%,transparent 50%),linear-gradient(160deg,#ffffff 0%,#F0F7FF 50%,#EBF5FF 100%)}
+    .hero-noise{opacity:.015}
+    .hero h1{color:#0F1C2E}
+    .hero-sub{color:rgba(15,28,46,.55)}
+    .hero-warn-text{color:#DC2626}
+    .hero-warn-badge{background:rgba(239,68,68,.07);border-color:rgba(239,68,68,.18)}
+    .hero-trust-item{color:rgba(15,28,46,.7)}
+    .hero-phone-btn{background:rgba(15,28,46,.06);border-color:rgba(15,28,46,.14);color:rgba(15,28,46,.82)}
+    .hero-phone-btn:hover{background:rgba(15,28,46,.1);border-color:rgba(15,28,46,.28);color:#0F1C2E}
+    .hero-phone-sep{color:rgba(15,28,46,.2)}
+    .hero-ba{box-shadow:0 28px 64px rgba(15,28,46,.18),0 0 0 1px rgba(15,28,46,.08)}
+    /* Trust bar → light */
+    .trust-bar{background:#EFF6FF;border-top:1px solid #BFDBFE}
+    .trust-label{color:#0F1C2E}
+    .trust-sub{color:rgba(15,28,46,.45)}
+    /* Reviews → light blue tint */
+    .reviews{background:#F0F7FF}
+    /* Damage section */
+    .damage{background:#F8FAFC}
+    .damage-card{background:#fff;border:1px solid #E2E8F0;box-shadow:0 4px 20px rgba(15,28,46,.05)}
+    .damage-card-cost{color:#DC2626}
+    .damage-card-title{color:#0F1C2E}
+    .damage-card-desc{color:rgba(15,28,46,.5)}
+    .damage-vs{background:#fff;border:1px solid #E2E8F0}
+    .damage-vs-bad .dvb-label,.damage-vs-good .dvg-label{color:rgba(15,28,46,.35)}
+    .damage-vs-bad .dvb-cost{color:#DC2626}
+    .damage-vs-bad .dvb-name,.damage-vs-good .dvg-name{color:rgba(15,28,46,.55)}
+    .damage-vs-sep{background:rgba(15,28,46,.08)}
+    .damage-vs-good .dvg-cost{color:#059669}
+    .damage-vs-arrow i{color:rgba(15,28,46,.18)}
+    .damage-vs-arrow span{color:rgba(15,28,46,.28)}
+    /* Process → light */
+    .process-svc{background:#EFF6FF}
+    .process-svc::before{background:radial-gradient(ellipse 80% 60% at 100% 0%,rgba(14,165,233,.04) 0%,transparent 55%)}
+    .process-header .section-title{color:#0F1C2E}
+    .process-header p{color:rgba(15,28,46,.5)}
+    .process-num{background:rgba(14,165,233,.07);border-color:rgba(14,165,233,.18)}
+    .process-title{color:#0F1C2E}
+    .process-desc{color:rgba(15,28,46,.5)}
+    /* Service areas */
+    .service-areas{background:#F8FAFC}
+    /* FAQ */
+    .faq{background:#EFF6FF}
+    .faq-item{background:#fff;border-color:#BFDBFE}
+    /* Other services */
+    .other-services{background:#F8FAFC}
+    /* CTA → light */
+    .cta{background:linear-gradient(160deg,#EFF6FF 0%,#DBEAFE 55%,#EFF6FF 100%)}
+    .cta::before{background:radial-gradient(ellipse 70% 70% at 50% 110%,rgba(14,165,233,.06) 0%,transparent 60%)}
+    .cta::after{background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+    .cta h2{color:#0F1C2E}
+    .cta p{color:rgba(15,28,46,.6)}
+    .cta-note{color:rgba(15,28,46,.3)}
+    /* Sticky CTA → light */
+    .sticky-cta{background:#EFF6FF;border-top:1px solid #BFDBFE;box-shadow:0 -8px 32px rgba(15,28,46,.1)}
+    .sticky-cta-label{color:rgba(15,28,46,.45)}
+    .sticky-cta-title{color:#0F1C2E}
+    .sticky-btn-call{background:rgba(15,28,46,.06);border-color:rgba(15,28,46,.14);color:#0F1C2E}
+    .sticky-btn-call:hover{background:rgba(15,28,46,.1)}
+    /* Footer → light */
+    .footer{background:#EFF6FF;border-top:1px solid #BFDBFE}
+    .footer-top{border-bottom-color:rgba(15,28,46,.08)}
+    .f-logo-name{color:#0F1C2E}
+    .f-logo-tag{color:var(--accent)}
+    .f-desc{color:rgba(15,28,46,.45)}
+    .f-col-title{color:rgba(15,28,46,.3)}
+    .f-links a{color:rgba(15,28,46,.5)}
+    .f-links a:hover{color:#0F1C2E}
+    .f-contact-row span{color:rgba(15,28,46,.5)}
+    .footer-bottom{border-top-color:rgba(15,28,46,.07)}
+    .f-copy{color:rgba(15,28,46,.28)}
+    .fsoc{background:rgba(15,28,46,.06);border-color:rgba(15,28,46,.1)}
+    .fsoc i{color:rgba(15,28,46,.35)}
+    .fsoc:hover{background:var(--accent);border-color:var(--accent)}
+    .fsoc:hover i{color:#fff}
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
@@ -411,7 +511,7 @@
 <nav class="nav" id="nav">
   <div class="nav-left">
     <div class="nav-dropdown-wrap">
-      <a href="index.html#services">Services <svg class="chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+      <a href="index.html#services">Services <i class="fi fi-rr-angle-down chev"></i></a>
       <div class="nav-dropdown">
         <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning</a>
         <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning</a>
@@ -477,35 +577,35 @@
       <div class="hero-divider"></div>
       <div class="hero-trust-row">
         <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          <i class="fi fi-rr-shield"></i>
           Fully insured — $5M public liability
         </div>
         <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          <i class="fi fi-rr-check-circle"></i>
           Downpipes cleared — full system every time, included
         </div>
         <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <i class="fi fi-sr-star"></i>
           5-star rated — 50+ local Peninsula homeowners
         </div>
       </div>
       <div class="hero-phone-row">
         <a class="hero-phone-btn" href="tel:+61406580520">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <i class="fi fi-rr-phone-call"></i>
           Call Ben: 0406 580 520
         </a>
         <span class="hero-phone-sep">or</span>
         <a class="hero-phone-btn" href="tel:+61416551923">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <i class="fi fi-rr-phone-call"></i>
           Call Lilli: 0416 551 923
         </a>
       </div>
 
       <!-- Before/After slider -->
       <div class="hero-ba">
-        <div class="ba-before" style="background-image:url('photos 2/Empty Gutter.jpeg')"></div>
-        <div class="ba-after"  style="background-image:url('components/Photos/IMG_8855.jpeg')"></div>
-        <div class="ba-div"><div class="ba-handle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#064789" stroke-width="2.2" stroke-linecap="round"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div></div>
+        <div class="ba-before" style="background-image:url('photos 2/Empty Gutter.webp')"></div>
+        <div class="ba-after"  style="background-image:url('components/Photos/IMG_8855.webp')"></div>
+        <div class="ba-div"><div class="ba-handle"><i class="fi fi-rr-arrows-h" style="font-size:18px;color:#064789;line-height:1"></i></div></div>
         <div class="ba-slider" id="heroSlider"></div>
         <span class="ba-tag ba-tag-b">Before</span>
         <span class="ba-tag ba-tag-a">After</span>
@@ -526,11 +626,11 @@
       <div class="hfc-sub">We'll call you back within the hour. No obligation — just a fast, honest price.</div>
       <div class="hfc-includes">
         <div class="hfc-includes-title">What's included in every clean</div>
-        <div class="hfc-include-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Full gutter debris removal</div>
-        <div class="hfc-include-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Every downpipe cleared &amp; tested</div>
-        <div class="hfc-include-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Condition report + before/after photos</div>
-        <div class="hfc-include-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Full site tidy-up on completion</div>
-        <div class="hfc-include-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>100% satisfaction guarantee</div>
+        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Full gutter debris removal</div>
+        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Every downpipe cleared &amp; tested</div>
+        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Condition report + before/after photos</div>
+        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Full site tidy-up on completion</div>
+        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>100% satisfaction guarantee</div>
       </div>
       <form id="heroForm" novalidate>
         <div class="hf-field">
@@ -562,10 +662,10 @@
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="container trust-bar-inner">
-    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M public liability</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div><div><div class="trust-label">Downpipes Included</div><div class="trust-sub">Full system clear, every time</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">Google &amp; local reviews</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><div class="trust-label">Satisfaction Guaranteed</div><div class="trust-sub">We're not done till you're happy</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-shield"></i></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M public liability</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-check-circle"></i></div><div><div class="trust-label">Downpipes Included</div><div class="trust-sub">Full system clear, every time</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><i class="fi fi-sr-star"></i></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">Google &amp; local reviews</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-thumbs-up"></i></div><div><div class="trust-label">Satisfaction Guaranteed</div><div class="trust-sub">We're not done till you're happy</div></div></div>
   </div>
 </div>
 
@@ -584,11 +684,11 @@
     <div class="reviews-grid">
       <div class="review-card" data-reveal data-d="1">
         <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
         </div>
         <p class="review-text">"Wonderful job done by Ben and Lilli. Looks great! Also now have <em>clean gutters, which were completely full!</em> They were friendly, punctual, very professional and will definitely use again and recommend."</p>
         <div class="review-author">
@@ -601,11 +701,11 @@
       </div>
       <div class="review-card" data-reveal data-d="2">
         <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
         </div>
         <p class="review-text">"We are so glad we hired Ben and Lilli to clean our guttering. They arrived on time, were extremely courteous and did an excellent job and left no mess. <em>Ben even discovered that we had a roof tile that had split</em> — something we never would have found otherwise."</p>
         <div class="review-author">
@@ -618,11 +718,11 @@
       </div>
       <div class="review-card" data-reveal data-d="3">
         <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
+          <i class="fi fi-sr-star"></i>
         </div>
         <p class="review-text">"Ben &amp; Lilli were a pleasure to have out to clean our gutters. Arrived on time, and worked efficiently to complete the job. <em>Also shared photos and kept me updated as they went.</em> Highly recommend."</p>
         <div class="review-author">
@@ -691,7 +791,7 @@
       </div>
       <div class="damage-vs-sep"></div>
       <div class="damage-vs-arrow">
-        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <i class="fi fi-rr-arrow-right"></i>
         <span>vs.</span>
       </div>
       <div class="damage-vs-sep"></div>
@@ -749,12 +849,12 @@
       <p>Everything you need to know before booking.</p>
     </div>
     <div class="faq-list" data-reveal data-d="1">
-      <div class="faq-item"><button class="faq-question">Do you clean downpipes as well?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes — clearing downpipes is included as part of every gutter clean. We check and clear every downpipe to ensure proper water flow from gutter to ground before we leave.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Is gutter cleaning safe for my roof?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Absolutely. We use safe, proven methods and professional equipment designed to protect your roof, gutters, and surrounding areas. We're careful around tiles, metal roofing, and fragile surfaces throughout the job.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Can you clean gutters on double-storey homes?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes. We're fully equipped to handle multi-storey properties safely and efficiently. If your property has particularly complex access, let us know when booking so we can arrive fully prepared.</p></div></div>
-      <div class="faq-item"><button class="faq-question">What do you do with the debris you remove?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>All debris is collected and properly disposed of. We clean up the surrounding area before leaving — no piles of leaves left on your lawn or paths.</p></div></div>
-      <div class="faq-item"><button class="faq-question">How often should I have my gutters cleaned?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>For most homes on the Peninsula, once a year is the minimum. If you're surrounded by trees — especially deciduous ones — twice a year (spring and autumn) is ideal. We can advise based on your specific property.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Do you offer regular maintenance plans?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-answer"><p>Yes. We can arrange scheduled gutter cleaning — annual, bi-annual, or more frequent — to keep your system in excellent condition year-round without you having to remember to book.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do you clean downpipes as well?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Yes — clearing downpipes is included as part of every gutter clean. We check and clear every downpipe to ensure proper water flow from gutter to ground before we leave.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Is gutter cleaning safe for my roof?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Absolutely. We use safe, proven methods and professional equipment designed to protect your roof, gutters, and surrounding areas. We're careful around tiles, metal roofing, and fragile surfaces throughout the job.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Can you clean gutters on double-storey homes?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Yes. We're fully equipped to handle multi-storey properties safely and efficiently. If your property has particularly complex access, let us know when booking so we can arrive fully prepared.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What do you do with the debris you remove?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>All debris is collected and properly disposed of. We clean up the surrounding area before leaving — no piles of leaves left on your lawn or paths.</p></div></div>
+      <div class="faq-item"><button class="faq-question">How often should I have my gutters cleaned?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>For most homes on the Peninsula, once a year is the minimum. If you're surrounded by trees — especially deciduous ones — twice a year (spring and autumn) is ideal. We can advise based on your specific property.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do you offer regular maintenance plans?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Yes. We can arrange scheduled gutter cleaning — annual, bi-annual, or more frequent — to keep your system in excellent condition year-round without you having to remember to book.</p></div></div>
     </div>
   </div>
 </section>
@@ -767,10 +867,10 @@
       <h2 class="section-title">Other Services</h2>
     </div>
     <div class="other-services-grid">
-      <a class="other-svc-card" href="solar-panel-cleaning.html" data-reveal data-d="1"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 110 10A5 5 0 0112 7zm0-5v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="#427AA1" stroke-width="2" stroke-linecap="round"/></svg></div><div class="other-svc-name">Solar Panel Cleaning</div><div class="other-svc-desc">Restore efficiency with safe, streak-free solar cleaning.</div><div class="other-svc-link">Learn More →</div></a>
-      <a class="other-svc-card" href="window-cleaning.html" data-reveal data-d="2"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#427AA1" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="#427AA1" stroke-width="2"/><line x1="12" y1="3" x2="12" y2="21" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Window Cleaning</div><div class="other-svc-desc">Crystal-clear results inside and out.</div><div class="other-svc-link">Learn More →</div></a>
-      <a class="other-svc-card" href="pressure-washing.html" data-reveal data-d="3"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" fill="none" stroke="#427AA1" stroke-width="2"/><path d="M9 22V12h6v10" fill="none" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Pressure Washing</div><div class="other-svc-desc">Remove years of grime from driveways and surfaces.</div><div class="other-svc-link">Learn More →</div></a>
-      <a class="other-svc-card" href="facade-cleaning.html" data-reveal data-d="4"><div class="other-svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2" fill="none" stroke="#427AA1" stroke-width="2"/><line x1="8" y1="3" x2="8" y2="21" stroke="#427AA1" stroke-width="2"/><line x1="16" y1="3" x2="16" y2="21" stroke="#427AA1" stroke-width="2"/></svg></div><div class="other-svc-name">Façade Cleaning</div><div class="other-svc-desc">Restore your building exterior with surface-safe techniques.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="solar-panel-cleaning.html" data-reveal data-d="1"><div class="other-svc-icon"><i class="fi fi-rr-solar-panel"></i></div><div class="other-svc-name">Solar Panel Cleaning</div><div class="other-svc-desc">Restore efficiency with safe, streak-free solar cleaning.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="window-cleaning.html" data-reveal data-d="2"><div class="other-svc-icon"><i class="fi fi-rr-sparkles"></i></div><div class="other-svc-name">Window Cleaning</div><div class="other-svc-desc">Crystal-clear results inside and out.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="pressure-washing.html" data-reveal data-d="3"><div class="other-svc-icon"><i class="fi fi-rr-home"></i></div><div class="other-svc-name">Pressure Washing</div><div class="other-svc-desc">Remove years of grime from driveways and surfaces.</div><div class="other-svc-link">Learn More →</div></a>
+      <a class="other-svc-card" href="facade-cleaning.html" data-reveal data-d="4"><div class="other-svc-icon"><i class="fi fi-rr-building"></i></div><div class="other-svc-name">Façade Cleaning</div><div class="other-svc-desc">Restore your building exterior with surface-safe techniques.</div><div class="other-svc-link">Learn More →</div></a>
     </div>
   </div>
 </section>
@@ -783,9 +883,9 @@
       <h2>Stop Gambling With Your Home.<br/>Book Your Clean Today.</h2>
       <p>Spots are filling fast this month. The longer you wait, the closer you get to the first heavy rain — and the first leak. Get your free quote now and lock in 20% off your first clean.</p>
       <div class="cta-actions">
-        <a class="btn btn-blue" href="tel:+61406580520"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Ben — 0406 580 520</a>
-        <a class="btn" href="tel:+61416551923" style="background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Lilli — 0416 551 923</a>
-        <a class="btn" href="#" data-quote style="flex-basis:100%;justify-content:center;background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Request a Quote</a>
+        <a class="btn btn-blue" href="tel:+61406580520"><i class="fi fi-rr-phone-call"></i>Call Ben — 0406 580 520</a>
+        <a class="btn" href="tel:+61416551923" style="background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><i class="fi fi-rr-phone-call"></i>Call Lilli — 0416 551 923</a>
+        <a class="btn" href="#" data-quote style="flex-basis:100%;justify-content:center;background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.15)"><i class="fi fi-rr-envelope"></i>Request a Quote</a>
       </div>
       <div class="cta-note">No commitment required — free estimates always</div>
     </div>
@@ -801,9 +901,9 @@
         <div class="f-logo-tag">Cleaning Co.</div>
         <p class="f-desc">Professional exterior cleaning across the Mornington Peninsula. Trusted by hundreds of homeowners and businesses for spotless results.</p>
         <div class="f-social">
-          <a class="fsoc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-          <a class="fsoc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-          <a class="fsoc" href="#" aria-label="Google"><svg viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg></a>
+          <a class="fsoc" href="#" aria-label="Facebook"><i class="fi fi-brands-facebook"></i></a>
+          <a class="fsoc" href="#" aria-label="Instagram"><i class="fi fi-brands-instagram"></i></a>
+          <a class="fsoc" href="#" aria-label="Google"><i class="fi fi-brands-google"></i></a>
         </div>
       </div>
       <div>
@@ -829,15 +929,15 @@
       <div>
         <div class="f-col-title">Contact</div>
         <div class="f-contact-row">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <i class="fi fi-rr-phone-call"></i>
           <span>Ben: 0406 580 520<br/>Lilli: 0416 551 923</span>
         </div>
         <div class="f-contact-row">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <i class="fi fi-rr-envelope"></i>
           <span>LB.exteriorservicing@gmail.com</span>
         </div>
         <div class="f-contact-row">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <i class="fi fi-rr-marker"></i>
           <span>Mornington Peninsula &amp; surrounds, VIC</span>
         </div>
       </div>
@@ -857,11 +957,11 @@
   </div>
   <div class="sticky-cta-actions">
     <a class="sticky-btn-call" href="tel:+61406580520">
-      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <i class="fi fi-rr-phone-call"></i>
       Call Now
     </a>
     <button class="sticky-btn-primary" onclick="openModal()">
-      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      <i class="fi fi-rr-envelope"></i>
       Get Free Quote
     </button>
   </div>
@@ -1040,7 +1140,6 @@ function gtag_report_conversion(url) {
     if (id.includes('quote') || id.includes('hero') || action.includes('quote')) { type = 'quote_request'; }
     else if (id.includes('book') || id.includes('appoint') || action.includes('book')) { type = 'booking'; }
     else { type = 'form_submission'; }
-    gtagConversion('G0fCCLHFnZkcEPnDjvlC', 1.0);
     track(type);
   });
   window._lbTrack = function(type, opts) {

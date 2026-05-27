@@ -521,14 +521,14 @@
     <h3>Real Results on the Mornington Peninsula</h3>
   </div>
   <div class="photo-strip">
-    <img src="photos%202/Facade%20Clean.jpeg" alt="Facade after cleaning" loading="lazy">
-    <img src="photos%202/Decking%20Contrast.jpeg" alt="Decking before and after" loading="lazy">
-    <img src="photos%202/Rye%20Windows.jpeg" alt="Window cleaning result Rye" loading="lazy">
-    <img src="photos%202/Laser%20Lite%2C%20Clean.jpeg" alt="Laser Lite roof clean" loading="lazy">
-    <img src="photos%202/Facade%20Wash%20and%20Pressure%20Wash.jpeg" alt="Facade and pressure wash" loading="lazy">
-    <img src="photos%202/Empty%20Gutter.jpeg" alt="Clean gutters after service" loading="lazy">
-    <img src="photos%202/IMG_1818.jpeg" alt="Exterior cleaning result" loading="lazy">
-    <img src="photos%202/IMG_8494%20(3).jpeg" alt="Exterior cleaning result" loading="lazy">
+    <img src="photos%202/Facade%20Clean.webp" alt="Facade after cleaning" loading="lazy">
+    <img src="photos%202/Decking%20Contrast.webp" alt="Decking before and after" loading="lazy">
+    <img src="photos%202/Rye%20Windows.webp" alt="Window cleaning result Rye" loading="lazy">
+    <img src="photos%202/Laser%20Lite%2C%20Clean.webp" alt="Laser Lite roof clean" loading="lazy">
+    <img src="photos%202/Facade%20Wash%20and%20Pressure%20Wash.webp" alt="Facade and pressure wash" loading="lazy">
+    <img src="photos%202/Empty%20Gutter.webp" alt="Clean gutters after service" loading="lazy">
+    <img src="photos%202/IMG_1818.webp" alt="Exterior cleaning result" loading="lazy">
+    <img src="photos%202/IMG_8494%20(3).webp" alt="Exterior cleaning result" loading="lazy">
   </div>
 </div>
 
@@ -1021,23 +1021,28 @@
     if(!n||!p||!a){alert('Please fill in your name, phone and suburb.');return;}
     const btn=this.querySelector('button[type=submit]');
     btn.disabled=true; btn.textContent='Sending…';
-    // Fire conversion immediately — before any async work so the hit is never lost.
-    // dataLayer.push lets the GT-5N5F66XZ container trigger the "Quote form submission" action.
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({'event':'quote_form_submit','value':300,'currency':'AUD'});
-    if(typeof gtag==='function'){
-      gtag('event','conversion',{'send_to':'AW-17970733561/t-6kCLT2m5kcEPnDjvlC','value':300,'currency':'AUD'});
-      gtag('event','conversion',{'send_to':'AW-17970733561/pqr_CKa8lp4cEPnDjvlC','value':300,'currency':'AUD'});
-    }
     const payload={name:n,phone:p,suburb:a,services:d,source:'quote_modal'};
     try {
-      await Promise.all([
+      const [formspreeRes] = await Promise.all([
         fetch('https://formspree.io/f/mgopelja',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)}),
         fetch('https://lb-intelligence.vercel.app/api/lead-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{})
       ]);
-    } catch(err){}
-    this.style.display='none';
-    document.getElementById('formSuccess').style.display='block';
+      if(formspreeRes.ok){
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({'event':'quote_form_submit','value':300,'currency':'AUD'});
+        if(typeof gtag==='function'){
+          gtag('event','conversion',{'send_to':'AW-17970733561/t-6kCLT2m5kcEPnDjvlC','value':300,'currency':'AUD'});
+          gtag('event','conversion',{'send_to':'AW-17970733561/pqr_CKa8lp4cEPnDjvlC','value':300,'currency':'AUD'});
+        }
+        this.style.display='none';
+        document.getElementById('formSuccess').style.display='block';
+      } else {
+        throw new Error('submit failed');
+      }
+    } catch(err){
+      btn.disabled=false; btn.textContent='Send Quote Request';
+      alert('Something went wrong — please try again or call us on 0406 580 520.');
+    }
   });
 </script>
 <!-- Step 2: L&B Conversion Tracking -->
@@ -1072,7 +1077,6 @@ function gtag_report_conversion(url) {
     if (id.includes('quote') || action.includes('quote')) { type = 'quote_request'; }
     else if (id.includes('book') || id.includes('appoint') || action.includes('book')) { type = 'booking'; }
     else { type = 'form_submission'; }
-    gtagConversion('G0fCCLHFnZkcEPnDjvlC', 1.0);
     track(type);
   });
   window._lbTrack = function(type, opts) {
