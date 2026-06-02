@@ -6,10 +6,6 @@
   <title>L&B Exterior Cleaning — Mornington Peninsula</title>
   <meta name="description" content="Professional exterior cleaning across the Mornington Peninsula. Gutter cleaning, solar panels, windows, pressure washing and façade cleaning." />
   <meta name="google-site-verification" content="Ka0hSPzDwLp_KVWzHDLufLmVdC0AYURbCCgXVRONe1o" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
@@ -25,8 +21,8 @@
       --body:     #2D3748;
       --muted:    #64748B;
       --dim:      #94A3B8;
-      --font-body:'Inter',sans-serif;
-      --font-mono:'IBM Plex Mono',monospace;
+      --font-body:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+      --font-mono:ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,Consolas,monospace;
       --ease:cubic-bezier(.25,.46,.45,.94);
       --ease-out:cubic-bezier(0,0,.2,1);
       --r:12px;
@@ -123,7 +119,8 @@
     .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2.5s ease infinite}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
     .badge-text{font-family:var(--font-body);font-size:.67rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
-    .hero-title{font-size:clamp(3rem,7.5vw,6.5rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:var(--navy);max-width:860px;margin-bottom:28px;animation:fadeUp .85s var(--ease) .25s both}
+    @keyframes slideIn{from{transform:translateY(16px)}to{transform:none}}
+    .hero-title{font-size:clamp(3rem,7.5vw,6.5rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:var(--navy);max-width:860px;margin-bottom:28px;animation:slideIn .5s var(--ease-out) both}
     @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
     .hero-title .blue{color:var(--blue)}
     .hero-desc{font-size:1.15rem;color:var(--muted);max-width:500px;line-height:1.8;margin-bottom:48px;animation:fadeUp .85s var(--ease) .4s both}
@@ -299,6 +296,8 @@
       .why-grid{grid-template-columns:1fr;gap:64px}
     }
     @media(max-width:768px){
+      .es{display:none}
+      .hero-bg{filter:none}
       .nav-left{display:none}
       .nav-right{display:none}
       .hamburger{display:flex}
@@ -378,9 +377,10 @@
       #promoFloat{bottom:82px}
     }
   </style>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');</script>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <!-- Google Analytics — deferred after load to not block LCP/FCP -->
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ';document.head.appendChild(s)});</script>
 </head>
 <body>
 
@@ -979,23 +979,9 @@
   );
   document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 
-  // ── Glowing card border effect ──
-  document.querySelectorAll('.sc').forEach(card => {
-    const glow = document.createElement('div');
-    glow.className = 'sc-glow';
-    card.prepend(glow);
-    let raf = 0;
-    card.addEventListener('mousemove', e => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const r = card.getBoundingClientRect();
-        const angle = Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI + 90;
-        card.style.setProperty('--glow-start', angle);
-        card.style.setProperty('--glow-active', '1');
-      });
-    });
-    card.addEventListener('mouseleave', () => card.style.setProperty('--glow-active', '0'));
-  });
+  // ── Glowing card border effect — deferred to avoid blocking LCP ──
+  function _setupGlowCards(){document.querySelectorAll('.sc').forEach(card=>{const glow=document.createElement('div');glow.className='sc-glow';card.prepend(glow);let raf=0;card.addEventListener('mousemove',e=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const r=card.getBoundingClientRect();const angle=Math.atan2(e.clientY-(r.top+r.height/2),e.clientX-(r.left+r.width/2))*180/Math.PI+90;card.style.setProperty('--glow-start',angle);card.style.setProperty('--glow-active','1');});});card.addEventListener('mouseleave',()=>card.style.setProperty('--glow-active','0'));});}
+  if('requestIdleCallback' in window)requestIdleCallback(_setupGlowCards,{timeout:2000});else setTimeout(_setupGlowCards,500);
 
   // Quote modal
   const overlay = document.getElementById('modalOverlay');
@@ -1137,7 +1123,7 @@ function gtag_report_conversion(url) {
   var dismiss=document.getElementById('promoDismiss');
   function closePromo(){overlay.style.opacity='0';setTimeout(function(){overlay.style.display='none';document.body.style.overflow=''},350);}
   function showPromo(){overlay.style.display='flex';requestAnimationFrame(function(){requestAnimationFrame(function(){overlay.style.opacity='1';})});document.body.style.overflow='hidden';sessionStorage.setItem('lb_promo_seen','1');}
-  setTimeout(showPromo,500);
+  setTimeout(showPromo,3000);
   cta.addEventListener('click',function(){closePromo();if(typeof openModal==='function'){openModal();}});
   dismiss.addEventListener('click',function(e){e.preventDefault();closePromo();});
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePromo();});
