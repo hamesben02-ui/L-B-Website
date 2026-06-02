@@ -93,9 +93,9 @@
     <div class="hero-left">
       <div class="hero-warn-badge">
         <span class="hero-warn-dot"></span>
-        <span class="hero-warn-text">May–July is peak blockage season — Peninsula gutters are filling up right now</span>
+        <span class="hero-warn-text">May–July is peak gutter cleaning season — Peninsula gutters are filling up right now</span>
       </div>
-      <h1>Most Peninsula Homeowners<br/>Find Out Their Gutters Are<br/>Blocked <em>After the Ceiling Stains</em></h1>
+      <h1>Most Peninsula Homeowners<br/>Book <em>Gutter Cleaning</em> After<br/>the Ceiling Already Stains</h1>
       <p class="hero-sub">By then the damage is already done — and repair bills start at $5,000. May–July is when Peninsula gutters block fastest. Most call us after the damage. Book now and we include a free roof condition report and a 30-day blockage guarantee.</p>
       <div class="hero-divider"></div>
       <div class="hero-trust-row">
@@ -145,8 +145,14 @@
         <div class="hfc-top-spots">⚡ Limited Winter spots</div>
       </div>
       <div class="hfc-body">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:10px 14px;background:#FFFBEB;border:1px solid #FCD34D;border-radius:10px">
+        <div style="display:flex;gap:2px;flex-shrink:0">
+          <i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i>
+        </div>
+        <span style="font-size:.75rem;font-weight:600;color:#92400E;line-height:1.3">"Arrived on time, professional, left no mess." — Vicki, Mount Eliza</span>
+      </div>
       <div class="hfc-title">Get Your Free Quote in 60 Seconds</div>
-      <div class="hfc-sub">We'll call you back within the hour. No obligation — just a fast, honest price.</div>
+      <div class="hfc-sub">We'll call you back within the hour. Fixed price before we start — no surprises.</div>
       <div class="hfc-includes">
         <div class="hfc-includes-title">The L&B Winter Protection Package</div>
         <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Full gutter clean &amp; downpipe flush</div>
@@ -169,7 +175,7 @@
           <input type="text" id="hAddress" name="address" placeholder="123 Beach Rd, Mornington" required autocomplete="street-address"/>
         </div>
         <button type="submit" class="hf-submit">Protect My Home — Get My Free Quote →</button>
-        <p class="hf-note">No commitment &nbsp;·&nbsp; Free quote &nbsp;·&nbsp; We call within the hour</p>
+        <p class="hf-note">No commitment &nbsp;·&nbsp; Fixed price quote &nbsp;·&nbsp; We call within the hour</p>
       </form>
       <div class="hf-success" id="heroSuccess">
         <div class="hf-success-icon">✓</div>
@@ -480,7 +486,7 @@
   <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
   <p class="modal-eyebrow">Free Quote</p>
   <h2 class="modal-title" id="modalTitle">Request a Quote</h2>
-  <p class="modal-sub">We'll get back to you within a few hours — usually same day.</p>
+  <p class="modal-sub">We'll call you back within the hour — fixed price before we start.</p>
   <form id="quoteForm" novalidate>
     <div class="form-row">
       <div class="form-field">
@@ -496,12 +502,8 @@
       <label for="qAddress">Property Address</label>
       <input type="text" id="qAddress" name="address" placeholder="123 Beach Rd, Mornington" required>
     </div>
-    <div class="form-field">
-      <label for="qDesc">What are you looking for?</label>
-      <textarea id="qDesc" name="description" placeholder="e.g. Gutter clean + solar panels, 2-storey home..." required></textarea>
-    </div>
-    <button type="submit" class="form-submit">Send Quote Request</button>
-    <p class="form-note">No commitment required &nbsp;·&nbsp; We'll contact you to confirm details</p>
+    <button type="submit" class="form-submit">Get My Free Quote →</button>
+    <p class="form-note">No commitment required &nbsp;·&nbsp; Fixed price before we start</p>
   </form>
   <div class="form-success" id="formSuccess">
     <div class="form-success-icon">✓</div>
@@ -589,11 +591,10 @@
     const n=document.getElementById('qName').value.trim();
     const p=document.getElementById('qPhone').value.trim();
     const a=document.getElementById('qAddress').value.trim();
-    const d=document.getElementById('qDesc').value.trim();
     if(!n||!p||!a){alert('Please fill in your name, phone and address.');return;}
     const btn=this.querySelector('button[type=submit]');
     btn.disabled=true; btn.textContent='Sending…';
-    await submitLead({name:n,phone:p,address:a,message:d});
+    await submitLead({name:n,phone:p,address:a,message:'Gutter cleaning enquiry'});
     this.style.display='none';
     document.getElementById('formSuccess').style.display='block';
   });
