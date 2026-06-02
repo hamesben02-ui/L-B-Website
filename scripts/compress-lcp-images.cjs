@@ -37,9 +37,12 @@ async function compress({ src, maxW, quality }) {
   const out  = path.join(dir, base + '.webp');
 
   const meta = await sharp(input).metadata();
-  const w    = Math.min(maxW, meta.width || maxW);
+  // .rotate() applies EXIF orientation and strips the tag — must come first
+  const correctedMeta = await sharp(input).rotate().metadata();
+  const w = Math.min(maxW, correctedMeta.width || maxW);
 
   await sharp(input)
+    .rotate()
     .resize(w, null, { withoutEnlargement: true })
     .webp({ quality, effort: 6, smartSubsample: true })
     .toFile(out);
