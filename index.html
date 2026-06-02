@@ -6,6 +6,10 @@
   <title>L&B Exterior Cleaning — Mornington Peninsula</title>
   <meta name="description" content="Professional exterior cleaning across the Mornington Peninsula. Gutter cleaning, solar panels, windows, pressure washing and façade cleaning." />
   <meta name="google-site-verification" content="Ka0hSPzDwLp_KVWzHDLufLmVdC0AYURbCCgXVRONe1o" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
@@ -21,8 +25,8 @@
       --body:     #2D3748;
       --muted:    #64748B;
       --dim:      #94A3B8;
-      --font-body:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
-      --font-mono:ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,Consolas,monospace;
+      --font-body:'Inter',sans-serif;
+      --font-mono:'IBM Plex Mono',monospace;
       --ease:cubic-bezier(.25,.46,.45,.94);
       --ease-out:cubic-bezier(0,0,.2,1);
       --r:12px;
@@ -119,8 +123,7 @@
     .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2.5s ease infinite}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
     .badge-text{font-family:var(--font-body);font-size:.67rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
-    @keyframes slideIn{from{transform:translateY(16px)}to{transform:none}}
-    .hero-title{font-size:clamp(3rem,7.5vw,6.5rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:var(--navy);max-width:860px;margin-bottom:28px;animation:slideIn .5s var(--ease-out) both}
+    .hero-title{font-size:clamp(3rem,7.5vw,6.5rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;color:var(--navy);max-width:860px;margin-bottom:28px;animation:fadeUp .85s var(--ease) .25s both}
     @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
     .hero-title .blue{color:var(--blue)}
     .hero-desc{font-size:1.15rem;color:var(--muted);max-width:500px;line-height:1.8;margin-bottom:48px;animation:fadeUp .85s var(--ease) .4s both}
@@ -296,8 +299,6 @@
       .why-grid{grid-template-columns:1fr;gap:64px}
     }
     @media(max-width:768px){
-      .es{display:none}
-      .hero-bg{filter:none}
       .nav-left{display:none}
       .nav-right{display:none}
       .hamburger{display:flex}
@@ -377,11 +378,9 @@
       #promoFloat{bottom:82px}
     }
   </style>
-  <style>.services,.metrics,.process,.why,.testimonials,.finale,.footer,.photo-strip-wrap{content-visibility:auto;contain-intrinsic-size:auto 500px}</style>
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-  <!-- Google Analytics — deferred after load to not block LCP/FCP -->
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ';document.head.appendChild(s)});</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');</script>
 </head>
 <body>
 
@@ -416,7 +415,7 @@
 
   <!-- Right: phone + CTA -->
   <div class="nav-right">
-    <a class="nav-phone" href="tel:+61416551923">0416 551 923</a>
+    <a class="nav-phone" href="tel:+61406580520">0406 580 520</a>
     <a class="nav-cta" href="#" data-quote>Get a Quote!</a>
   </div>
 
@@ -436,7 +435,7 @@
   <a href="#why" class="ml">About Us</a>
   <a href="#reviews" class="ml">Reviews</a>
   <a href="contact.html" class="ml">Contact</a>
-  <a href="tel:+61416551923" class="ml">0416 551 923</a>
+  <a href="tel:+61406580520" class="ml">0406 580 520</a>
   <a class="nav-cta" href="#" data-quote>Get a Quote!</a>
 </div>
 
@@ -523,14 +522,14 @@
     <h3>Real Results on the Mornington Peninsula</h3>
   </div>
   <div class="photo-strip">
-    <img src="photos%202/Facade%20Clean.webp?v=2" alt="Facade after cleaning" loading="lazy">
-    <img src="photos%202/Decking%20Contrast.webp?v=2" alt="Decking before and after" loading="lazy">
-    <img src="photos%202/Rye%20Windows.webp?v=2" alt="Window cleaning result Rye" loading="lazy">
-    <img src="photos%202/Laser%20Lite%2C%20Clean.webp?v=2" alt="Laser Lite roof clean" loading="lazy">
-    <img src="photos%202/Facade%20Wash%20and%20Pressure%20Wash.webp?v=2" alt="Facade and pressure wash" loading="lazy">
-    <img src="photos%202/Empty%20Gutter.webp?v=2" alt="Clean gutters after service" loading="lazy">
-    <img src="photos%202/IMG_1818.webp?v=2" alt="Exterior cleaning result" loading="lazy">
-    <img src="photos%202/IMG_8494%20(3).webp?v=2" alt="Exterior cleaning result" loading="lazy">
+    <img src="photos%202/Facade%20Clean.webp" alt="Facade after cleaning" loading="lazy">
+    <img src="photos%202/Decking%20Contrast.webp" alt="Decking before and after" loading="lazy">
+    <img src="photos%202/Rye%20Windows.webp" alt="Window cleaning result Rye" loading="lazy">
+    <img src="photos%202/Laser%20Lite%2C%20Clean.webp" alt="Laser Lite roof clean" loading="lazy">
+    <img src="photos%202/Facade%20Wash%20and%20Pressure%20Wash.webp" alt="Facade and pressure wash" loading="lazy">
+    <img src="photos%202/Empty%20Gutter.webp" alt="Clean gutters after service" loading="lazy">
+    <img src="photos%202/IMG_1818.webp" alt="Exterior cleaning result" loading="lazy">
+    <img src="photos%202/IMG_8494%20(3).webp" alt="Exterior cleaning result" loading="lazy">
   </div>
 </div>
 
@@ -560,7 +559,7 @@
       <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Berwick</span>
       <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Narre Warren</span>
     </div>
-    <p style="font-family:'Inter',sans-serif;font-size:.82rem;color:#64748B;margin:0">Not sure if we cover your area? Give us a call — <a href="tel:0416551923" style="color:#0EA5E9;font-weight:700;text-decoration:none">0416 551 923</a></p>
+    <p style="font-family:'Inter',sans-serif;font-size:.82rem;color:#64748B;margin:0">Not sure if we cover your area? Give us a call — <a href="tel:0406580520" style="color:#0EA5E9;font-weight:700;text-decoration:none">0406 580 520</a></p>
   </div>
 </section>
 
@@ -757,7 +756,7 @@
           <div class="area-divider"></div>
           <div class="area-bottom">
             <p>Covering the full Mornington Peninsula — residential &amp; commercial.</p>
-            <a class="area-btn" href="tel:+61416551923">Call Now</a>
+            <a class="area-btn" href="tel:+61406580520">Call Now</a>
           </div>
         </div>
       </div>
@@ -886,7 +885,7 @@
         <div class="f-col-title">Contact</div>
         <div class="f-contact-row">
           <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          <span>Lilli: 0416 551 923<br/>Ben: 0406 580 520</span>
+          <span>Ben: 0406 580 520<br/>Lilli: 0416 551 923</span>
         </div>
         <div class="f-contact-row">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -916,8 +915,8 @@
   <h2 class="modal-title" id="modalTitle">Request a Quote</h2>
   <p class="modal-sub">We'll get back to you within a few hours — usually same day.</p>
   <div style="background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:10px;padding:14px 20px;margin-bottom:6px;text-align:center">
-    <div style="font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:#166534;margin-bottom:6px;letter-spacing:.01em">📞 Call Lilli directly for an instant quote</div>
-    <a href="tel:0416551923" style="font-family:'Inter',sans-serif;font-size:1.35rem;font-weight:800;color:#0EA5E9;text-decoration:none;letter-spacing:.02em;display:block;margin-bottom:4px">0416 551 923</a>
+    <div style="font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:#166534;margin-bottom:6px;letter-spacing:.01em">📞 Call Ben directly for an instant quote</div>
+    <a href="tel:0406580520" style="font-family:'Inter',sans-serif;font-size:1.35rem;font-weight:800;color:#0EA5E9;text-decoration:none;letter-spacing:.02em;display:block;margin-bottom:4px">0406 580 520</a>
     <div style="font-family:'Inter',sans-serif;font-size:.74rem;color:#64748B">Most quotes given in under 2 minutes</div>
   </div>
   <div style="display:flex;align-items:center;gap:10px;margin:16px 0;color:#94A3B8;font-family:'Inter',sans-serif;font-size:.74rem">
@@ -959,7 +958,7 @@
   <div class="form-success" id="formSuccess">
     <div class="form-success-icon">✓</div>
     <h3>Request Sent!</h3>
-    <p>Thanks — Ben or Lilli will be in touch shortly.<br>Or call us directly on <strong>0416 551 923</strong>.</p>
+    <p>Thanks — Ben or Lilli will be in touch shortly.<br>Or call us directly on <strong>0406 580 520</strong>.</p>
   </div>
 </div>
 
@@ -980,9 +979,23 @@
   );
   document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 
-  // ── Glowing card border effect — deferred to avoid blocking LCP ──
-  function _setupGlowCards(){document.querySelectorAll('.sc').forEach(card=>{const glow=document.createElement('div');glow.className='sc-glow';card.prepend(glow);let raf=0;card.addEventListener('mousemove',e=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const r=card.getBoundingClientRect();const angle=Math.atan2(e.clientY-(r.top+r.height/2),e.clientX-(r.left+r.width/2))*180/Math.PI+90;card.style.setProperty('--glow-start',angle);card.style.setProperty('--glow-active','1');});});card.addEventListener('mouseleave',()=>card.style.setProperty('--glow-active','0'));});}
-  if('requestIdleCallback' in window)requestIdleCallback(_setupGlowCards,{timeout:2000});else setTimeout(_setupGlowCards,500);
+  // ── Glowing card border effect ──
+  document.querySelectorAll('.sc').forEach(card => {
+    const glow = document.createElement('div');
+    glow.className = 'sc-glow';
+    card.prepend(glow);
+    let raf = 0;
+    card.addEventListener('mousemove', e => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const r = card.getBoundingClientRect();
+        const angle = Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI + 90;
+        card.style.setProperty('--glow-start', angle);
+        card.style.setProperty('--glow-active', '1');
+      });
+    });
+    card.addEventListener('mouseleave', () => card.style.setProperty('--glow-active', '0'));
+  });
 
   // Quote modal
   const overlay = document.getElementById('modalOverlay');
@@ -1029,7 +1042,7 @@
       }
     } catch(err){
       btn.disabled=false; btn.textContent='Send Quote Request';
-      alert('Something went wrong — please try again or call Lilli on 0416 551 923.');
+      alert('Something went wrong — please try again or call us on 0406 580 520.');
     }
   });
 </script>
@@ -1108,8 +1121,8 @@ function gtag_report_conversion(url) {
     <button id="promoCta" style="display:block;width:100%;background:#0EA5E9;color:#fff;font-family:'Inter',sans-serif;font-size:.92rem;font-weight:700;letter-spacing:.04em;padding:15px 24px;border-radius:10px;border:none;cursor:pointer;margin-bottom:16px;transition:background .2s,transform .2s">Get My Free Quote</button>
     <!-- Call CTA -->
     <div style="background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:10px;padding:12px 16px;margin-bottom:16px">
-      <div style="font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;color:#166534;margin-bottom:4px">📞 Or call Lilli for an instant quote</div>
-      <a href="tel:0416551923" style="font-family:'Inter',sans-serif;font-size:1.18rem;font-weight:800;color:#0EA5E9;text-decoration:none;letter-spacing:.02em;display:block;margin-bottom:2px">0416 551 923</a>
+      <div style="font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;color:#166534;margin-bottom:4px">📞 Or call Ben for an instant quote</div>
+      <a href="tel:0406580520" style="font-family:'Inter',sans-serif;font-size:1.18rem;font-weight:800;color:#0EA5E9;text-decoration:none;letter-spacing:.02em;display:block;margin-bottom:2px">0406 580 520</a>
       <div style="font-family:'Inter',sans-serif;font-size:.7rem;color:#64748B">Most quotes given in under 2 minutes</div>
     </div>
     <!-- Dismiss -->
@@ -1124,7 +1137,7 @@ function gtag_report_conversion(url) {
   var dismiss=document.getElementById('promoDismiss');
   function closePromo(){overlay.style.opacity='0';setTimeout(function(){overlay.style.display='none';document.body.style.overflow=''},350);}
   function showPromo(){overlay.style.display='flex';requestAnimationFrame(function(){requestAnimationFrame(function(){overlay.style.opacity='1';})});document.body.style.overflow='hidden';sessionStorage.setItem('lb_promo_seen','1');}
-  setTimeout(showPromo,3000);
+  setTimeout(showPromo,500);
   cta.addEventListener('click',function(){closePromo();if(typeof openModal==='function'){openModal();}});
   dismiss.addEventListener('click',function(e){e.preventDefault();closePromo();});
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePromo();});
