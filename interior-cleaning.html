@@ -10,10 +10,6 @@
   <meta property="og:description" content="Professional interior and home cleaning on the Mornington Peninsula. Deep cleans, regular housekeeping, end-of-lease and move-in cleans. Free quotes."/>
   <meta property="og:url" content="https://www.lbexteriorcleaning.com.au/interior-cleaning.html"/>
   <meta property="og:type" content="website"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
@@ -29,9 +25,9 @@
       --body:     #2D3748;
       --muted:    #64748B;
       --dim:      #94A3B8;
-      --font-body:'Inter',sans-serif;
-      --font-mono:'IBM Plex Mono',monospace;
-      --font-display:'Inter',sans-serif;
+      --font-body:sans-serif;
+      --font-mono:monospace;
+      --font-display:sans-serif;
       --ease:cubic-bezier(.25,.46,.45,.94);
       --ease-out:cubic-bezier(0,0,.2,1);
       --r:12px;
@@ -333,9 +329,11 @@
     .sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;color:#fff;font-weight:700;font-size:1rem;text-decoration:none}
     @media(max-width:768px){.sticky-call{display:block}}
   </style>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');</script>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <!-- Google Analytics — deferred after load to not block LCP/FCP -->
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');window.addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ";document.head.appendChild(s)});</script>
+  <style>@media(max-width:768px){.nav{backdrop-filter:none!important}}.trust-bar,.overview,.process,.service-areas,.faq,.other-services,.cta,.footer{content-visibility:auto;contain-intrinsic-size:auto 500px}</style>
 </head>
 <body>
 
@@ -375,8 +373,8 @@
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-logo">
-    <div class="nav-logo-mark" style="font-family:'IBM Plex Mono',monospace;font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111">L&amp;B Exterior Cleaning</div>
-    <div class="nav-logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#427AA1;margin-top:4px">Mornington Peninsula</div>
+    <div class="nav-logo-mark" style="font-family:monospace;font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111">L&amp;B Exterior Cleaning</div>
+    <div class="nav-logo-sub" style="font-family:monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#427AA1;margin-top:4px">Mornington Peninsula</div>
   </div>
   <a href="index.html#services" class="ml">Services</a>
   <a href="gutter-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Gutter Cleaning</a>
