@@ -940,6 +940,10 @@
       <input type="text" id="qAddress" name="suburb" placeholder="e.g. Mornington, Frankston, Mount Eliza" required>
     </div>
     <div class="form-field">
+      <label for="qEmail">Email Address <span style="font-weight:400;color:var(--dim)">(optional)</span></label>
+      <input type="email" id="qEmail" name="email" placeholder="you@example.com" autocomplete="email">
+    </div>
+    <div class="form-field">
       <label>Services Needed</label>
       <div style="display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:4px" id="qServicesGroup">
         <label style="display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:400"><input type="checkbox" name="services" value="Gutter Cleaning" style="accent-color:var(--accent);width:15px;height:15px;cursor:pointer"> Gutter Cleaning</label>
@@ -1017,12 +1021,13 @@
     const n=document.getElementById('qName').value.trim();
     const p=document.getElementById('qPhone').value.trim();
     const a=document.getElementById('qAddress').value.trim();
+    const em=document.getElementById('qEmail').value.trim();
     const otherDesc=document.getElementById('qOtherDesc').value.trim();
     const d=Array.from(document.querySelectorAll('#qServicesGroup input[type=checkbox]:checked')).map(c=>c.value==='Other'&&otherDesc?'Other: '+otherDesc:c.value).join(', ');
     if(!n||!p||!a){alert('Please fill in your name, phone and suburb.');return;}
     const btn=this.querySelector('button[type=submit]');
     btn.disabled=true; btn.textContent='Sending…';
-    const payload={name:n,phone:p,suburb:a,services:d,source:'quote_modal'};
+    const payload={name:n,phone:p,suburb:a,email:em||undefined,services:d,source:'quote_modal'};
     try {
       const [formspreeRes] = await Promise.all([
         fetch('https://formspree.io/f/mgopelja',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)}),

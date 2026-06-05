@@ -652,6 +652,10 @@
           <label for="hAddress">Property Address</label>
           <input type="text" id="hAddress" name="address" placeholder="123 Beach Rd, Mornington" required autocomplete="street-address"/>
         </div>
+        <div class="hf-field">
+          <label for="hEmail">Email <span style="font-weight:400;opacity:.6">(optional)</span></label>
+          <input type="email" id="hEmail" name="email" placeholder="you@example.com" autocomplete="email"/>
+        </div>
         <button type="submit" class="hf-submit">Protect My Home — Get My Free Quote →</button>
         <p class="hf-note">No commitment &nbsp;·&nbsp; Fixed price quote &nbsp;·&nbsp; We call within the hour</p>
       </form>
@@ -980,6 +984,10 @@
       <label for="qAddress">Property Address</label>
       <input type="text" id="qAddress" name="address" placeholder="123 Beach Rd, Mornington" required>
     </div>
+    <div class="form-field">
+      <label for="qEmail">Email Address <span style="font-weight:400;color:var(--dim)">(optional)</span></label>
+      <input type="email" id="qEmail" name="email" placeholder="you@example.com" autocomplete="email">
+    </div>
     <button type="submit" class="form-submit">Get My Free Quote →</button>
     <p class="form-note">No commitment required &nbsp;·&nbsp; Fixed price before we start</p>
   </form>
@@ -1051,10 +1059,11 @@
     const n = document.getElementById('hName').value.trim();
     const p = document.getElementById('hPhone').value.trim();
     const a = document.getElementById('hAddress').value.trim();
+    const em = document.getElementById('hEmail').value.trim();
     if(!n||!p||!a){alert('Please fill in your name, phone and address.');return;}
     const btn = this.querySelector('button[type=submit]');
     btn.disabled=true; btn.textContent='Sending…';
-    await submitLead({name:n,phone:p,address:a,message:'Gutter cleaning enquiry'});
+    await submitLead({name:n,phone:p,address:a,email:em||undefined,message:'Gutter cleaning enquiry'});
     this.style.display='none';
     document.getElementById('heroSuccess').style.display='block';
   });
@@ -1065,10 +1074,11 @@
     const n=document.getElementById('qName').value.trim();
     const p=document.getElementById('qPhone').value.trim();
     const a=document.getElementById('qAddress').value.trim();
+    const em=document.getElementById('qEmail')?.value?.trim()||undefined;
     if(!n||!p||!a){alert('Please fill in your name, phone and address.');return;}
     const btn=this.querySelector('button[type=submit]');
     btn.disabled=true; btn.textContent='Sending…';
-    await submitLead({name:n,phone:p,address:a,message:'Gutter cleaning enquiry'});
+    await submitLead({name:n,phone:p,address:a,email:em,message:'Gutter cleaning enquiry'});
     this.style.display='none';
     document.getElementById('formSuccess').style.display='block';
   });
