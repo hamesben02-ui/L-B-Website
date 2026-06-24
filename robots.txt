@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lbexteriorcleaning.com.au/sitemap.xml
+Sitemap: https://www.lbexteriorcleaning.com.au/sitemap.xml

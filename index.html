@@ -6,6 +6,8 @@
   <title>L&B Exterior Cleaning — Mornington Peninsula</title>
   <meta name="description" content="Professional exterior cleaning across the Mornington Peninsula. Gutter cleaning, solar panels, windows, pressure washing and façade cleaning." />
   <meta name="google-site-verification" content="Ka0hSPzDwLp_KVWzHDLufLmVdC0AYURbCCgXVRONe1o" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -58,35 +60,42 @@
     .btn-white{background:#fff;color:var(--accent);font-weight:700}
     .btn-white:hover{background:#eff5ff;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
 
+    /* ── ANNOUNCEMENT BAR ── */
+    .announce{position:fixed;top:0;left:0;right:0;width:100%;z-index:101;background:#0F1C2E;height:36px;display:flex;align-items:center;justify-content:center;gap:10px}
+    .announce-text{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+    .announce-sep{color:rgba(255,255,255,.4);font-size:.7rem}
+    .announce-pill{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:100px;padding:2px 10px;font-size:.6rem;font-weight:700;letter-spacing:.08em;color:#fff;text-transform:uppercase}
+    #announceBar{transition:transform .3s ease}
+
     /* ── NAV — centred split layout ── */
-    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:76px;display:flex;align-items:center;background:#fff;border-bottom:1px solid #d5d5d5;padding:0 36px}
+    .nav{position:fixed;top:36px;transition:top .3s ease,box-shadow .3s ease;left:0;right:0;z-index:100;height:76px;display:flex;align-items:center;background:#0F1C2E;border-bottom:1px solid rgba(255,255,255,.08);padding:0 36px}
     /* Left nav links */
     .nav-left{display:flex;align-items:center;height:100%;flex:1;gap:0;max-width:calc(50% - 90px)}
-    .nav-left>a{display:flex;align-items:center;height:100%;padding:0 9px;font-family:var(--font-body);font-size:.65rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
-    .nav-left>a:hover{color:#111;background:#E0F2FE}
+    .nav-left>a{display:flex;align-items:center;height:100%;padding:0 9px;font-family:var(--font-body);font-size:.65rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.65);white-space:nowrap;transition:color .18s,background .18s}
+    .nav-left>a:hover{color:#fff;background:rgba(255,255,255,.06)}
     /* Logo — absolutely centred */
     .nav-logo{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-decoration:none;gap:0;user-select:none}
-    .nav-logo-mark{font-family:var(--font-body);font-size:1.16rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#111;line-height:1.1}
-    .nav-logo-rule{width:110%;height:1px;background:linear-gradient(90deg,transparent,rgba(66,122,161,.6),transparent);margin:3px 0}
-    .nav-logo-sub{font-family:var(--font-body);font-size:.53rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#427AA1;white-space:nowrap}
+    .nav-logo-mark{font-family:var(--font-body);font-size:1.16rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;line-height:1.1}
+    .nav-logo-rule{width:110%;height:1px;background:linear-gradient(90deg,transparent,rgba(14,165,233,.5),transparent);margin:3px 0}
+    .nav-logo-sub{font-family:var(--font-body);font-size:.53rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
     /* Right: phone + CTA */
     .nav-right{display:flex;align-items:center;gap:14px;flex:1;justify-content:flex-end}
-    .nav-phone{font-family:var(--font-body);font-size:.71rem;font-weight:500;letter-spacing:.06em;color:#666;white-space:nowrap;transition:color .18s}
-    .nav-phone:hover{color:#111}
+    .nav-phone{font-family:var(--font-body);font-size:.71rem;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.45);white-space:nowrap;transition:color .18s}
+    .nav-phone:hover{color:#fff}
     .nav-cta{background:var(--accent);color:#fff;font-family:var(--font-body);font-size:.71rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:9px 20px;border-radius:8px;white-space:nowrap;transition:background .18s,transform .18s}
     .nav-cta:hover{background:var(--accent-dk);transform:translateY(-1px)}
-    .nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.08);border-bottom-color:transparent}
+    .nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.35);border-bottom-color:transparent}
     /* Dropdown */
     .nav-dropdown-wrap{position:relative;display:flex;align-items:center;height:100%}
-    .nav-dropdown-wrap>a{display:flex;align-items:center;gap:5px;height:100%;padding:0 9px;font-family:var(--font-body);font-size:.65rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
-    .nav-dropdown-wrap>a:hover{color:#111;background:#E0F2FE}
-    .nav-dropdown-wrap>a .chev{width:9px;height:9px;fill:#888;transition:transform .2s;flex-shrink:0}
+    .nav-dropdown-wrap>a{display:flex;align-items:center;gap:5px;height:100%;padding:0 9px;font-family:var(--font-body);font-size:.65rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.65);white-space:nowrap;transition:color .18s,background .18s}
+    .nav-dropdown-wrap>a:hover{color:#fff;background:rgba(255,255,255,.06)}
+    .nav-dropdown-wrap>a .chev{width:9px;height:9px;fill:rgba(255,255,255,.4);transition:transform .2s;flex-shrink:0}
     .nav-dropdown-wrap:hover>a .chev{transform:rotate(180deg)}
-    .nav-dropdown{position:absolute;top:100%;left:0;min-width:215px;background:#fff;border:1px solid #e0e0e0;border-top:2px solid var(--accent);z-index:200;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s var(--ease),transform .18s var(--ease);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .nav-dropdown{position:absolute;top:100%;left:0;min-width:240px;background:#0F1C2E;border:1px solid #1E3A5F;border-top:2px solid var(--accent);z-index:200;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s var(--ease),transform .18s var(--ease);box-shadow:0 8px 24px rgba(0,0,0,.3)}
     .nav-dropdown-wrap:hover .nav-dropdown{opacity:1;pointer-events:auto;transform:none}
-    .nav-dropdown a{display:flex;align-items:center;gap:9px;padding:11px 16px;font-family:var(--font-body);font-size:.71rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;border-bottom:1px solid #f0f0f0;white-space:nowrap;transition:color .15s,background .15s}
+    .nav-dropdown a{display:flex;align-items:center;gap:9px;padding:11px 16px;font-family:var(--font-body);font-size:.71rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;transition:color .15s,background .15s}
     .nav-dropdown a:last-child{border-bottom:none}
-    .nav-dropdown a:hover{color:var(--accent);background:#E0F2FE}
+    .nav-dropdown a:hover{color:var(--accent);background:rgba(255,255,255,.05)}
     .nav-dropdown a .dd-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;opacity:.5}
     /* Hamburger */
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:10px;margin-left:12px}
@@ -117,7 +126,7 @@
     .es4{--r:20deg;right:20%;top:15%;animation-delay:.6s}.es4 .es-body{width:200px;height:60px;background:linear-gradient(to right,rgba(6,71,137,.1),transparent);animation-duration:10s;animation-delay:.5s}
     .es5{--r:-25deg;left:25%;top:10%;animation-delay:.7s}.es5 .es-body{width:150px;height:40px;background:linear-gradient(to right,rgba(66,122,161,.1),transparent);animation-duration:9s;animation-delay:1.5s}
 
-    .hero-inner{position:relative;z-index:2;padding:168px 0 100px}
+    .hero-inner{position:relative;z-index:2;padding:204px 0 100px}
     .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(66,122,161,.1);border:1px solid rgba(66,122,161,.28);border-radius:100px;padding:6px 16px 6px 8px;margin-bottom:32px;animation:fadeDown .8s var(--ease) .1s both}
     @keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
     .badge-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2.5s ease infinite}
@@ -384,6 +393,15 @@
 </head>
 <body>
 
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce" id="announceBar">
+  <span class="announce-text">The L&amp;B Winter Protection Package — Free Roof Report Included</span>
+  <span class="announce-sep">·</span>
+  <span class="announce-text">Mornington Peninsula's most trusted exterior cleaners</span>
+  <span class="announce-sep">·</span>
+  <span class="announce-pill">Limited Winter Spots</span>
+</div>
+
 <!-- ── NAV — centred split ── -->
 <nav class="nav" id="nav">
 
@@ -400,7 +418,6 @@
         <a href="interior-cleaning.html"><span class="dd-dot"></span>Interior &amp; Home Cleaning</a>
       </div>
     </div>
-    <a href="#process">Our Process</a>
     <a href="#why">About Us</a>
     <a href="#reviews">Reviews</a>
     <a href="contact.html">Contact</a>
@@ -431,7 +448,6 @@
     <div class="nav-logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#427AA1;margin-top:4px">Mornington Peninsula</div>
   </div>
   <a href="#services" class="ml">Services</a>
-  <a href="#process" class="ml">Our Process</a>
   <a href="#why" class="ml">About Us</a>
   <a href="#reviews" class="ml">Reviews</a>
   <a href="contact.html" class="ml">Contact</a>
@@ -453,7 +469,7 @@
   <div class="container hero-inner">
     <div class="hero-badge">
       <div class="badge-dot"></div>
-      <span class="badge-text">Book Now — Only a Few Autumn Slots Left</span>
+      <span class="badge-text">Book Now — Only a Few Winter Slots Left</span>
     </div>
     <h1 class="hero-title">
       Every Surface.<br/>
@@ -968,7 +984,12 @@
 
 <script>
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  const announceBar = document.getElementById('announceBar');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 40);
+    if(announceBar){ announceBar.style.transform = y > 80 ? 'translateY(-100%)' : ''; nav.style.top = y > 80 ? '0' : '36px'; }
+  }, {passive:true});
 
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
@@ -1111,11 +1132,11 @@ function gtag_report_conversion(url) {
 <div id="promoOverlay" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:9999;opacity:0;transition:opacity .35s ease;align-items:center;justify-content:center">
   <div id="promoCard" style="background:#fff;border-radius:16px;padding:40px 36px 32px;max-width:440px;width:calc(100% - 32px);text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.22);position:relative">
     <!-- Badge -->
-    <div style="display:inline-block;background:#EFF6FF;color:#1D4ED8;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:18px">Limited Autumn Offer</div>
+    <div style="display:inline-block;background:#EFF6FF;color:#1D4ED8;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:18px">Limited Winter Offer</div>
     <!-- Headline -->
     <h2 style="font-family:'Inter',sans-serif;font-size:1.45rem;font-weight:800;line-height:1.18;letter-spacing:-.025em;color:#0F172A;margin-bottom:10px">Claim Your 20% First Clean Discount</h2>
     <!-- Subheadline -->
-    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#475569;margin-bottom:22px;line-height:1.55">Plus a FREE Roof Health Check — <strong style="color:#0F172A">Only a Few Autumn Slots Left</strong></p>
+    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#475569;margin-bottom:22px;line-height:1.55">Plus a FREE Roof Health Check — <strong style="color:#0F172A">Only a Few Winter Slots Left</strong></p>
     <!-- Bullets -->
     <ul style="list-style:none;padding:0;margin:0 0 26px;text-align:left;display:inline-block">
       <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> 20% off your first clean</li>
@@ -1136,6 +1157,12 @@ function gtag_report_conversion(url) {
 </div>
 <script>
 (function(){
+  /* Float button always works regardless of promo seen state */
+  var floatBtn=document.getElementById('promoFloat');
+  floatBtn.addEventListener('click',function(){if(typeof openModal==='function'){openModal();}else{document.querySelector('[data-quote]').click();}});
+  floatBtn.addEventListener('mouseover',function(){this.style.background='#0284C7';this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(14,165,233,.55)';});
+  floatBtn.addEventListener('mouseout',function(){this.style.background='#0EA5E9';this.style.transform='none';this.style.boxShadow='0 6px 24px rgba(14,165,233,.45)';});
+
   if(sessionStorage.getItem('lb_promo_seen'))return;
   var overlay=document.getElementById('promoOverlay');
   var cta=document.getElementById('promoCta');
@@ -1151,10 +1178,6 @@ function gtag_report_conversion(url) {
   cta.addEventListener('mouseout',function(){this.style.background='#0EA5E9';this.style.transform='none';});
   dismiss.addEventListener('mouseover',function(){this.style.color='#475569';});
   dismiss.addEventListener('mouseout',function(){this.style.color='#94A3B8';});
-  var floatBtn=document.getElementById('promoFloat');
-  floatBtn.addEventListener('click',function(){overlay.style.display='flex';requestAnimationFrame(function(){requestAnimationFrame(function(){overlay.style.opacity='1';})});document.body.style.overflow='hidden';});
-  floatBtn.addEventListener('mouseover',function(){this.style.background='#0284C7';this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(14,165,233,.55)';});
-  floatBtn.addEventListener('mouseout',function(){this.style.background='#0EA5E9';this.style.transform='none';this.style.boxShadow='0 6px 24px rgba(14,165,233,.45)';});
 })();
 </script>
 </body>
