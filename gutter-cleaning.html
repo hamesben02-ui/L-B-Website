@@ -130,7 +130,7 @@
     .hero-warn-dot{width:7px;height:7px;border-radius:50%;background:#F87171;animation:warnPulse 2s ease infinite;flex-shrink:0}
     @keyframes warnPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
     .hero-warn-text{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FCA5A5}
-    .hero h1{font-family:var(--font-display);font-size:clamp(1.45rem,2.1vw,1.9rem);font-weight:800;line-height:1.18;color:var(--white);max-width:540px;margin-bottom:20px;letter-spacing:-.02em}
+    .hero h1{font-family:var(--font-display);font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;line-height:1.15;color:var(--white);max-width:540px;margin-bottom:20px;letter-spacing:-.02em}
     .hero h1 em{font-style:normal;background:linear-gradient(90deg,#38BDF8,#0EA5E9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .hero-sub{font-size:.95rem;color:rgba(255,255,255,.52);max-width:500px;line-height:1.75;margin-bottom:24px}
     .hero-divider{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:2px;margin-bottom:28px}
@@ -401,8 +401,13 @@
       .container{padding:0 20px}
       .nav{padding:0 20px;justify-content:space-between;background:#fff}
       .nav-logo{position:static;transform:none}
-      .hero h1{font-size:1.45rem;line-height:1.2}
+      .hero h1{font-size:1.75rem;line-height:1.15}
       .hero-sub{font-size:.87rem}
+      .hero-inner{display:flex;flex-direction:column}
+      .hero-form-card{order:-1;max-width:100%}
+      .hero-ba{display:none}
+      .hero-trust-row{display:none}
+      .hero-divider{display:none}
     }
     @media(max-width:500px){
       .process-steps{grid-template-columns:1fr}
@@ -651,8 +656,8 @@
         <span class="hero-warn-dot"></span>
         <span class="hero-warn-text">May–July is peak gutter cleaning season — Peninsula gutters are filling up right now</span>
       </div>
-      <h1>Most Peninsula Homeowners<br/>Book <em>Gutter Cleaning</em> After<br/>the Ceiling Already Stains</h1>
-      <p class="hero-sub">By then the damage is already done — and repair bills start at $5,000. May–July is when Peninsula gutters block fastest. Most call us after the damage. Book now and we include a free roof condition report and a 30-day blockage guarantee.</p>
+      <h1><em>Gutter Cleaning</em><br/>Mornington Peninsula<br/>Fixed Price. Same Week.</h1>
+      <p class="hero-sub">Most Peninsula homeowners call us after the ceiling already stains — by then, repair bills start at $5,000. May–July is when gutters block fastest. Book now and we include a free roof condition report and a 30-day blockage guarantee. Serving Frankston, Mornington, Mount Eliza, Hastings, Rosebud and across the Peninsula.</p>
       <div class="hero-divider"></div>
       <div class="hero-trust-row">
         <div class="hero-trust-item">
