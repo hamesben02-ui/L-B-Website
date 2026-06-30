@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>L&B Exterior Cleaning — Mornington Peninsula</title>
   <meta name="description" content="Professional exterior cleaning across the Mornington Peninsula. Gutter cleaning, solar panels, windows, pressure washing and façade cleaning." />
   <meta name="google-site-verification" content="Ka0hSPzDwLp_KVWzHDLufLmVdC0AYURbCCgXVRONe1o" />
@@ -381,10 +381,10 @@
     #stickyCta.up{transform:none}
     #stickyCta-btn{flex:1;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:.85rem;font-weight:700;border:none;border-radius:10px;padding:13px;cursor:pointer;text-align:center}
     @media(max-width:768px){
-      #stickyCta{display:flex;align-items:center;gap:12px}
+      #stickyCta{display:flex;align-items:center;gap:12px;padding-bottom:calc(16px + env(safe-area-inset-bottom))}
       .photo-strip{padding:0 20px 10px}
       .photo-strip img{height:180px;min-width:240px}
-      #promoFloat{bottom:82px}
+      #promoFloat{bottom:calc(84px + env(safe-area-inset-bottom));right:16px}
     }
   </style>
   <!-- Google Analytics -->
@@ -1120,7 +1120,12 @@ function gtag_report_conversion(url) {
 <script>
 (function(){
   var bar=document.getElementById('stickyCta');
-  window.addEventListener('scroll',function(){bar.classList.toggle('up',window.scrollY>300);},{ passive:true });
+  var pf=document.getElementById('promoFloat');
+  window.addEventListener('scroll',function(){
+    var past=window.scrollY>300;
+    bar.classList.toggle('up',past);
+    if(window.innerWidth<=768){pf.style.display=past?'none':'flex';}
+  },{passive:true});
 })();
 </script>
 <!-- ── Promo Float Button ── -->
