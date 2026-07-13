@@ -15,8 +15,8 @@
   <meta property="og:site_name" content="L&B Exterior Cleaning"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet"/></noscript>
   <style>
     .fi{width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -1190,6 +1190,7 @@
 </div>
 
 <script>
+(window.requestIdleCallback || function(cb){setTimeout(cb,1)})(function(){
   const nav = document.getElementById('nav');
   const announceBar = document.getElementById('announceBar');
   const stickyCta = document.getElementById('stickyCta');
@@ -1296,10 +1297,12 @@
     document.addEventListener('mouseup',  () => dragging = false);
     document.addEventListener('touchend', () => dragging = false);
   });
+}, {timeout: 2000});
 </script>
 
 <!-- L&B Conversion Tracking -->
 <script>
+(window.requestIdleCallback || function(cb){setTimeout(cb,1)})(function(){
 function gtag_report_conversion(url) {
   var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
   gtag('event', 'conversion', {'send_to': 'AW-17970733561/yPakCJ72npwcEPnDjvlC', 'value': 1.0, 'currency': 'AUD', 'event_callback': callback});
@@ -1338,6 +1341,7 @@ function gtag_report_conversion(url) {
     if (type === 'form_submission' || type === 'quote_request' || type === 'booking') gtagConversion('G0fCCLHFnZkcEPnDjvlC', 1.0);
   };
 })();
+}, {timeout: 2000});
 </script>
 
 <!-- WINTER ENTRANCE POPUP -->
@@ -1392,6 +1396,7 @@ function gtag_report_conversion(url) {
 </div>
 
 <script>
+(window.requestIdleCallback || function(cb){setTimeout(cb,1)})(function(){
 (function(){
   var STORAGE_KEY = 'lb_winter_popup_shown';
   if(sessionStorage.getItem(STORAGE_KEY)) return;
@@ -1439,6 +1444,7 @@ function gtag_report_conversion(url) {
     setTimeout(closeEP, 3500);
   });
 })();
+}, {timeout: 2000});
 </script>
 </body>
 </html>
