@@ -17,9 +17,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
-  <!-- Load icon fonts after page load to eliminate TBT impact -->
-  <script>window.addEventListener('load',function(){['https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css','https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css','https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'].forEach(function(h){var l=document.createElement('link');l.rel='stylesheet';l.href=h;document.head.appendChild(l);});});</script>
   <style>
+    .fi{width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
       --white:    #FFFFFF;
@@ -55,7 +54,7 @@
 
     /* ── Buttons ── */
     .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:.88rem;font-weight:600;padding:13px 26px;border-radius:var(--r);border:none;cursor:pointer;transition:all .22s var(--ease)}
-    .btn i{font-size:16px;line-height:1;flex-shrink:0}
+    .btn svg{font-size:16px;line-height:1;flex-shrink:0}
     .btn-blue{background:var(--accent);color:#fff}
     .btn-blue:hover{background:var(--accent-dk);transform:translateY(-1px);box-shadow:0 8px 24px rgba(14,165,233,.32)}
     .btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.5)}
@@ -115,7 +114,7 @@
     .sticky-btn-primary:hover{background:var(--accent-dk)}
     .sticky-btn-call{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);color:#fff;border-radius:10px;padding:11px 20px;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer;transition:background .2s;white-space:nowrap}
     .sticky-btn-call:hover{background:rgba(255,255,255,.14)}
-    .sticky-btn-call i,.sticky-btn-primary i{font-size:13px;flex-shrink:0;line-height:1}
+    .sticky-btn-call svg,.sticky-btn-primary svg{font-size:13px;flex-shrink:0;line-height:1}
     @media(max-width:640px){.sticky-cta-left{display:none}.sticky-cta{justify-content:center}}
 
     /* ── URGENCY HERO ── */
@@ -136,11 +135,11 @@
     .hero-divider{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:2px;margin-bottom:28px}
     .hero-trust-row{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
     .hero-trust-item{display:flex;align-items:center;gap:11px;font-size:.875rem;color:rgba(255,255,255,.72);font-weight:500}
-    .hero-trust-item i{font-size:15px;color:var(--accent);flex-shrink:0;line-height:1}
+    .hero-trust-item svg{font-size:15px;color:var(--accent);flex-shrink:0;line-height:1}
     .hero-phone-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
     .hero-phone-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:12px 22px;font-size:.88rem;font-weight:600;color:rgba(255,255,255,.85);transition:all .22s var(--ease)}
     .hero-phone-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff}
-    .hero-phone-btn i{font-size:14px;color:var(--accent);flex-shrink:0;line-height:1}
+    .hero-phone-btn svg{font-size:14px;color:var(--accent);flex-shrink:0;line-height:1}
     .hero-phone-sep{font-size:.75rem;color:rgba(255,255,255,.2)}
 
     /* BA slider in hero */
@@ -168,7 +167,7 @@
     .hfc-includes-title{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0369A1;margin-bottom:10px}
     .hfc-include-item{display:flex;align-items:center;gap:9px;font-size:.82rem;color:var(--navy);margin-bottom:7px;font-weight:500}
     .hfc-include-item:last-child{margin-bottom:0}
-    .hfc-include-item i{font-size:13px;color:#0EA5E9;flex-shrink:0;line-height:1}
+    .hfc-include-item svg{font-size:13px;color:#0EA5E9;flex-shrink:0;line-height:1}
     .hf-field{display:flex;flex-direction:column;gap:5px;margin-bottom:11px}
     .hf-field label{font-size:.58rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#475569}
     .hf-field input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--font-body);font-size:.9rem;color:var(--navy);background:#fff;transition:border-color .2s,box-shadow .2s;outline:none}
@@ -186,7 +185,7 @@
     .trust-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .trust-item{display:flex;align-items:center;gap:12px;flex:1;min-width:200px}
     .trust-icon{width:38px;height:38px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .trust-icon i{font-size:18px;color:var(--accent)}
+    .trust-icon svg{font-size:18px;color:var(--accent)}
     .trust-label{font-size:.8rem;font-weight:700;color:#fff}
     .trust-sub{font-size:.7rem;color:rgba(255,255,255,.4)}
 
@@ -198,7 +197,7 @@
     .wi-item{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)}
     .wi-item:last-child{border-bottom:none}
     .wi-item-icon{width:36px;height:36px;border-radius:9px;background:var(--blue-lt);border:1px solid rgba(14,165,233,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-    .wi-item-icon i{font-size:15px;color:var(--accent);line-height:1}
+    .wi-item-icon svg{font-size:15px;color:var(--accent);line-height:1}
     .wi-item-text{flex:1}
     .wi-item-title{font-size:.93rem;font-weight:700;color:var(--navy);margin-bottom:3px}
     .wi-item-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
@@ -211,7 +210,7 @@
     .wi-card-note{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}
     .wi-card-checks{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
     .wi-card-check{display:flex;align-items:center;gap:10px;font-size:.85rem;color:rgba(255,255,255,.75);font-weight:500}
-    .wi-card-check i{font-size:13px;color:#34D399;flex-shrink:0;line-height:1}
+    .wi-card-check svg{font-size:13px;color:#34D399;flex-shrink:0;line-height:1}
     .wi-card-cta{display:block;width:100%;padding:15px;background:linear-gradient(135deg,#0EA5E9,#0284C7);color:#fff;border:none;border-radius:11px;font-family:var(--font-body);font-size:.95rem;font-weight:700;cursor:pointer;text-align:center;transition:opacity .2s,transform .2s;box-shadow:0 4px 16px rgba(14,165,233,.35);text-decoration:none}
     .wi-card-cta:hover{opacity:.92;transform:translateY(-1px)}
     .wi-card-sub{text-align:center;font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:10px}
@@ -234,7 +233,7 @@
     .review-card::before{content:'\\201C';position:absolute;top:16px;right:22px;font-size:5rem;font-weight:800;color:rgba(14,165,233,.08);line-height:1;pointer-events:none;font-family:Georgia,serif}
     .review-card:hover{box-shadow:0 16px 48px rgba(15,28,46,.1);transform:translateY(-4px);background:#fff}
     .review-stars{display:flex;gap:3px;margin-bottom:16px}
-    .review-stars i{font-size:15px;color:#FBBF24;line-height:1}
+    .review-stars svg{font-size:15px;color:#FBBF24;line-height:1}
     .review-text{font-size:.9rem;color:#374151;line-height:1.8;flex:1;margin-bottom:20px}
     .review-text em{font-style:normal;font-weight:700;color:var(--navy)}
     .review-author{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--border)}
@@ -265,7 +264,7 @@
     .damage-vs-good .dvg-cost{font-family:var(--font-display);font-size:3rem;font-weight:800;color:#34D399;margin-bottom:6px;letter-spacing:-.03em;line-height:1}
     .damage-vs-good .dvg-name{font-size:.85rem;color:rgba(255,255,255,.45)}
     .damage-vs-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 36px;flex-shrink:0}
-    .damage-vs-arrow i{font-size:28px;color:rgba(255,255,255,.2);line-height:1}
+    .damage-vs-arrow svg{font-size:28px;color:rgba(255,255,255,.2);line-height:1}
     .damage-vs-arrow span{font-size:.6rem;color:rgba(255,255,255,.25);margin-top:8px;text-transform:uppercase;letter-spacing:.1em}
 
     /* ── GUARANTEE ── */
@@ -310,8 +309,8 @@
     .faq-item{background:var(--off);border-radius:14px;border:1px solid var(--border);overflow:hidden;transition:border-color .2s}
     .faq-item.open{border-color:rgba(14,165,233,.35)}
     .faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;font-size:.95rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;text-align:left;gap:16px}
-    .faq-question i{font-size:16px;color:var(--muted);flex-shrink:0;transition:transform .3s,color .2s;line-height:1}
-    .faq-item.open .faq-question i{transform:rotate(45deg);color:var(--accent)}
+    .faq-question svg{font-size:16px;color:var(--muted);flex-shrink:0;transition:transform .3s,color .2s;line-height:1}
+    .faq-item.open .faq-question svg{transform:rotate(45deg);color:var(--accent)}
     .faq-item.open .faq-question{color:var(--accent)}
     .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
     .faq-item.open .faq-answer{max-height:300px}
@@ -327,8 +326,8 @@
     .other-svc-card:hover .other-svc-desc{color:rgba(255,255,255,.55)}
     .other-svc-card:hover .other-svc-link{color:var(--accent)}
     .other-svc-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-lt);border:1px solid rgba(66,122,161,.2);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-    .other-svc-icon i{font-size:20px;color:var(--blue);line-height:1}
-    .other-svc-card:hover .other-svc-icon i{color:var(--accent)}
+    .other-svc-icon svg{font-size:20px;color:var(--blue);line-height:1}
+    .other-svc-card:hover .other-svc-icon svg{color:var(--accent)}
     .other-svc-name{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px;transition:color .3s}
     .other-svc-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:12px;transition:color .3s}
     .other-svc-link{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);transition:color .3s}
@@ -352,14 +351,14 @@
     .f-social{display:flex;gap:8px}
     .fsoc{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .2s}
     .fsoc:hover{background:var(--accent);border-color:var(--accent)}
-    .fsoc i{font-size:15px;color:rgba(255,255,255,.4)}
-    .fsoc:hover i{color:#fff}
+    .fsoc svg{font-size:15px;color:rgba(255,255,255,.4)}
+    .fsoc:hover svg{color:#fff}
     .f-col-title{font-family:var(--font-body);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:18px}
     .f-links{list-style:none;display:flex;flex-direction:column;gap:11px}
     .f-links a{font-size:.84rem;color:rgba(255,255,255,.35);transition:color .2s}
     .f-links a:hover{color:#fff}
     .f-contact-row{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px}
-    .f-contact-row i{font-size:13px;color:var(--accent);flex-shrink:0;margin-top:3px;line-height:1}
+    .f-contact-row svg{font-size:13px;color:var(--accent);flex-shrink:0;margin-top:3px;line-height:1}
     .f-contact-row span{font-size:.83rem;color:rgba(255,255,255,.35);line-height:1.55}
     .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;gap:16px;flex-wrap:wrap}
     .f-copy{font-family:var(--font-body);font-size:.63rem;letter-spacing:.04em;color:rgba(255,255,255,.2)}
@@ -500,7 +499,7 @@
     .damage-vs-bad .dvb-name,.damage-vs-good .dvg-name{color:rgba(15,28,46,.55)}
     .damage-vs-sep{background:rgba(15,28,46,.08)}
     .damage-vs-good .dvg-cost{color:#059669}
-    .damage-vs-arrow i{color:rgba(15,28,46,.18)}
+    .damage-vs-arrow svg{color:rgba(15,28,46,.18)}
     .damage-vs-arrow span{color:rgba(15,28,46,.28)}
     /* Process → light */
     .process-svc{background:#EFF6FF}
@@ -543,9 +542,9 @@
     .footer-bottom{border-top-color:rgba(15,28,46,.07)}
     .f-copy{color:rgba(15,28,46,.28)}
     .fsoc{background:rgba(15,28,46,.06);border-color:rgba(15,28,46,.1)}
-    .fsoc i{color:rgba(15,28,46,.35)}
+    .fsoc svg{color:rgba(15,28,46,.35)}
     .fsoc:hover{background:var(--accent);border-color:var(--accent)}
-    .fsoc:hover i{color:#fff}
+    .fsoc:hover svg{color:#fff}
 
     /* ── WINTER ENTRANCE POPUP ── */
     .ep-overlay{position:fixed;inset:0;background:rgba(6,28,52,.65);backdrop-filter:blur(5px);z-index:900;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
@@ -578,11 +577,36 @@
     .ep-success p{font-size:.82rem;color:var(--muted)}
     @media(max-width:480px){.ep-card{padding:20px 16px 16px}.ep-title{font-size:1.1rem}.ep-fields{grid-template-columns:1fr}}
   </style>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');</script>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <!-- Google Analytics — deferred after load to not block LCP/FCP -->
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','G-0YQJ3XQ829');gtag('config','AW-17970733561');window.addEventListener("load",function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ";document.head.appendChild(s)});</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="fi-rr-angle-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-shield" viewBox="0 0 24 24"><path d="M12 2.5l7.5 3.4V11c0 5-3.2 8.7-7.5 10.5C7.7 19.7 4.5 16 4.5 11V5.9L12 2.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><polyline points="8 12.3 10.8 15 16 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-tag" viewBox="0 0 24 24"><path d="M12.6 3H5.5A1.5 1.5 0 0 0 4 4.5v7.1c0 .4.16.78.44 1.06l9 9a1.5 1.5 0 0 0 2.12 0l7.1-7.1a1.5 1.5 0 0 0 0-2.12l-9-9A1.5 1.5 0 0 0 12.6 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.3" cy="8.3" r="1.15" fill="currentColor"/></symbol>
+<symbol id="fi-sr-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.26 6.9.74-5.1 4.63 1.4 6.87L12 17.3 5.9 21l1.4-6.87L2.2 9.5l6.9-.74L12 2.5z"/></symbol>
+<symbol id="fi-rr-phone-call" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="fi-rr-arrows-h" viewBox="0 0 24 24"><polyline points="8 7 3 12 8 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="16 7 21 12 16 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="fi-rr-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-sr-shield-check" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l7.5 3.4V11c0 5-3.2 8.7-7.5 10.5C7.7 19.7 4.5 16 4.5 11V5.9L12 2.5z"/><polyline points="8.3 12 10.8 14.5 15.7 9.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-wind" viewBox="0 0 24 24"><path d="M3 8h10.5a2.25 2.25 0 1 0-2.25-2.25" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12.5h14.5a2.5 2.5 0 1 1-2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 17h8.5a2 2 0 1 1-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-arrow-down" viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="6 13 12 19 18 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-home" viewBox="0 0 24 24"><path d="M4 11.5L12 4l8 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h3.5v-6h3v6H17a1 1 0 0 0 1-1v-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-camera" viewBox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1-2h7l1 2h2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5v-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="fi-rr-broom" viewBox="0 0 24 24"><line x1="19" y1="3" x2="10.5" y2="11.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10.5 11.5l-6.8 8a1.1 1.1 0 0 0 1.55 1.55l8-6.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="7.3" y1="14.7" x2="9.3" y2="16.7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="9.3" y1="12.7" x2="11.3" y2="14.7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
+<symbol id="fi-rr-arrow-right" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="13 6 19 12 13 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-rr-plus" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="fi-rr-envelope" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><polyline points="3.5 6.5 12 13 20.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="fi-brands-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M15 8.5h1.8V5.6h-2.1c-2 0-3.4 1.4-3.4 3.5v1.6H9.4v3h1.9V21h3v-7.3h2l.4-3h-2.4V9.4c0-.6.3-.9 1-.9z"/></symbol>
+<symbol id="fi-brands-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/></symbol>
+<symbol id="fi-brands-google" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 12.23c0-.76-.07-1.5-.2-2.2H12v4.16h5.4a4.6 4.6 0 0 1-2 3.03v2.5h3.2c1.9-1.75 3-4.32 3-7.49z"/><path fill="currentColor" d="M12 22c2.7 0 4.97-.9 6.63-2.43l-3.2-2.5c-.9.6-2.05.95-3.43.95-2.63 0-4.86-1.78-5.66-4.16H3.03v2.6A10 10 0 0 0 12 22z"/><path fill="currentColor" d="M6.34 13.86a6 6 0 0 1 0-3.72v-2.6H3.03a10 10 0 0 0 0 8.92l3.31-2.6z"/><path fill="currentColor" d="M12 6.18c1.47 0 2.79.5 3.83 1.5l2.86-2.86A9.96 9.96 0 0 0 12 2a10 10 0 0 0-8.97 5.54l3.31 2.6c.8-2.38 3.03-4 5.66-4z"/></symbol>
+<symbol id="fi-rr-marker" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21.5s7-6.7 7-12.2A7 7 0 0 0 5 9.3c0 5.5 7 12.2 7 12.2z"/><circle cx="12" cy="9.3" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</defs>
+</svg>
 
 <!-- ANNOUNCEMENT BAR -->
 <div class="announce" id="announceBar">
@@ -597,7 +621,7 @@
 <nav class="nav" id="nav">
   <div class="nav-left">
     <div class="nav-dropdown-wrap">
-      <a href="index.html#services">Services <i class="fi fi-rr-angle-down chev"></i></a>
+      <a href="index.html#services">Services <svg class="fi fi-rr-angle-down chev" aria-hidden="true"><use href="#fi-rr-angle-down"/></svg></a>
       <div class="nav-dropdown">
         <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">From $149</span></a>
         <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">From $149</span></a>
@@ -661,25 +685,25 @@
       <div class="hero-divider"></div>
       <div class="hero-trust-row">
         <div class="hero-trust-item">
-          <i class="fi fi-rr-shield"></i>
+          <svg class="fi fi-rr-shield" aria-hidden="true"><use href="#fi-rr-shield"/></svg>
           Fully insured — $5M public liability
         </div>
         <div class="hero-trust-item">
-          <i class="fi fi-rr-check-circle"></i>
+          <svg class="fi fi-rr-check-circle" aria-hidden="true"><use href="#fi-rr-check-circle"/></svg>
           Downpipes cleared — full system every time, included
         </div>
         <div class="hero-trust-item">
-          <i class="fi fi-rr-tag"></i>
+          <svg class="fi fi-rr-tag" aria-hidden="true"><use href="#fi-rr-tag"/></svg>
           Gutter cleaning from $149
         </div>
         <div class="hero-trust-item">
-          <i class="fi fi-sr-star"></i>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
           5-star rated — 25+ five-star Peninsula homeowners
         </div>
       </div>
       <div class="hero-phone-row">
         <a class="btn btn-blue" href="tel:+61416551923">
-          <i class="fi fi-rr-phone-call"></i>
+          <svg class="fi fi-rr-phone-call" aria-hidden="true"><use href="#fi-rr-phone-call"/></svg>
           Call Lilli: 0416 551 923
         </a>
       </div>
@@ -688,7 +712,7 @@
       <div class="hero-ba">
         <div class="ba-before" style="background-image:url('Empty Gutter.webp')"></div>
         <div class="ba-after"  style="background-image:url('IMG_8855.webp')"></div>
-        <div class="ba-div"><div class="ba-handle"><i class="fi fi-rr-arrows-h" style="font-size:18px;color:#064789;line-height:1"></i></div></div>
+        <div class="ba-div"><div class="ba-handle"><svg class="fi fi-rr-arrows-h" aria-hidden="true" style="font-size:18px;color:#064789;line-height:1"><use href="#fi-rr-arrows-h"/></svg></div></div>
         <div class="ba-slider" id="heroSlider"></div>
         <span class="ba-tag ba-tag-b">Before</span>
         <span class="ba-tag ba-tag-a">After</span>
@@ -711,7 +735,7 @@
       <div class="hfc-body">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:10px 14px;background:#FFFBEB;border:1px solid #FCD34D;border-radius:10px">
         <div style="display:flex;gap:2px;flex-shrink:0">
-          <i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i>
+          <svg class="fi fi-sr-star" aria-hidden="true" style="font-size:12px;color:#F59E0B"><use href="#fi-sr-star"/></svg><svg class="fi fi-sr-star" aria-hidden="true" style="font-size:12px;color:#F59E0B"><use href="#fi-sr-star"/></svg><svg class="fi fi-sr-star" aria-hidden="true" style="font-size:12px;color:#F59E0B"><use href="#fi-sr-star"/></svg><svg class="fi fi-sr-star" aria-hidden="true" style="font-size:12px;color:#F59E0B"><use href="#fi-sr-star"/></svg><svg class="fi fi-sr-star" aria-hidden="true" style="font-size:12px;color:#F59E0B"><use href="#fi-sr-star"/></svg>
         </div>
         <span style="font-size:.75rem;font-weight:600;color:#92400E;line-height:1.3">"Arrived on time, professional, left no mess." — Vicki, Mount Eliza</span>
       </div>
@@ -719,11 +743,11 @@
       <div class="hfc-sub">We'll call you back within the hour. Fixed price before we start — no surprises.</div>
       <div class="hfc-includes">
         <div class="hfc-includes-title">The L&B Winter Protection Package</div>
-        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Full gutter clean &amp; downpipe flush</div>
-        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Before &amp; after photos sent to you</div>
-        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Free roof condition report</div>
-        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>30-day blockage guarantee</div>
-        <div class="hfc-include-item"><i class="fi fi-rr-check"></i>Full site tidy-up on completion</div>
+        <div class="hfc-include-item"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Full gutter clean &amp; downpipe flush</div>
+        <div class="hfc-include-item"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Before &amp; after photos sent to you</div>
+        <div class="hfc-include-item"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Free roof condition report</div>
+        <div class="hfc-include-item"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>30-day blockage guarantee</div>
+        <div class="hfc-include-item"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Full site tidy-up on completion</div>
       </div>
       <form id="heroForm" novalidate>
         <div class="hf-field">
@@ -755,10 +779,10 @@
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="container trust-bar-inner">
-    <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-shield"></i></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M public liability</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-check-circle"></i></div><div><div class="trust-label">Downpipes Included</div><div class="trust-sub">Full system clear, every time</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><i class="fi fi-sr-star"></i></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">Google &amp; local reviews</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><i class="fi fi-sr-shield-check"></i></div><div><div class="trust-label">Satisfaction Guaranteed</div><div class="trust-sub">We're not done till you're happy</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg class="fi fi-rr-shield" aria-hidden="true"><use href="#fi-rr-shield"/></svg></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M public liability</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg class="fi fi-rr-check-circle" aria-hidden="true"><use href="#fi-rr-check-circle"/></svg></div><div><div class="trust-label">Downpipes Included</div><div class="trust-sub">Full system clear, every time</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">Google &amp; local reviews</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg class="fi fi-sr-shield-check" aria-hidden="true"><use href="#fi-sr-shield-check"/></svg></div><div><div class="trust-label">Satisfaction Guaranteed</div><div class="trust-sub">We're not done till you're happy</div></div></div>
   </div>
 </div>
 
@@ -773,42 +797,42 @@
     <div class="wi-inner">
       <ul class="wi-list" data-reveal>
         <li class="wi-item">
-          <div class="wi-item-icon"><i class="fi fi-rr-wind"></i></div>
+          <div class="wi-item-icon"><svg class="fi fi-rr-wind" aria-hidden="true"><use href="#fi-rr-wind"/></svg></div>
           <div class="wi-item-text">
             <div class="wi-item-title">Full Debris Removal</div>
             <div class="wi-item-desc">Every leaf, clump of silt, and build-up of moss is cleared from all gutters — not just the visible sections. Our gutter cleaners work the full perimeter of your home.</div>
           </div>
         </li>
         <li class="wi-item">
-          <div class="wi-item-icon"><i class="fi fi-rr-arrow-down"></i></div>
+          <div class="wi-item-icon"><svg class="fi fi-rr-arrow-down" aria-hidden="true"><use href="#fi-rr-arrow-down"/></svg></div>
           <div class="wi-item-text">
             <div class="wi-item-title">Downpipe Flush &amp; Blockage Clearing</div>
             <div class="wi-item-desc">Every downpipe is checked and cleared to ensure proper water flow from gutter to ground. Included as standard — not an add-on.</div>
           </div>
         </li>
         <li class="wi-item">
-          <div class="wi-item-icon"><i class="fi fi-rr-home"></i></div>
+          <div class="wi-item-icon"><svg class="fi fi-rr-home" aria-hidden="true"><use href="#fi-rr-home"/></svg></div>
           <div class="wi-item-text">
             <div class="wi-item-title">Roof &amp; Gutter Condition Inspection</div>
             <div class="wi-item-desc">We inspect your entire roof and gutter system while we're up there — checking for rust, cracked tiles, loose brackets, and signs of damage. You get a written report with photos.</div>
           </div>
         </li>
         <li class="wi-item">
-          <div class="wi-item-icon"><i class="fi fi-rr-camera"></i></div>
+          <div class="wi-item-icon"><svg class="fi fi-rr-camera" aria-hidden="true"><use href="#fi-rr-camera"/></svg></div>
           <div class="wi-item-text">
             <div class="wi-item-title">Before &amp; After Photos Sent to You</div>
             <div class="wi-item-desc">We photograph before we start and after we finish — sent directly to your phone so you can see exactly what was done, without needing to climb up yourself.</div>
           </div>
         </li>
         <li class="wi-item">
-          <div class="wi-item-icon"><i class="fi fi-rr-shield"></i></div>
+          <div class="wi-item-icon"><svg class="fi fi-rr-shield" aria-hidden="true"><use href="#fi-rr-shield"/></svg></div>
           <div class="wi-item-text">
             <div class="wi-item-title">30-Day Blockage Guarantee</div>
             <div class="wi-item-desc">If your gutters block again within 30 days of our clean, we return at zero cost. No call-out fee, no arguments.</div>
           </div>
         </li>
         <li class="wi-item">
-          <div class="wi-item-icon"><i class="fi fi-rr-broom"></i></div>
+          <div class="wi-item-icon"><svg class="fi fi-rr-broom" aria-hidden="true"><use href="#fi-rr-broom"/></svg></div>
           <div class="wi-item-text">
             <div class="wi-item-title">Full Site Tidy-Up</div>
             <div class="wi-item-desc">All debris is bagged and removed. Paths, lawns, and surrounds are left clean — no piles of leaves or mess for you to deal with.</div>
@@ -823,11 +847,11 @@
         </div>
         <div class="wi-card-note">Fixed price quoted before we start. Most single-storey homes on the Peninsula are $149–$220 depending on size and debris volume.</div>
         <div class="wi-card-checks">
-          <div class="wi-card-check"><i class="fi fi-rr-check"></i>Full gutter &amp; downpipe clean</div>
-          <div class="wi-card-check"><i class="fi fi-rr-check"></i>Before &amp; after photos</div>
-          <div class="wi-card-check"><i class="fi fi-rr-check"></i>Free roof condition report</div>
-          <div class="wi-card-check"><i class="fi fi-rr-check"></i>30-day blockage guarantee</div>
-          <div class="wi-card-check"><i class="fi fi-rr-check"></i>Full site tidy-up</div>
+          <div class="wi-card-check"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Full gutter &amp; downpipe clean</div>
+          <div class="wi-card-check"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Before &amp; after photos</div>
+          <div class="wi-card-check"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Free roof condition report</div>
+          <div class="wi-card-check"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>30-day blockage guarantee</div>
+          <div class="wi-card-check"><svg class="fi fi-rr-check" aria-hidden="true"><use href="#fi-rr-check"/></svg>Full site tidy-up</div>
         </div>
         <a href="#" data-quote class="wi-card-cta">Get My Fixed-Price Quote →</a>
         <div class="wi-card-sub">No commitment &nbsp;·&nbsp; We call within the hour</div>
@@ -857,11 +881,11 @@
     <div class="reviews-grid">
       <div class="review-card" data-reveal data-d="1">
         <div class="review-stars">
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
         </div>
         <p class="review-text">"Wonderful job done by Ben and Lilli. Looks great! Also now have <em>clean gutters, which were completely full!</em> They were friendly, punctual, very professional and will definitely use again and recommend."</p>
         <div class="review-author">
@@ -874,11 +898,11 @@
       </div>
       <div class="review-card" data-reveal data-d="2">
         <div class="review-stars">
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
         </div>
         <p class="review-text">"We are so glad we hired Ben and Lilli to clean our guttering. They arrived on time, were extremely courteous and did an excellent job and left no mess. <em>Ben even discovered that we had a roof tile that had split</em> — something we never would have found otherwise."</p>
         <div class="review-author">
@@ -891,11 +915,11 @@
       </div>
       <div class="review-card" data-reveal data-d="3">
         <div class="review-stars">
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
-          <i class="fi fi-sr-star"></i>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
+          <svg class="fi fi-sr-star" aria-hidden="true"><use href="#fi-sr-star"/></svg>
         </div>
         <p class="review-text">"Ben &amp; Lilli were a pleasure to have out to clean our gutters. Arrived on time, and worked efficiently to complete the job. <em>Also shared photos and kept me updated as they went.</em> Highly recommend."</p>
         <div class="review-author">
@@ -964,7 +988,7 @@
       </div>
       <div class="damage-vs-sep"></div>
       <div class="damage-vs-arrow">
-        <i class="fi fi-rr-arrow-right"></i>
+        <svg class="fi fi-rr-arrow-right" aria-hidden="true"><use href="#fi-rr-arrow-right"/></svg>
         <span>vs.</span>
       </div>
       <div class="damage-vs-sep"></div>
@@ -1022,15 +1046,15 @@
       <p>Everything you need to know before booking.</p>
     </div>
     <div class="faq-list" data-reveal data-d="1">
-      <div class="faq-item"><button class="faq-question">How much does gutter cleaning cost?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Gutter cleaning starts from $149 for a standard single-storey home. We provide a clear, no-obligation quote before we start — most quotes are given within 2 minutes of your call. Price depends on the size of your property and volume of debris.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Do you clean downpipes as well?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Yes — clearing downpipes is included as part of every gutter clean. We check and clear every downpipe to ensure proper water flow from gutter to ground before we leave.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Is gutter cleaning safe for my roof?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Absolutely. We use safe, proven methods and professional equipment designed to protect your roof, gutters, and surrounding areas. We're careful around tiles, metal roofing, and fragile surfaces throughout the job.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Can you clean gutters on double-storey homes?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Yes. We're fully equipped to handle multi-storey properties safely and efficiently. If your property has particularly complex access, let us know when booking so we can arrive fully prepared.</p></div></div>
-      <div class="faq-item"><button class="faq-question">What do you do with the debris you remove?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>All debris is collected and properly disposed of. We clean up the surrounding area before leaving — no piles of leaves left on your lawn or paths.</p></div></div>
-      <div class="faq-item"><button class="faq-question">How often should I have my gutters cleaned?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>For most homes on the Peninsula, once a year is the minimum. If you're surrounded by trees — especially deciduous ones — twice a year (spring and autumn) is ideal. We can advise based on your specific property.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Do you offer regular maintenance plans?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Yes. We can arrange scheduled gutter cleaning — annual, bi-annual, or more frequent — to keep your system in excellent condition year-round without you having to remember to book.</p></div></div>
-      <div class="faq-item"><button class="faq-question">How do I find a reliable gutter cleaner near me on the Peninsula?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Look for a local gutter cleaner who is fully insured, provides before and after photos, and includes downpipe clearing as standard. L&B is based on the Mornington Peninsula and services Frankston, Mornington, Mount Eliza, Hastings, Rosebud, and surrounding suburbs. We're available 7 days and most jobs are booked within the week. Call Lilli on 0416 551 923 for a quote in under 2 minutes.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Do you do roof and gutter cleaning together?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Every gutter clean includes a visual roof inspection — we check for cracked tiles, rust, loose brackets, and anything that needs attention while we're up there. You receive a written roof condition report with photos at no extra cost. If your roof needs a full clean as well, ask us about adding that to the job.</p></div></div>
+      <div class="faq-item"><button class="faq-question">How much does gutter cleaning cost?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>Gutter cleaning starts from $149 for a standard single-storey home. We provide a clear, no-obligation quote before we start — most quotes are given within 2 minutes of your call. Price depends on the size of your property and volume of debris.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do you clean downpipes as well?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>Yes — clearing downpipes is included as part of every gutter clean. We check and clear every downpipe to ensure proper water flow from gutter to ground before we leave.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Is gutter cleaning safe for my roof?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>Absolutely. We use safe, proven methods and professional equipment designed to protect your roof, gutters, and surrounding areas. We're careful around tiles, metal roofing, and fragile surfaces throughout the job.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Can you clean gutters on double-storey homes?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>Yes. We're fully equipped to handle multi-storey properties safely and efficiently. If your property has particularly complex access, let us know when booking so we can arrive fully prepared.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What do you do with the debris you remove?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>All debris is collected and properly disposed of. We clean up the surrounding area before leaving — no piles of leaves left on your lawn or paths.</p></div></div>
+      <div class="faq-item"><button class="faq-question">How often should I have my gutters cleaned?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>For most homes on the Peninsula, once a year is the minimum. If you're surrounded by trees — especially deciduous ones — twice a year (spring and autumn) is ideal. We can advise based on your specific property.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do you offer regular maintenance plans?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>Yes. We can arrange scheduled gutter cleaning — annual, bi-annual, or more frequent — to keep your system in excellent condition year-round without you having to remember to book.</p></div></div>
+      <div class="faq-item"><button class="faq-question">How do I find a reliable gutter cleaner near me on the Peninsula?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>Look for a local gutter cleaner who is fully insured, provides before and after photos, and includes downpipe clearing as standard. L&B is based on the Mornington Peninsula and services Frankston, Mornington, Mount Eliza, Hastings, Rosebud, and surrounding suburbs. We're available 7 days and most jobs are booked within the week. Call Lilli on 0416 551 923 for a quote in under 2 minutes.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Do you do roof and gutter cleaning together?<svg class="fi fi-rr-plus" aria-hidden="true"><use href="#fi-rr-plus"/></svg></button><div class="faq-answer"><p>Every gutter clean includes a visual roof inspection — we check for cracked tiles, rust, loose brackets, and anything that needs attention while we're up there. You receive a written roof condition report with photos at no extra cost. If your roof needs a full clean as well, ask us about adding that to the job.</p></div></div>
     </div>
   </div>
 </section>
@@ -1043,8 +1067,8 @@
       <h2>Stop Gambling With Your Home.<br/>Book Your Clean Today.</h2>
       <p>May–July is when Peninsula gutters block fastest — and most homeowners call us after the damage. Spots are filling fast. Get your free quote and secure The L&B Winter Protection Package before we're full.</p>
       <div class="cta-actions">
-        <a class="btn btn-blue" href="tel:+61416551923"><i class="fi fi-rr-phone-call"></i>Call Lilli — 0416 551 923</a>
-        <a class="btn" href="#" data-quote style="background:var(--navy);color:#fff;border:1.5px solid var(--navy)"><i class="fi fi-rr-envelope"></i>Get My Free Quote</a>
+        <a class="btn btn-blue" href="tel:+61416551923"><svg class="fi fi-rr-phone-call" aria-hidden="true"><use href="#fi-rr-phone-call"/></svg>Call Lilli — 0416 551 923</a>
+        <a class="btn" href="#" data-quote style="background:var(--navy);color:#fff;border:1.5px solid var(--navy)"><svg class="fi fi-rr-envelope" aria-hidden="true"><use href="#fi-rr-envelope"/></svg>Get My Free Quote</a>
       </div>
       <div class="cta-note">No commitment required — free estimates always</div>
     </div>
@@ -1060,9 +1084,9 @@
         <div class="f-logo-tag">Cleaning Co.</div>
         <p class="f-desc">Professional exterior cleaning across the Mornington Peninsula. Trusted by hundreds of homeowners and businesses for spotless results.</p>
         <div class="f-social">
-          <a class="fsoc" href="https://www.facebook.com/p/L-B-Exterior-Cleaning-61578186357518/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fi fi-brands-facebook"></i></a>
-          <a class="fsoc" href="https://www.instagram.com/lb.exteriorcleaning/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fi fi-brands-instagram"></i></a>
-          <a class="fsoc" href="#" aria-label="Google"><i class="fi fi-brands-google"></i></a>
+          <a class="fsoc" href="https://www.facebook.com/p/L-B-Exterior-Cleaning-61578186357518/" aria-label="Facebook" target="_blank" rel="noopener"><svg class="fi fi-brands-facebook" aria-hidden="true"><use href="#fi-brands-facebook"/></svg></a>
+          <a class="fsoc" href="https://www.instagram.com/lb.exteriorcleaning/" aria-label="Instagram" target="_blank" rel="noopener"><svg class="fi fi-brands-instagram" aria-hidden="true"><use href="#fi-brands-instagram"/></svg></a>
+          <a class="fsoc" href="#" aria-label="Google"><svg class="fi fi-brands-google" aria-hidden="true"><use href="#fi-brands-google"/></svg></a>
         </div>
       </div>
       <div>
@@ -1087,15 +1111,15 @@
       <div>
         <div class="f-col-title">Contact</div>
         <div class="f-contact-row">
-          <i class="fi fi-rr-phone-call"></i>
+          <svg class="fi fi-rr-phone-call" aria-hidden="true"><use href="#fi-rr-phone-call"/></svg>
           <span>Lilli: 0416 551 923</span>
         </div>
         <div class="f-contact-row">
-          <i class="fi fi-rr-envelope"></i>
+          <svg class="fi fi-rr-envelope" aria-hidden="true"><use href="#fi-rr-envelope"/></svg>
           <span>LB.exteriorservicing@gmail.com</span>
         </div>
         <div class="f-contact-row">
-          <i class="fi fi-rr-marker"></i>
+          <svg class="fi fi-rr-marker" aria-hidden="true"><use href="#fi-rr-marker"/></svg>
           <span>Mornington Peninsula &amp; surrounds, VIC</span>
         </div>
       </div>
@@ -1115,11 +1139,11 @@
   </div>
   <div class="sticky-cta-actions">
     <a class="sticky-btn-call" href="tel:+61416551923">
-      <i class="fi fi-rr-phone-call"></i>
+      <svg class="fi fi-rr-phone-call" aria-hidden="true"><use href="#fi-rr-phone-call"/></svg>
       Call Now
     </a>
     <button class="sticky-btn-primary" onclick="openModal()">
-      <i class="fi fi-rr-envelope"></i>
+      <svg class="fi fi-rr-envelope" aria-hidden="true"><use href="#fi-rr-envelope"/></svg>
       Get Free Quote
     </button>
   </div>
