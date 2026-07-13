@@ -55,8 +55,8 @@
     /* ── Buttons ── */
     .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:.88rem;font-weight:600;padding:13px 26px;border-radius:var(--r);border:none;cursor:pointer;transition:all .22s var(--ease)}
     .btn svg{font-size:16px;line-height:1;flex-shrink:0}
-    .btn-blue{background:var(--accent);color:#fff}
-    .btn-blue:hover{background:var(--accent-dk);transform:translateY(-1px);box-shadow:0 8px 24px rgba(14,165,233,.32)}
+    .btn-blue{background:#016694;color:#fff}
+    .btn-blue:hover{background:#014f73;transform:translateY(-1px);box-shadow:0 8px 24px rgba(14,165,233,.32)}
     .btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.5)}
     .btn-outline:hover{background:var(--white);color:var(--navy)}
 
@@ -155,7 +155,7 @@
 
     /* right column — quote card */
     .hero-form-card{background:#fff;border-radius:20px;padding:0;box-shadow:0 40px 80px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08);overflow:hidden}
-    .hfc-top-bar{background:linear-gradient(90deg,#0369A1,#0EA5E9);padding:14px 28px;display:flex;align-items:center;justify-content:space-between}
+    .hfc-top-bar{background:linear-gradient(90deg,#023A56,#016694);padding:14px 28px;display:flex;align-items:center;justify-content:space-between}
     .hfc-top-offer{display:flex;align-items:center;gap:8px}
     .hfc-offer-pct{font-size:1.4rem;font-weight:800;color:#fff;line-height:1}
     .hfc-offer-txt{font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.85);line-height:1.4}
@@ -174,7 +174,7 @@
     .hf-field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(14,165,233,.12)}
     .hf-submit{width:100%;padding:15px;background:linear-gradient(135deg,#0EA5E9,#0284C7);color:#fff;border:none;border-radius:11px;font-family:var(--font-body);font-size:.95rem;font-weight:700;cursor:pointer;transition:opacity .2s,transform .2s;margin-top:8px;letter-spacing:.01em;box-shadow:0 4px 16px rgba(14,165,233,.35)}
     .hf-submit:hover{opacity:.92;transform:translateY(-1px)}
-    .hf-note{text-align:center;font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:10px}
+    .hf-note{text-align:center;font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:10px}
     .hf-success{display:none;text-align:center;padding:28px 0}
     .hf-success-icon{font-size:3rem;margin-bottom:10px}
     .hf-success h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:8px}
@@ -484,7 +484,7 @@
     /* Trust bar → light */
     .trust-bar{background:#EFF6FF;border-top:1px solid #BFDBFE}
     .trust-label{color:#0F1C2E}
-    .trust-sub{color:rgba(15,28,46,.45)}
+    .trust-sub{color:rgba(15,28,46,.62)}
     /* Reviews → light blue tint */
     .reviews{background:#F0F7FF}
     /* Damage section */
@@ -534,13 +534,13 @@
     .footer-top{border-bottom-color:rgba(15,28,46,.08)}
     .f-logo-name{color:#0F1C2E}
     .f-logo-tag{color:var(--accent)}
-    .f-desc{color:rgba(15,28,46,.45)}
-    .f-col-title{color:rgba(15,28,46,.3)}
-    .f-links a{color:rgba(15,28,46,.5)}
+    .f-desc{color:rgba(15,28,46,.62)}
+    .f-col-title{color:rgba(15,28,46,.62)}
+    .f-links a{color:rgba(15,28,46,.62)}
     .f-links a:hover{color:#0F1C2E}
-    .f-contact-row span{color:rgba(15,28,46,.5)}
+    .f-contact-row span{color:rgba(15,28,46,.62)}
     .footer-bottom{border-top-color:rgba(15,28,46,.07)}
-    .f-copy{color:rgba(15,28,46,.28)}
+    .f-copy{color:rgba(15,28,46,.62)}
     .fsoc{background:rgba(15,28,46,.06);border-color:rgba(15,28,46,.1)}
     .fsoc svg{color:rgba(15,28,46,.35)}
     .fsoc:hover{background:var(--accent);border-color:var(--accent)}
@@ -1151,7 +1151,7 @@
 
 <!-- QUOTE MODAL (secondary CTAs) -->
 <div class="modal-overlay" id="modalOverlay"></div>
-<div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a free quote">
   <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
   <div class="modal-call-box">
     <div class="modal-call-label">📞 Call Lilli directly for an instant quote</div>
@@ -1368,7 +1368,7 @@ function gtag_report_conversion(url) {
         <input type="email" id="epEmail" name="email" placeholder="Email address (optional)" autocomplete="email"/>
       </div>
       <div class="ep-field-full">
-        <select id="epService" name="service">
+        <select id="epService" name="service" aria-label="Service needed">
           <option value="" disabled selected>Service needed</option>
           <option value="Gutter Cleaning">Gutter Cleaning</option>
           <option value="Window Cleaning">Window Cleaning</option>
