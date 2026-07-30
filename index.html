@@ -309,6 +309,8 @@
       .why-grid{grid-template-columns:1fr;gap:64px}
     }
     @media(max-width:768px){
+      .announce{display:none}
+      .nav{top:0}
       .nav-left{display:none}
       .nav-right{display:none}
       .hamburger{display:flex}
@@ -989,7 +991,7 @@
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 40);
-    if(announceBar){ announceBar.style.transform = y > 80 ? 'translateY(-100%)' : ''; nav.style.top = y > 80 ? '0' : '36px'; }
+    if(announceBar && window.innerWidth > 768){ announceBar.style.transform = y > 80 ? 'translateY(-100%)' : ''; nav.style.top = y > 80 ? '0' : '36px'; }
   }, {passive:true});
 
   const hamburger = document.getElementById('hamburger');
