@@ -10,7 +10,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.lbexteriorcleaning.com.au/contact.html"/>
   <meta property="og:title" content="Contact L&B Exterior Cleaning | Mornington Peninsula"/>
-  <meta property="og:description" content="Get a free quote from L&B Exterior Cleaning. Fast response guaranteed — we call back within the hour."/>
+  <meta property="og:description" content="Get a free quote from L&B Exterior Cleaning. Fast response guaranteed. We call back within the hour."/>
   <meta property="og:site_name" content="L&B Exterior Cleaning"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -185,6 +185,19 @@
     @media(max-width:500px){.qform-row{grid-template-columns:1fr}.modal{padding:32px 24px}}
     @media(max-width:1024px){.contact-inner{grid-template-columns:1fr}.contact-info{display:grid;grid-template-columns:1fr 1fr;gap:16px}.trust-bar-inner{gap:12px}.footer-top{grid-template-columns:1fr 1fr}}
     @media(max-width:768px){.announce{display:none}.nav{top:0}.nav-left{display:none}.nav-right{display:none}.hamburger{display:flex}.contact-hero{padding:100px 0 60px}.contact-inner{gap:40px}.contact-info{grid-template-columns:1fr}.form-row-2{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;text-align:center}.container{padding:0 20px}.nav{padding:0 20px;justify-content:space-between;background:rgba(15,28,46,.97)}.nav-logo{position:static;transform:none}}
+    /* ── PAGE AURA (per-page accent; nav, footer, fonts and navy stay shared) ── */
+    :root{--aura-rgb:129,140,248;--aura-text:#4F46E5}
+    .contact-hero{position:relative}
+    .contact-hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 90% at 92% 10%,rgba(var(--aura-rgb),.18),transparent 62%),radial-gradient(ellipse 40% 70% at 0% 100%,rgba(14,165,233,.12),transparent 60%)}
+    /* ── Spring Packages nav highlight ── */
+    .nav-left>a[href="spring-packages.html"]{color:#FBBF24;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.45);border-radius:99px;height:auto;align-self:center;padding:7px 13px;margin:0 8px;font-weight:600;transition:background .18s,color .18s}
+    .nav-left>a[href="spring-packages.html"]:hover{color:#0F1C2E;background:#FBBF24}
+    .mobile-nav a[href="spring-packages.html"]{color:#FBBF24;font-weight:600}
+    /* keep the centred logo clear of the menu on narrower laptops */
+    @media(max-width:1400px){.nav-left>a,.nav-dropdown-wrap>a{padding:0 6px!important}.nav-left>a[href="spring-packages.html"]{margin:0 3px;padding:6px 10px!important;font-size:.62rem}}
+    @media(max-width:1180px){.nav-left>a,.nav-dropdown-wrap>a{font-size:.6rem;letter-spacing:.03em}.nav-phone{display:none}}
+    @media(max-width:1180px){.nav-logo-mark{font-size:.95rem!important;letter-spacing:.07em!important}.nav-left>a[href="spring-packages.html"]{padding:5px 8px!important}.nav-left>a,.nav-dropdown-wrap>a{padding:0 5px!important}.nav-cta{padding:8px 14px}}
+    @media(max-width:1000px){.nav-left,.nav-right{display:none!important}.hamburger{display:flex!important}.nav{padding:0 20px;justify-content:space-between}.nav-logo{position:static!important;transform:none!important}}
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','AW-17970733561');</script>
@@ -204,14 +217,14 @@
     <div class="nav-dropdown-wrap">
       <a href="index.html#services">Services <i class="fi fi-rr-angle-down chev"></i></a>
       <div class="nav-dropdown">
-        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning</a>
-        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning</a>
-        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning</a>
-        <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing</a>
-        <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning</a>
-        <a href="interior-cleaning.html"><span class="dd-dot"></span>Interior &amp; Home Cleaning</a>
+        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
+        <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
       </div>
     </div>
+    <a href="spring-packages.html">Spring Packages</a>
     <a href="index.html#why">About Us</a>
     <a href="index.html#reviews">Reviews</a>
     <a href="contact.html">Contact</a>
@@ -234,12 +247,12 @@
     <div style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#0EA5E9;margin-top:4px">Mornington Peninsula</div>
   </div>
   <a href="index.html#services" class="ml">Services</a>
-  <a href="gutter-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Gutter Cleaning</a>
-  <a href="solar-panel-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Solar Panel Cleaning</a>
-  <a href="window-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Window Cleaning</a>
-  <a href="pressure-washing.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Pressure Washing</a>
-  <a href="facade-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Façade Cleaning</a>
-  <a href="interior-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Interior Cleaning</a>
+  <a href="gutter-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Gutter Cleaning</a>
+  <a href="solar-panel-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Solar Panel Cleaning</a>
+  <a href="window-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Window Cleaning</a>
+  <a href="pressure-washing.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Pressure Washing</a>
+  <a href="facade-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Façade Cleaning</a>
+  <a href="spring-packages.html" class="ml">Spring Packages</a>
   <a href="index.html#why" class="ml">About Us</a>
   <a href="index.html#reviews" class="ml">Reviews</a>
   <a href="contact.html" class="ml">Contact</a>
@@ -250,8 +263,8 @@
 <!-- HERO -->
 <section class="contact-hero">
   <div class="container contact-hero-inner">
-    <h1>Get in Touch —<br/><em>We'll Call You Back Within the Hour</em></h1>
-    <p class="contact-hero-sub">Fill in the form or pick up the phone. No hold music, no call centres — just Ben and Lilli, ready to help.</p>
+    <h1>Get in Touch:<br/><em>We'll Call You Back Within the Hour</em></h1>
+    <p class="contact-hero-sub">Fill in the form or pick up the phone. No hold music, no call centres, just Ben and Lilli, ready to help.</p>
   </div>
 </section>
 
@@ -261,7 +274,7 @@
     <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-phone-call"></i></div><div><div class="trust-label">Fast Response</div><div class="trust-sub">We call within the hour</div></div></div>
     <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-file-check"></i></div><div><div class="trust-label">Free Quotes</div><div class="trust-sub">No obligation</div></div></div>
     <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-shield"></i></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M liability</div></div></div>
-    <div class="trust-item"><div class="trust-icon"><i class="fi fi-sr-star"></i></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">25+ five-star reviews</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><i class="fi fi-sr-star"></i></div><div><div class="trust-label">5-Star Rated</div><div class="trust-sub">40+ five-star reviews</div></div></div>
   </div>
 </div>
 
@@ -273,7 +286,7 @@
       <!-- LEFT: Contact form -->
       <div class="contact-form-wrap" data-reveal>
         <div class="contact-form-title">Send Us a Message</div>
-        <p class="contact-form-sub">We'll call you back within the hour — fixed price before we start, no surprises.</p>
+        <p class="contact-form-sub">We'll call you back within the hour, fixed price before we start, no surprises.</p>
         <form id="contactForm" novalidate>
           <div class="form-row-2">
             <div class="form-field"><label for="cName">Your Name</label><input type="text" id="cName" name="name" placeholder="Jane Smith" required autocomplete="name"/></div>
@@ -289,18 +302,17 @@
               <option>Window Cleaning</option>
               <option>Pressure Washing</option>
               <option>Façade Cleaning</option>
-              <option>Interior Cleaning</option>
               <option>General Enquiry</option>
             </select>
           </div>
           <div class="form-field"><label for="cMessage">Message (optional)</label><textarea id="cMessage" name="message" placeholder="Any details that would help us quote accurately..."></textarea></div>
-          <button type="submit" class="contact-submit">Send Message — We'll Call Back Within the Hour →</button>
+          <button type="submit" class="contact-submit">Send Message: We'll Call Back Within the Hour →</button>
           <p class="contact-form-note">No commitment required &nbsp;·&nbsp; Fixed price before we start</p>
         </form>
         <div class="contact-success" id="contactSuccess">
           <div class="contact-success-icon">✓</div>
           <h3>Message Sent!</h3>
-          <p>Thanks — Lilli will call you back shortly.<br/>Or call us directly on <a href="tel:+61416551923" style="color:var(--accent);font-weight:700">0416 551 923</a>.</p>
+          <p>Thanks, Lilli will call you back shortly.<br/>Or call us directly on <a href="tel:+61416551923" style="color:var(--accent);font-weight:700">0416 551 923</a>.</p>
         </div>
       </div>
 
@@ -324,7 +336,7 @@
           <div class="contact-info-icon"><i class="fi fi-rr-marker"></i></div>
           <div class="contact-info-label">Service Area</div>
           <div class="contact-info-value">Mornington Peninsula &amp; surrounds</div>
-          <div class="contact-info-note">Brighton to Portsea</div>
+          <div class="contact-info-note">Frankston to Portsea</div>
         </div>
         <div class="contact-info-card">
           <div class="contact-info-icon"><i class="fi fi-rr-clock"></i></div>
@@ -370,7 +382,7 @@
           <li><a href="window-cleaning.html">Window Cleaning</a></li>
           <li><a href="pressure-washing.html">Pressure Washing</a></li>
           <li><a href="facade-cleaning.html">Façade Cleaning</a></li>
-          <li><a href="interior-cleaning.html">Interior &amp; Home Cleaning</a></li>
+          <li><a href="spring-packages.html">Spring Packages</a></li>
         </ul>
       </div>
       <div>
@@ -413,7 +425,7 @@
   <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
   <p class="modal-eyebrow">Free Quote</p>
   <h2 class="modal-title" id="modalTitle">Request a Quote</h2>
-  <p class="modal-sub">We'll call you back within the hour — fixed price before we start.</p>
+  <p class="modal-sub">We'll call you back within the hour, fixed price before we start.</p>
   <form id="quoteForm" novalidate>
     <div class="qform-row">
       <div class="qform-field"><label for="qName">Your Name</label><input type="text" id="qName" name="name" placeholder="Jane Smith" required></div>
@@ -426,7 +438,7 @@
   <div class="qform-success" id="formSuccess">
     <div class="qform-success-icon">✓</div>
     <h3>Request Sent!</h3>
-    <p>Thanks — Lilli will be in touch shortly.<br>Or call us directly on <strong>0416 551 923</strong>.</p>
+    <p>Thanks, Lilli will be in touch shortly.<br>Or call us directly on <strong>0416 551 923</strong>.</p>
   </div>
 </div>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
-  <title>Privacy Policy — L&B Exterior Cleaning</title>
+  <title>Privacy Policy | L&B Exterior Cleaning</title>
   <meta name="description" content="Privacy Policy for L&B Exterior Cleaning. Learn how we collect, use, and protect your personal information in accordance with Australian Privacy Principles."/>
   <link rel="canonical" href="https://www.lbexteriorcleaning.com.au/privacy-policy.html"/>
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
@@ -16,13 +16,13 @@
     :root{
       --white:    #FFFFFF;
       --off:      #F8FAFC;
-      --border:   #CBD5E1;
+      --border:   #E2E8F0;
       --blue:     #2B6CB0;
       --blue-dk:  #356585;
-      --blue-lt:  #F8FAFC;
+      --blue-lt:  #EFF6FF;
       --accent:   #0EA5E9;
       --accent-dk:#0284C7;
-      --navy:     #1C2B3A;
+      --navy:     #0F1C2E;
       --body:     #2D3748;
       --muted:    #64748B;
       --dim:      #94A3B8;
@@ -39,37 +39,38 @@
     .container{max-width:1160px;margin:0 auto;padding:0 40px}
 
     /* ── NAV ── */
-    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:76px;display:flex;align-items:center;background:#fff;border-bottom:1px solid #d5d5d5;padding:0 36px}
-    .nav-left{display:flex;align-items:center;height:100%;flex:1;gap:0}
-    .nav-left>a{display:flex;align-items:center;height:100%;padding:0 16px;font-family:var(--font-body);font-size:.68rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
-    .nav-left>a:hover,.nav-left>a.active{color:var(--accent);background:#D9EFFE}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;background:rgba(15,28,46,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);padding:0 36px;transition:top .3s,box-shadow .3s}
+    .nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.35);border-bottom-color:transparent}
+    .nav-left{display:flex;align-items:center;height:100%;flex:1;gap:0;max-width:calc(50% - 90px)}
+    .nav-left>a{display:flex;align-items:center;height:100%;padding:0 9px;font-size:.65rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.65);white-space:nowrap;transition:color .18s,background .18s}
+    .nav-left>a:hover{color:#fff;background:rgba(255,255,255,.06)}
     .nav-logo{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-decoration:none;gap:0;user-select:none}
-    .nav-logo-mark{font-family:var(--font-body);font-size:1.16rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#111;line-height:1.1}
-    .nav-logo-rule{width:110%;height:1px;background:linear-gradient(90deg,transparent,rgba(66,122,161,.6),transparent);margin:3px 0}
-    .nav-logo-sub{font-family:var(--font-body);font-size:.53rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#427AA1;white-space:nowrap}
+    .nav-logo-mark{font-size:1.16rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;line-height:1.1}
+    .nav-logo-rule{width:110%;height:1px;background:linear-gradient(90deg,transparent,rgba(14,165,233,.5),transparent);margin:3px 0}
+    .nav-logo-sub{font-size:.53rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
     .nav-right{display:flex;align-items:center;gap:14px;flex:1;justify-content:flex-end}
-    .nav-phone{font-family:var(--font-body);font-size:.71rem;font-weight:500;letter-spacing:.06em;color:#666;white-space:nowrap;transition:color .18s}
-    .nav-phone:hover{color:#111}
-    .nav-cta{background:var(--accent);color:#fff;font-family:var(--font-body);font-size:.71rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:9px 20px;border-radius:8px;white-space:nowrap;transition:background .18s,transform .18s}
+    .nav-phone{font-size:.71rem;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.45);white-space:nowrap;transition:color .18s}
+    .nav-phone:hover{color:#fff}
+    .nav-cta{background:var(--accent);color:#fff;font-size:.71rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:9px 20px;border-radius:8px;white-space:nowrap;transition:background .18s,transform .18s}
     .nav-cta:hover{background:var(--accent-dk);transform:translateY(-1px)}
     .nav-dropdown-wrap{position:relative;display:flex;align-items:center;height:100%}
-    .nav-dropdown-wrap>a{display:flex;align-items:center;gap:5px;height:100%;padding:0 16px;font-family:var(--font-body);font-size:.68rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#444;white-space:nowrap;transition:color .18s,background .18s}
-    .nav-dropdown-wrap>a:hover{color:#111;background:#E0F2FE}
-    .nav-dropdown-wrap>a .chev{width:9px;height:9px;fill:#888;transition:transform .2s;flex-shrink:0}
-    .nav-dropdown-wrap:hover>a .chev{transform:rotate(180deg)}
-    .nav-dropdown{position:absolute;top:100%;left:0;min-width:215px;background:#fff;border:1px solid #e0e0e0;border-top:2px solid var(--accent);z-index:200;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s var(--ease),transform .18s var(--ease);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .nav-dropdown-wrap>a{display:flex;align-items:center;gap:5px;height:100%;padding:0 9px;font-size:.65rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.65);white-space:nowrap;transition:color .18s,background .18s}
+    .nav-dropdown-wrap>a:hover{color:#fff;background:rgba(255,255,255,.06)}
+    .nav-dropdown-wrap>a .chev{width:12px;height:12px;fill:rgba(255,255,255,.65);color:#888;transition:transform .2s;flex-shrink:0;line-height:1}
+    .nav-dropdown-wrap:hover>a .chev{transform:rotate(-90deg) scale(1.4)}
+    .nav-dropdown{position:absolute;top:100%;left:0;min-width:215px;background:#0F1C2E;border:1px solid #1E3A5F;border-top:2px solid var(--accent);z-index:200;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s var(--ease),transform .18s var(--ease);box-shadow:0 8px 24px rgba(0,0,0,.08)}
     .nav-dropdown-wrap:hover .nav-dropdown{opacity:1;pointer-events:auto;transform:none}
-    .nav-dropdown a{display:flex;align-items:center;gap:9px;padding:11px 16px;font-family:var(--font-body);font-size:.71rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#444;border-bottom:1px solid #f0f0f0;white-space:nowrap;transition:color .15s,background .15s}
+    .nav-dropdown a{display:flex;align-items:center;gap:9px;padding:11px 16px;font-size:.71rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;transition:color .15s,background .15s}
     .nav-dropdown a:last-child{border-bottom:none}
-    .nav-dropdown a:hover{color:var(--accent);background:#E0F2FE}
+    .nav-dropdown a:hover{color:var(--accent);background:rgba(255,255,255,.05)}
     .nav-dropdown a .dd-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;opacity:.5}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:10px;margin-left:12px}
-    .hamburger span{display:block;width:22px;height:1.5px;background:#333;transition:all .3s}
-    .mobile-nav{position:fixed;inset:0;background:#fff;z-index:99;display:flex;flex-direction:column;align-items:stretch;justify-content:center;transform:translateX(100%);transition:transform .4s var(--ease)}
+    .hamburger span{display:block;width:22px;height:1.5px;background:#fff;transition:all .3s}
+    .mobile-nav{position:fixed;inset:0;background:#0F1C2E;z-index:99;display:flex;flex-direction:column;align-items:stretch;justify-content:center;transform:translateX(100%);transition:transform .4s var(--ease)}
     .mobile-nav.open{transform:none}
-    .mobile-nav-logo{text-align:center;padding:28px 36px 20px;border-bottom:1px solid #ececec;margin-bottom:8px}
-    .mobile-nav a{font-family:var(--font-body);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#555;padding:20px 36px;border-bottom:1px solid #ececec;transition:color .18s,background .18s}
-    .mobile-nav a:hover{color:#111;background:#E0F2FE}
+    .mobile-nav-logo{text-align:center;padding:28px 36px 20px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:8px}
+    .mobile-nav a{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);padding:20px 36px;border-bottom:1px solid rgba(255,255,255,.06);transition:color .18s,background .18s}
+    .mobile-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
     .mobile-nav .nav-cta{background:var(--accent);color:#fff;text-align:center;border-bottom:none;padding:22px 36px;font-weight:600}
 
     /* ── HERO ── */
@@ -90,7 +91,7 @@
     .pp-section p:last-child{margin-bottom:0}
     .pp-section ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
     .pp-section ul li{font-size:.97rem;color:var(--muted);line-height:1.7;padding-left:18px;position:relative}
-    .pp-section ul li::before{content:'—';position:absolute;left:0;color:var(--accent);font-weight:600}
+    .pp-section ul li::before{content:'•';position:absolute;left:0;color:var(--accent);font-weight:600}
     .pp-contact-block{background:var(--off);border-radius:16px;padding:28px 32px;border:1px solid var(--border)}
     .pp-contact-block p{margin-bottom:6px;font-size:.95rem;color:var(--body)}
     .pp-contact-block a{color:var(--accent);transition:color .18s}
@@ -137,6 +138,15 @@
     @media(max-width:500px){
       .pp-section h2{font-size:1.1rem}
     }
+    /* ── Spring Packages nav highlight ── */
+    .nav-left>a[href="spring-packages.html"]{color:#FBBF24;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.45);border-radius:99px;height:auto;align-self:center;padding:7px 13px;margin:0 8px;font-weight:600;transition:background .18s,color .18s}
+    .nav-left>a[href="spring-packages.html"]:hover{color:#0F1C2E;background:#FBBF24}
+    .mobile-nav a[href="spring-packages.html"]{color:#FBBF24;font-weight:600}
+    /* keep the centred logo clear of the menu on narrower laptops */
+    @media(max-width:1400px){.nav-left>a,.nav-dropdown-wrap>a{padding:0 6px!important}.nav-left>a[href="spring-packages.html"]{margin:0 3px;padding:6px 10px!important;font-size:.62rem}}
+    @media(max-width:1180px){.nav-left>a,.nav-dropdown-wrap>a{font-size:.6rem;letter-spacing:.03em}.nav-phone{display:none}}
+    @media(max-width:1180px){.nav-logo-mark{font-size:.95rem!important;letter-spacing:.07em!important}.nav-left>a[href="spring-packages.html"]{padding:5px 8px!important}.nav-left>a,.nav-dropdown-wrap>a{padding:0 5px!important}.nav-cta{padding:8px 14px}}
+    @media(max-width:1000px){.nav-left,.nav-right{display:none!important}.hamburger{display:flex!important}.nav{padding:0 20px;justify-content:space-between}.nav-logo{position:static!important;transform:none!important}}
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
@@ -150,15 +160,15 @@
     <div class="nav-dropdown-wrap">
       <a href="index.html#services">Services <svg class="chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
       <div class="nav-dropdown">
-        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning</a>
-        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning</a>
-        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning</a>
-        <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing</a>
-        <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning</a>
-        <a href="interior-cleaning.html"><span class="dd-dot"></span>Interior &amp; Home Cleaning</a>
+        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
+        <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
       </div>
     </div>
 
+    <a href="spring-packages.html">Spring Packages</a>
     <a href="index.html#why">About Us</a>
     <a href="index.html#reviews">Reviews</a>
     <a href="contact.html">Contact</a>
@@ -180,7 +190,7 @@
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-logo">
-    <div style="font-family:var(--font-body);font-size:.9rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#111">L&amp;B Exterior Cleaning</div>
+    <div style="font-family:var(--font-body);font-size:.9rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff">L&amp;B Exterior Cleaning</div>
     <div style="font-family:var(--font-body);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px">Mornington Peninsula</div>
   </div>
   <a href="gutter-cleaning.html">Gutter Cleaning</a>
@@ -189,6 +199,7 @@
   <a href="pressure-washing.html">Pressure Washing</a>
   <a href="facade-cleaning.html">Façade Cleaning</a>
   <a href="index.html#process">Our Process</a>
+  <a href="spring-packages.html">Spring Packages</a>
   <a href="index.html#why">About Us</a>
   <a href="index.html#reviews">Reviews</a>
   <a href="contact.html">Contact</a>
@@ -200,7 +211,7 @@
   <div class="container pp-hero-inner">
     <div class="pp-hero-tag">Legal</div>
     <h1>Privacy Policy</h1>
-    <p class="pp-hero-sub">How we collect, use, and protect your personal information — in accordance with Australian Privacy Principles.</p>
+    <p class="pp-hero-sub">How we collect, use, and protect your personal information, in accordance with Australian Privacy Principles.</p>
   </div>
 </section>
 
@@ -302,6 +313,7 @@
           <li><a href="window-cleaning.html">Window Cleaning</a></li>
           <li><a href="pressure-washing.html">Pressure Washing</a></li>
           <li><a href="facade-cleaning.html">Façade Cleaning</a></li>
+          <li><a href="spring-packages.html">Spring Packages</a></li>
         </ul>
       </div>
       <div>

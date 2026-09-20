@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
-  <title>L&B Exterior Cleaning — Mornington Peninsula</title>
+  <title>L&B Exterior Cleaning | Mornington Peninsula</title>
   <meta name="description" content="Professional exterior cleaning across the Mornington Peninsula. Gutter cleaning, solar panels, windows, pressure washing and façade cleaning." />
   <meta name="google-site-verification" content="Ka0hSPzDwLp_KVWzHDLufLmVdC0AYURbCCgXVRONe1o" />
   <link rel="canonical" href="https://www.lbexteriorcleaning.com.au/"/>
@@ -18,13 +18,13 @@
     :root{
       --white:    #FFFFFF;
       --off:      #F8FAFC;
-      --border:   #CBD5E1;
+      --border:   #E2E8F0;
       --blue:     #2B6CB0;      /* muted slate-blue — brand primary */
       --blue-dk:  #356585;
-      --blue-lt:  #F8FAFC;
+      --blue-lt:  #EFF6FF;
       --accent:   #0EA5E9;      /* vivid blue — CTAs & highlights */
       --accent-dk:#0284C7;
-      --navy:     #1C2B3A;
+      --navy:     #0F1C2E;
       --body:     #2D3748;
       --muted:    #64748B;
       --dim:      #94A3B8;
@@ -243,13 +243,14 @@
     .testimonials{padding:120px 0;background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background-image:radial-gradient(circle,rgba(66,122,161,.15) 1px,transparent 1px);background-size:36px 36px}
     .test-hdr{text-align:center;margin-bottom:56px}
     .test-hdr .subtext{max-width:440px;margin:14px auto 0}
-    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:20px;overflow:hidden}
-    .rev-card{background:var(--white);padding:36px;border-right:1px solid var(--border);transition:background .25s}
-    .rev-card:last-child{border-right:none}
+    .rev-grid{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+    .rev-card{background:var(--white);padding:24px 20px;border-bottom:1px solid var(--border);border-right:1px solid var(--border);transition:background .25s}
+    .rev-card:nth-child(6n){border-right:none}
+    .rev-card:nth-child(n+7){border-bottom:none}
     .rev-card:hover{background:var(--blue-lt)}
     .rev-stars{display:flex;gap:3px;margin-bottom:18px}
     .rev-stars svg{width:16px;height:16px;fill:#F59E0B}
-    .rev-text{font-size:.9rem;color:var(--body);line-height:1.8;margin-bottom:28px;font-style:italic}
+    .rev-text{font-size:.8rem;color:var(--body);line-height:1.65;margin-bottom:20px;font-style:italic}
     .rev-author{display:flex;align-items:center;gap:13px;padding-top:20px;border-top:1px solid var(--border)}
     .rev-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--accent));display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;color:#fff;flex-shrink:0}
     .rev-name{font-size:.88rem;font-weight:600;color:var(--navy)}
@@ -391,6 +392,42 @@
       .photo-strip img{height:180px;min-width:240px}
       #promoFloat{bottom:calc(84px + env(safe-area-inset-bottom));right:16px}
     }
+    /* ── PAGE AURA (per-page accent; nav, footer, fonts and navy stay shared) ── */
+    :root{--aura-rgb:14,165,233;--aura-text:#0284C7}
+    .hero-bg::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 70% at 88% 8%,rgba(var(--aura-rgb),.16),transparent 62%)}
+    /* ── Spring Packages nav highlight ── */
+    .nav-left>a[href="spring-packages.html"]{color:#FBBF24;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.45);border-radius:99px;height:auto;align-self:center;padding:7px 13px;margin:0 8px;font-weight:600;transition:background .18s,color .18s}
+    .nav-left>a[href="spring-packages.html"]:hover{color:#0F1C2E;background:#FBBF24}
+    .mobile-nav a[href="spring-packages.html"]{color:#FBBF24;font-weight:600}
+    /* ── Reviews grid responsive (6 x 2 desktop) ── */
+    @media(max-width:1100px){.rev-grid{grid-template-columns:repeat(3,1fr)}.rev-card:nth-child(n){border-right:1px solid var(--border);border-bottom:1px solid var(--border)}.rev-card:nth-child(3n){border-right:none}.rev-card:nth-child(n+10){border-bottom:none}}
+    @media(max-width:768px){.rev-grid{grid-template-columns:1fr}.rev-card:nth-child(n){border-right:none;border-bottom:1px solid var(--border)}.rev-card:last-child{border-bottom:none}}
+    /* ── Reviews carousel: 2 rows, 3 visible, looping ── */
+    .rev-grid{display:flex;flex-direction:column;gap:22px;border:none;border-radius:0;overflow:visible}
+    .rev-row{position:relative;padding:0}
+    .rev-viewport{overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;border:1px solid var(--border);border-radius:20px;background:var(--white)}
+    .rev-track{display:flex;transition:transform .55s cubic-bezier(.22,.61,.36,1);will-change:transform}
+    .rev-row .rev-card{flex:0 0 calc(100% / var(--v,3));box-sizing:border-box;padding:28px 26px;border-right:1px solid var(--border);border-bottom:none}
+    .rev-row .rev-card:nth-child(n){border-bottom:none}
+    .rev-row .rev-text{font-size:.86rem;line-height:1.7}
+    
+    @media(max-width:1100px){.rev-row{--v:2}}
+    @media(max-width:768px){.rev-row{--v:1}.rev-row .rev-card{border-right:none}}
+    /* scroll hint arrows (indicators only; scroll by hovering + mouse wheel / trackpad, swipe on touch) */
+    .rev-hint{position:absolute;top:50%;width:40px;height:40px;margin-top:-20px;border-radius:50%;background:#fff;color:var(--navy);border:1px solid var(--border);box-shadow:0 6px 18px rgba(15,28,46,.14);display:flex;align-items:center;justify-content:center;z-index:3;pointer-events:none}
+    .rev-hint svg{width:18px;height:18px}
+    .rev-hint-l{left:-20px}.rev-hint-r{right:-20px;animation:revNudge 1.8s ease-in-out infinite}
+    @keyframes revNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+    .rev-row:hover .rev-hint{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .rev-row:hover .rev-hint-r{animation:none}
+    @media(prefers-reduced-motion:reduce){.rev-hint-r{animation:none}}
+    @media(max-width:1300px){.rev-hint-l{left:6px}.rev-hint-r{right:6px}}
+    @media(max-width:768px){.rev-hint{width:34px;height:34px;margin-top:-17px}}
+    /* keep the centred logo clear of the menu on narrower laptops */
+    @media(max-width:1400px){.nav-left>a,.nav-dropdown-wrap>a{padding:0 6px!important}.nav-left>a[href="spring-packages.html"]{margin:0 3px;padding:6px 10px!important;font-size:.62rem}}
+    @media(max-width:1180px){.nav-left>a,.nav-dropdown-wrap>a{font-size:.6rem;letter-spacing:.03em}.nav-phone{display:none}}
+    @media(max-width:1180px){.nav-logo-mark{font-size:.95rem!important;letter-spacing:.07em!important}.nav-left>a[href="spring-packages.html"]{padding:5px 8px!important}.nav-left>a,.nav-dropdown-wrap>a{padding:0 5px!important}.nav-cta{padding:8px 14px}}
+    @media(max-width:1000px){.nav-left,.nav-right{display:none!important}.hamburger{display:flex!important}.nav{padding:0 20px;justify-content:space-between}.nav-logo{position:static!important;transform:none!important}}
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
@@ -400,11 +437,11 @@
 
 <!-- ANNOUNCEMENT BAR -->
 <div class="announce" id="announceBar">
-  <span class="announce-text">The L&amp;B Winter Protection Package — Free Roof Report Included</span>
+  <span class="announce-text">The L&amp;B Spring Protection Package: Free Roof Report Included</span>
   <span class="announce-sep">·</span>
   <span class="announce-text">Mornington Peninsula's most trusted exterior cleaners</span>
   <span class="announce-sep">·</span>
-  <span class="announce-pill">Limited Winter Spots</span>
+  <span class="announce-pill">Limited Spring Spots</span>
 </div>
 
 <!-- ── NAV — centred split ── -->
@@ -415,14 +452,14 @@
     <div class="nav-dropdown-wrap">
       <a href="#services">Services <svg class="chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
       <div class="nav-dropdown">
-        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $149</span></a>
-        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $149</span></a>
-        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $149</span></a>
+        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
         <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
         <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
-        <a href="interior-cleaning.html"><span class="dd-dot"></span>Interior &amp; Home Cleaning</a>
       </div>
     </div>
+    <a href="spring-packages.html">Spring Packages</a>
     <a href="#why">About Us</a>
     <a href="#reviews">Reviews</a>
     <a href="contact.html">Contact</a>
@@ -449,10 +486,11 @@
 <!-- ── MOBILE NAV ── -->
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-logo">
-    <div class="nav-logo-mark" style="font-family:'IBM Plex Mono',monospace;font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111">L&amp;B Exterior Cleaning</div>
-    <div class="nav-logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#427AA1;margin-top:4px">Mornington Peninsula</div>
+    <div class="nav-logo-mark" style="font-family:'IBM Plex Mono',monospace;font-size:1.1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff">L&amp;B Exterior Cleaning</div>
+    <div class="nav-logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px">Mornington Peninsula</div>
   </div>
   <a href="#services" class="ml">Services</a>
+  <a href="spring-packages.html" class="ml">Spring Packages</a>
   <a href="#why" class="ml">About Us</a>
   <a href="#reviews" class="ml">Reviews</a>
   <a href="contact.html" class="ml">Contact</a>
@@ -474,13 +512,13 @@
   <div class="container hero-inner">
     <div class="hero-badge">
       <div class="badge-dot"></div>
-      <span class="badge-text">Book Now — Only a Few Winter Slots Left</span>
+      <span class="badge-text">Book Now: Only a Few Spring Slots Left</span>
     </div>
     <h1 class="hero-title">
       Fall in love with your home<br/>
       <span class="blue">all over again.</span>
     </h1>
-    <p class="hero-desc">Professional exterior cleaning across the Mornington Peninsula. Gutters, solar panels, windows, pressure washing, and façade restoration — done right, every time.</p>
+    <p class="hero-desc">Professional exterior cleaning across the Mornington Peninsula. Gutters, solar panels, windows, pressure washing, and façade restoration, done right, every time.</p>
     <div class="hero-actions">
       <a class="btn btn-blue" href="#" data-quote>
         <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -554,33 +592,160 @@
   </div>
 </div>
 
-<!-- ── SERVICE AREAS ── -->
-<section style="padding:48px 0 40px;background:#F8FAFC;border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0">
-  <div style="max-width:900px;margin:0 auto;padding:0 24px;text-align:center">
-    <span style="font-family:'Inter',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#0EA5E9;display:block;margin-bottom:10px">Service Area</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:1.45rem;font-weight:800;color:#1C2B3A;margin:0 0 10px;letter-spacing:-.02em">Areas We Service</h2>
-    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#475569;margin:0 0 28px;line-height:1.6">L&amp;B Exterior Cleaning proudly services Melbourne's south east — from the Mornington Peninsula through to Bayside and beyond.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px">
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Frankston</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Mount Eliza</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Mornington</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Seaford</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Chelsea</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Cheltenham</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Brighton</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Bayside</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Carrum Downs</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Rosebud</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Sorrento</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Mount Martha</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Langwarrin</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Cranbourne</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Dandenong</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Pakenham</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Berwick</span>
-      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#1C2B3A;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Narre Warren</span>
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <div class="test-hdr">
+      <p class="eyebrow" data-reveal>Testimonials</p>
+      <h2 class="heading" data-reveal data-d="1">What Our Customers Say</h2>
+      <p class="subtext" data-reveal data-d="2">Don't take our word for it. Here's what real homeowners across the Peninsula say about working with us.</p>
     </div>
-    <p style="font-family:'Inter',sans-serif;font-size:.82rem;color:#64748B;margin:0">Not sure if we cover your area? Give us a call — <a href="tel:0416551923" style="color:#0EA5E9;font-weight:700;text-decoration:none">0416 551 923</a></p>
+    <div class="rev-grid">
+      <div class="rev-row" data-rev-row="1">
+        <span class="rev-hint rev-hint-l" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="rev-hint rev-hint-r" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="rev-viewport"><div class="rev-track">
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"We are so glad we hired Ben and Lilli to clean our guttering. They arrived on time, were extremely courteous and did an excellent job and left no mess. <em>Ben even discovered that we had a roof tile that had split</em>, something we never would have found otherwise."</p>
+        <div class="rev-author">
+          <div class="rev-av">CL</div>
+          <div>
+            <div class="rev-name">Christopher and Lynne</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Wonderful job done by Ben and Lilli. Looks great! Also now have <em>clean gutters, which were completely full!</em> They were friendly, punctual, very professional and will definitely use again and recommend."</p>
+        <div class="rev-author">
+          <div class="rev-av">VJ</div>
+          <div>
+            <div class="rev-name">Vicki Jarrett</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Ben &amp; Lilli were a pleasure to have out to clean our gutters. Arrived on time, and worked efficiently to complete the job. <em>Also shared photos and kept me updated as they went.</em> Highly recommend."</p>
+        <div class="rev-author">
+          <div class="rev-av">TA</div>
+          <div>
+            <div class="rev-name">Telemahos Anastas</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Lilli and Ben attended today to clean out exterior guttering. They did a terrific job, are clearly very good at what they do and were great to deal with. Highly recommended."</p>
+        <div class="rev-author">
+          <div class="rev-av">PC</div>
+          <div>
+            <div class="rev-name">Patricia Cooney</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"These locals are the best exterior cleaners I've ever used. Timely &amp; respectful, they did an absolutely fantastic job cleaning our driveway, roof &amp; windows. Will definitely use them again."</p>
+        <div class="rev-author">
+          <div class="rev-av">LM</div>
+          <div>
+            <div class="rev-name">Louie Marshall</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Cannot beat these guys. Did an amazing job on a very overgrown patio. They are really thorough, great communication and always on time. That's rare. Highly recommend them for your outdoors."</p>
+        <div class="rev-author">
+          <div class="rev-av">AP</div>
+          <div>
+            <div class="rev-name">Angela Pollard</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+        </div></div>
+      </div>
+      <div class="rev-row" data-rev-row="2">
+        <span class="rev-hint rev-hint-l" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="rev-hint rev-hint-r" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="rev-viewport"><div class="rev-track">
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"I recently had them clean my solar panels and I am extremely satisfied. After cleaning, I noticed a significant improvement in the performance of my solar panels. The customer service was 10/10. Highly recommend!"</p>
+        <div class="rev-author">
+          <div class="rev-av">MD</div>
+          <div>
+            <div class="rev-name">Matthew Davidge</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Lilli and Ben did an amazing job on our driveway and garden path. Lousy weather, wind and rain, but great result. Pleasant and professional team, we would highly recommend them."</p>
+        <div class="rev-author">
+          <div class="rev-av">RB</div>
+          <div>
+            <div class="rev-name">Richard Bosher</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Was really happy with the pavers and driveway. Hasn't been cleaned like that since new and the team were professional in all their dealings including letting me know when they were running behind schedule."</p>
+        <div class="rev-author">
+          <div class="rev-av">SW</div>
+          <div>
+            <div class="rev-name">Shiona Wicks</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Lilli &amp; Ben recently cleaned my solar panels, I am extremely satisfied with the results. I didn't realise how dirty the panels were until after they were finished."</p>
+        <div class="rev-author">
+          <div class="rev-av">CT</div>
+          <div>
+            <div class="rev-name">Chris Tait</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"What was an old, dirty looking driveway is a clean fresh looking driveway. Thanks so much for the hard work put in by Ben and Lilli, showing up when the weather was against them."</p>
+        <div class="rev-author">
+          <div class="rev-av">KW</div>
+          <div>
+            <div class="rev-name">Kristy Woods</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <p class="rev-text">"Lilli and Ben did a great job cleaning my roof and windows at my property. Top notch service, highly recommend."</p>
+        <div class="rev-author">
+          <div class="rev-av">AD</div>
+          <div>
+            <div class="rev-name">Aaron TJ Davis</div>
+            <div class="rev-loc">Google Review</div>
+          </div>
+        </div>
+      </div>
+        </div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -593,7 +758,7 @@
         <h2 class="heading" data-reveal data-d="1">Five Services.<br/>One Team.</h2>
       </div>
       <div class="services-hdr-r">
-        <p class="subtext" data-reveal data-d="2">From gutters to glass, we use the right technique for every surface type — residential, commercial, and strata.</p>
+        <p class="subtext" data-reveal data-d="2">From gutters to glass, we use the right technique for every surface type, residential, commercial, and strata.</p>
       </div>
     </div>
 
@@ -603,24 +768,24 @@
         <div class="sc-num">01</div>
                 <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div>
         <div class="sc-name">Gutter Cleaning</div>
-        <div class="sc-price">From $149</div>
-        <p class="sc-desc">Full debris removal, downpipe clearing, and a visual inspection report. Blocked gutters cause real structural damage — we keep yours flowing freely year-round.</p>
+        <div class="sc-price">From $175</div>
+        <p class="sc-desc">Full debris removal, downpipe clearing, and a visual inspection report. Blocked gutters cause real structural damage. We keep yours flowing freely year-round.</p>
         <a class="sc-link" href="gutter-cleaning.html">Learn More <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></a>
       </div>
       <div class="sc">
         <div class="sc-num">02</div>
                 <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M19.5 12c0-1.31-.37-2.52-.99-3.57L13 14.96V19h3c.55 0 1-.45 1-1v-2.5c1.48-.73 2.5-2.25 2.5-4zm-7.5 7v-9.04L5.5 8.43C5.18 9.46 5 10.71 5 12c0 3.87 2.78 7.09 6.5 7.74V19zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
         <div class="sc-name">Solar Panel Cleaning</div>
-        <div class="sc-price">From $149</div>
-        <p class="sc-desc">Restore lost output caused by salt spray, dust, and bird droppings. Dirty panels can lose 15–25% of efficiency — especially in coastal conditions.</p>
+        <div class="sc-price">From $175</div>
+        <p class="sc-desc">Restore lost output caused by salt spray, dust, and bird droppings. Dirty panels can lose 15–25% of efficiency, especially in coastal conditions.</p>
         <a class="sc-link" href="solar-panel-cleaning.html">Learn More <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></a>
       </div>
       <div class="sc">
         <div class="sc-num">03</div>
                 <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm4 14H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm0-4H5V5h2v2zm11 12H8V5h10v14zm-2-8h-6v-2h6v2zm0 4h-6v-2h6v2z"/></svg></div>
         <div class="sc-name">Window Cleaning</div>
-        <div class="sc-price">From $149</div>
-        <p class="sc-desc">Streak-free results for homes and commercial properties. Coastal salt specialists — interior, exterior, frames, sills, and flyscreens.</p>
+        <div class="sc-price">From $175</div>
+        <p class="sc-desc">Streak-free results for homes and commercial properties. Coastal salt specialists, interior, exterior, frames, sills, and flyscreens.</p>
         <a class="sc-link" href="window-cleaning.html">Learn More <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></a>
       </div>
       <!-- Row 2: 2 cards spanning full width -->
@@ -638,7 +803,7 @@
                     <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
           <div class="sc-name">Façade Cleaning</div>
           <div class="sc-price">From $99</div>
-          <p class="sc-desc">Render, brick, painted surfaces, and cladding — we use the right method for each material, including soft washing and targeted mould treatment.</p>
+          <p class="sc-desc">Render, brick, painted surfaces, and cladding. We use the right method for each material, including soft washing and targeted mould treatment.</p>
           <a class="sc-link" href="facade-cleaning.html">Learn More <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></a>
         </div>
       </div>
@@ -689,7 +854,7 @@
       <div class="pstep" data-reveal>
         <div class="pbubble"><div class="pbubble-inner"><span class="pbubble-num">01</span></div></div>
         <div class="ptitle">Get a Quote!</div>
-        <p class="pdesc">Tell us about your property. We'll provide a clear, no-obligation quote — often same day.</p>
+        <p class="pdesc">Tell us about your property. We'll provide a clear, no-obligation quote, often same day.</p>
       </div>
       <div class="pstep" data-reveal data-d="1">
         <div class="pbubble"><div class="pbubble-inner"><span class="pbubble-num">02</span></div></div>
@@ -717,7 +882,7 @@
       <div>
         <p class="eyebrow" data-reveal>Why L&amp;B</p>
         <h2 class="heading" data-reveal data-d="1">Professional Results.<br/>Personal Service.</h2>
-        <p class="subtext" data-reveal data-d="2">We're not a large franchise — we're a dedicated local team that takes pride in every property we service across the Mornington Peninsula.</p>
+        <p class="subtext" data-reveal data-d="2">We're not a large franchise. We're a dedicated local team that takes pride in every property we service across the Mornington Peninsula.</p>
         <div class="why-features">
           <div class="wf" data-reveal data-d="2">
             <div class="wf-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
@@ -730,14 +895,14 @@
             <div class="wf-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c8 0 10-8 10-8s-1 2-4 2.5c1-2 1-5 1-5-2 2.5-4 3-4 3 2-4 4-5 4-5z"/></svg></div>
             <div>
               <div class="wf-title">Eco-Friendly Solutions</div>
-              <div class="wf-desc">Biodegradable, plant-based cleaning agents — safe for your family, pets, and landscaping.</div>
+              <div class="wf-desc">Biodegradable, plant-based cleaning agents, safe for your family, pets, and landscaping.</div>
             </div>
           </div>
           <div class="wf" data-reveal data-d="4">
             <div class="wf-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
             <div>
               <div class="wf-title">100% Satisfaction Guaranteed</div>
-              <div class="wf-desc">If you're not completely satisfied, we'll return and make it right — no questions asked, no excuses.</div>
+              <div class="wf-desc">If you're not completely satisfied, we'll return and make it right, no questions asked, no excuses.</div>
             </div>
           </div>
         </div>
@@ -746,9 +911,6 @@
         <div class="area-panel">
           <p class="area-panel-label">Where We Operate</p>
           <div class="area-chips">
-            <span class="chip">Brighton</span>
-            <span class="chip">Hampton</span>
-            <span class="chip">Sandringham</span>
             <span class="chip">Mentone</span>
             <span class="chip">Mordialloc</span>
             <span class="chip">Aspendale</span>
@@ -776,7 +938,7 @@
           </div>
           <div class="area-divider"></div>
           <div class="area-bottom">
-            <p>Covering the full Mornington Peninsula — residential &amp; commercial.</p>
+            <p>Covering the full Mornington Peninsula, residential &amp; commercial.</p>
             <a class="area-btn" href="tel:+61416551923">Call Now</a>
           </div>
         </div>
@@ -785,67 +947,26 @@
   </div>
 </section>
 
-<!-- ── TESTIMONIALS ── -->
-<section class="testimonials" id="reviews">
-  <div class="container">
-    <div class="test-hdr">
-      <p class="eyebrow" data-reveal>Testimonials</p>
-      <h2 class="heading" data-reveal data-d="1">What Our Customers Say</h2>
-      <p class="subtext" data-reveal data-d="2">Don't take our word for it — here's what real homeowners across the Peninsula say about working with us.</p>
+<!-- ── SERVICE AREAS ── -->
+<section style="padding:48px 0 40px;background:#F8FAFC;border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0">
+  <div style="max-width:900px;margin:0 auto;padding:0 24px;text-align:center">
+    <span style="font-family:'Inter',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#0EA5E9;display:block;margin-bottom:10px">Service Area</span>
+    <h2 style="font-family:'Inter',sans-serif;font-size:1.45rem;font-weight:800;color:#0F1C2E;margin:0 0 10px;letter-spacing:-.02em">Areas We Service</h2>
+    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#475569;margin:0 0 28px;line-height:1.6">L&amp;B Exterior Cleaning proudly services Melbourne's south east, from Frankston and Cranbourne right through the Mornington Peninsula.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px">
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Frankston</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Mount Eliza</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Mornington</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Seaford</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Chelsea</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Carrum Downs</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Rosebud</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Sorrento</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Mount Martha</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Langwarrin</span>
+      <span style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;color:#0F1C2E;background:#fff;border:1.5px solid #BFDBFE;border-radius:99px;padding:5px 14px">Cranbourne</span>
     </div>
-    <div class="rev-grid">
-      <div class="rev-card" data-reveal>
-        <div class="rev-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        </div>
-        <p class="rev-text">"These locals are the best exterior cleaners I've ever used. Timely &amp; respectful, they did an absolutely fantastic job cleaning our driveway, roof &amp; windows. Will definitely use them again."</p>
-        <div class="rev-author">
-          <div class="rev-av">LM</div>
-          <div>
-            <div class="rev-name">Louie Marshall</div>
-            <div class="rev-loc">Google Review</div>
-          </div>
-        </div>
-      </div>
-      <div class="rev-card" data-reveal data-d="1">
-        <div class="rev-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        </div>
-        <p class="rev-text">"Wonderful job done by Ben and Lil pressure washing my driveway, pavers and bricks. Looks great! Also now have clean gutters, which were completely full! They were friendly, punctual, very professional and will definitely use again and recommend."</p>
-        <div class="rev-author">
-          <div class="rev-av">VJ</div>
-          <div>
-            <div class="rev-name">Vicki Jarrett</div>
-            <div class="rev-loc">Google Review</div>
-          </div>
-        </div>
-      </div>
-      <div class="rev-card" data-reveal data-d="2">
-        <div class="rev-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        </div>
-        <p class="rev-text">"I recently had them clean my solar panels and I am extremely satisfied with the results. After cleaning, I noticed a significant improvement in the performance of my solar panels. The whole process was very easy, the workers were an absolute delight and the customer service was 10/10. Highly recommend!"</p>
-        <div class="rev-author">
-          <div class="rev-av">MD</div>
-          <div>
-            <div class="rev-name">Matthew Davidge</div>
-            <div class="rev-loc">Google Review</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p style="font-family:'Inter',sans-serif;font-size:.82rem;color:#64748B;margin:0">Not sure if we cover your area? Give us a call, <a href="tel:0416551923" style="color:#0EA5E9;font-weight:700;text-decoration:none">0416 551 923</a></p>
   </div>
 </section>
 
@@ -891,6 +1012,7 @@
           <li><a href="window-cleaning.html">Window Cleaning</a></li>
           <li><a href="pressure-washing.html">Pressure Washing</a></li>
           <li><a href="facade-cleaning.html">Façade Cleaning</a></li>
+          <li><a href="spring-packages.html">Spring Packages</a></li>
         </ul>
       </div>
       <div>
@@ -934,7 +1056,7 @@
   <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
   <p class="modal-eyebrow">Free Quote</p>
   <h2 class="modal-title" id="modalTitle">Request a Quote</h2>
-  <p class="modal-sub">We'll get back to you within a few hours — usually same day.</p>
+  <p class="modal-sub">We'll get back to you within a few hours, usually same day.</p>
   <div style="background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:10px;padding:14px 20px;margin-bottom:6px;text-align:center">
     <div style="font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:#166534;margin-bottom:6px;letter-spacing:.01em">📞 Call Lilli directly for an instant quote</div>
     <a href="tel:0416551923" style="font-family:'Inter',sans-serif;font-size:1.35rem;font-weight:800;color:#0EA5E9;text-decoration:none;letter-spacing:.02em;display:block;margin-bottom:4px">0416 551 923</a>
@@ -942,7 +1064,7 @@
   </div>
   <div style="display:flex;align-items:center;gap:10px;margin:16px 0;color:#94A3B8;font-family:'Inter',sans-serif;font-size:.74rem">
     <div style="flex:1;border-top:1px solid #E2E8F0"></div>
-    <span>— or fill out the form below —</span>
+    <span>or fill out the form below</span>
     <div style="flex:1;border-top:1px solid #E2E8F0"></div>
   </div>
   <form id="quoteForm" novalidate>
@@ -983,7 +1105,7 @@
   <div class="form-success" id="formSuccess">
     <div class="form-success-icon">✓</div>
     <h3>Request Sent!</h3>
-    <p>Thanks — Ben or Lilli will be in touch shortly.<br>Or call us directly on <strong>0416 551 923</strong>.</p>
+    <p>Thanks, Ben or Lilli will be in touch shortly.<br>Or call us directly on <strong>0416 551 923</strong>.</p>
   </div>
 </div>
 
@@ -1073,7 +1195,7 @@
       }
     } catch(err){
       btn.disabled=false; btn.textContent='Send Quote Request';
-      alert('Something went wrong — please try again or call us on 0416 551 923.');
+      alert('Something went wrong, please try again or call us on 0416 551 923.');
     }
   });
 </script>
@@ -1136,21 +1258,21 @@ function gtag_report_conversion(url) {
 <!-- ── Promo Float Button ── -->
 <button id="promoFloat" title="Claim 20% off your first clean" style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#0EA5E9;color:#fff;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none;border-radius:99px;padding:11px 18px 11px 14px;cursor:pointer;box-shadow:0 6px 24px rgba(14,165,233,.45);display:flex;align-items:center;gap:8px;transition:background .2s,transform .2s,box-shadow .2s">
   <span style="background:rgba(255,255,255,.22);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0">%</span>
-  <span>20% Off — Claim Offer</span>
+  <span>20% Off: Claim Offer</span>
 </button>
 <!-- ── Promo Popup ── -->
 <div id="promoOverlay" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:9999;opacity:0;transition:opacity .35s ease;align-items:center;justify-content:center">
   <div id="promoCard" style="background:#fff;border-radius:16px;padding:40px 36px 32px;max-width:440px;width:calc(100% - 32px);text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.22);position:relative">
     <!-- Badge -->
-    <div style="display:inline-block;background:#EFF6FF;color:#1D4ED8;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:18px">Limited Winter Offer</div>
+    <div style="display:inline-block;background:#EFF6FF;color:#1D4ED8;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:18px">Limited Spring Offer</div>
     <!-- Headline -->
     <h2 style="font-family:'Inter',sans-serif;font-size:1.45rem;font-weight:800;line-height:1.18;letter-spacing:-.025em;color:#0F172A;margin-bottom:10px">Claim Your 20% First Clean Discount</h2>
     <!-- Subheadline -->
-    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#475569;margin-bottom:22px;line-height:1.55">Plus a FREE Roof Health Check — <strong style="color:#0F172A">Only a Few Winter Slots Left</strong></p>
+    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#475569;margin-bottom:22px;line-height:1.55">Plus a FREE Roof Health Check, <strong style="color:#0F172A">Only a Few Spring Slots Left</strong></p>
     <!-- Bullets -->
     <ul style="list-style:none;padding:0;margin:0 0 26px;text-align:left;display:inline-block">
-      <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> 20% off your first clean</li>
-      <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> Free roof health check (worth $149)</li>
+      <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> 20% off your first clean (max $200 discount)</li>
+      <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> Free roof health check (worth $175)</li>
       <li style="font-family:'Inter',sans-serif;font-size:.88rem;color:#1E293B;padding:5px 0;display:flex;align-items:center;gap:10px"><span style="color:#16A34A;font-size:1rem;flex-shrink:0">&#10003;</span> 30-day blockage guarantee</li>
     </ul>
     <!-- CTA -->
@@ -1190,5 +1312,57 @@ function gtag_report_conversion(url) {
   dismiss.addEventListener('mouseout',function(){this.style.color='#94A3B8';});
 })();
 </script>
+<script>
+(function(){
+  document.querySelectorAll("[data-rev-row]").forEach(function(row){
+    var vp=row.querySelector(".rev-viewport"), track=row.querySelector(".rev-track");
+    var cards=[].slice.call(track.children), n=cards.length;
+    for(var k=0;k<3;k++){ var c=cards[k].cloneNode(true); c.setAttribute("aria-hidden","true"); track.appendChild(c); }
+    var cur=0, startX=0, startPos=0, dragging=false, moved=false, lastX=0, lastT=0, vel=0;
+    function cw(){ return track.children[0].getBoundingClientRect().width; }
+    function setX(px, animate){
+      track.style.transition = animate ? "transform .45s cubic-bezier(.22,.61,.36,1)" : "none";
+      track.style.transform = "translateX(" + (-px) + "px)"; cur = px;
+    }
+    function wrap(){ var L=n*cw(); if(cur<0){ cur+=L; startPos+=L; } else if(cur>=L){ cur-=L; startPos-=L; } }
+    function down(e){
+      if(e.pointerType!=="touch") return;
+      dragging=true; moved=false; startX=lastX=e.clientX; lastT=Date.now(); vel=0; startPos=cur;
+      track.style.transition="none"; vp.classList.add("grabbing");
+      try{ vp.setPointerCapture(e.pointerId); }catch(_){}
+    }
+    function move(e){
+      if(!dragging) return;
+      var dx=e.clientX-startX; if(Math.abs(dx)>4) moved=true;
+      var now=Date.now(); vel=(e.clientX-lastX)/Math.max(1,now-lastT); lastX=e.clientX; lastT=now;
+      cur=startPos-dx; wrap(); track.style.transform="translateX("+(-cur)+"px)";
+    }
+    function up(){
+      if(!dragging) return; dragging=false; vp.classList.remove("grabbing");
+      var w=cw(), idx=cur/w;
+      idx = vel<-0.3 ? Math.ceil(idx) : vel>0.3 ? Math.floor(idx) : Math.round(idx);
+      setX(idx*w, true);
+      setTimeout(function(){ if(cur>=n*w-1){ setX(cur-n*w,false); } }, 480);
+    }
+    var idle=null;
+    vp.addEventListener("wheel",function(e){
+      var horiz = Math.abs(e.deltaX)>Math.abs(e.deltaY);
+      var d = horiz ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+      if(!d) return;            // plain up/down scrolling is left alone so the page keeps scrolling past the reviews
+      e.preventDefault();
+      if(e.deltaMode===1) d*=32;
+      track.style.transition="none"; cur+=d*1.1; startPos=cur; wrap(); track.style.transform="translateX("+(-cur)+"px)";
+      clearTimeout(idle); idle=setTimeout(function(){ var w=cw(); setX(Math.round(cur/w)*w,true); setTimeout(function(){ if(cur>=n*w-1){ setX(cur-n*w,false); } },480); },140);
+    },{passive:false});
+    vp.addEventListener("pointerdown",down);
+    vp.addEventListener("pointermove",move);
+    vp.addEventListener("pointerup",up);
+    vp.addEventListener("pointercancel",up);
+    vp.addEventListener("dragstart",function(e){ e.preventDefault(); });
+    addEventListener("resize",function(){ setX(Math.round(cur/cw())*cw(),false); });
+  });
+})();
+</script>
+
 </body>
 </html>

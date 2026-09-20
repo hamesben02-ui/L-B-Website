@@ -1,5 +1,8 @@
 {
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/interior-cleaning.html", "destination": "/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*\\.jpeg|.*\\.jpg|.*\\.png|.*\\.webp|.*\\.svg|.*\\.ico)",

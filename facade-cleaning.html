@@ -253,6 +253,22 @@
     @media(max-width:500px){.form-row{grid-template-columns:1fr}.modal{padding:32px 24px}}
     @media(max-width:1024px){.hero-inner{grid-template-columns:1fr;gap:48px}.hero-form-card{max-width:560px}.reviews-grid{grid-template-columns:1fr 1fr}.damage-grid{grid-template-columns:1fr}.guarantee-inner{grid-template-columns:1fr;text-align:center}.guarantee-badge{margin:0 auto}.process-steps{grid-template-columns:1fr 1fr;gap:40px}.areas-grid{grid-template-columns:repeat(3,1fr)}.footer-top{grid-template-columns:1fr 1fr}}
     @media(max-width:768px){.announce{display:none}.nav{top:0}.hero{padding-top:76px}.nav-left{display:none}.nav-right{display:none}.hamburger{display:flex}.reviews-grid{grid-template-columns:1fr}.areas-grid{grid-template-columns:repeat(2,1fr)}.footer-top{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;text-align:center}.container{padding:0 20px}.nav{padding:0 20px;justify-content:space-between;background:rgba(15,28,46,.97)}.nav-logo{position:static;transform:none}.hero h1{font-size:1.45rem;line-height:1.2}.hero-sub{font-size:.87rem}.process-steps{grid-template-columns:1fr}}
+    /* ── PAGE AURA (per-page accent; nav, footer, fonts and navy stay shared) ── */
+    @media(min-width:901px){.hero{min-height:0}.hero-inner{align-items:start;padding:48px 0 72px}}
+    :root{--aura-rgb:214,158,46;--aura-text:#B45309}
+    .hero h1 em{color:var(--aura-text)!important}
+    .hero-bg::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 70% at 88% 8%,rgba(var(--aura-rgb),.20),transparent 62%),radial-gradient(ellipse 40% 55% at 4% 95%,rgba(var(--aura-rgb),.11),transparent 60%)}
+    .hero-form-card{box-shadow:0 30px 80px -28px rgba(var(--aura-rgb),.5),0 2px 8px rgba(15,28,46,.06)}
+    .hero-divider{background:linear-gradient(90deg,transparent,rgba(var(--aura-rgb),.55),transparent)}
+    /* ── Spring Packages nav highlight ── */
+    .nav-left>a[href="spring-packages.html"]{color:#FBBF24;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.45);border-radius:99px;height:auto;align-self:center;padding:7px 13px;margin:0 8px;font-weight:600;transition:background .18s,color .18s}
+    .nav-left>a[href="spring-packages.html"]:hover{color:#0F1C2E;background:#FBBF24}
+    .mobile-nav a[href="spring-packages.html"]{color:#FBBF24;font-weight:600}
+    /* keep the centred logo clear of the menu on narrower laptops */
+    @media(max-width:1400px){.nav-left>a,.nav-dropdown-wrap>a{padding:0 6px!important}.nav-left>a[href="spring-packages.html"]{margin:0 3px;padding:6px 10px!important;font-size:.62rem}}
+    @media(max-width:1180px){.nav-left>a,.nav-dropdown-wrap>a{font-size:.6rem;letter-spacing:.03em}.nav-phone{display:none}}
+    @media(max-width:1180px){.nav-logo-mark{font-size:.95rem!important;letter-spacing:.07em!important}.nav-left>a[href="spring-packages.html"]{padding:5px 8px!important}.nav-left>a,.nav-dropdown-wrap>a{padding:0 5px!important}.nav-cta{padding:8px 14px}}
+    @media(max-width:1000px){.nav-left,.nav-right{display:none!important}.hamburger{display:flex!important}.nav{padding:0 20px;justify-content:space-between}.nav-logo{position:static!important;transform:none!important}}
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','AW-17970733561');</script>
@@ -272,14 +288,14 @@
     <div class="nav-dropdown-wrap">
       <a href="index.html#services">Services <i class="fi fi-rr-angle-down chev"></i></a>
       <div class="nav-dropdown">
-        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning</a>
-        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning</a>
-        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning</a>
-        <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing</a>
-        <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning</a>
-        <a href="interior-cleaning.html"><span class="dd-dot"></span>Interior &amp; Home Cleaning</a>
+        <a href="gutter-cleaning.html"><span class="dd-dot"></span>Gutter Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="solar-panel-cleaning.html"><span class="dd-dot"></span>Solar Panel Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="window-cleaning.html"><span class="dd-dot"></span>Window Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $175</span></a>
+        <a href="pressure-washing.html"><span class="dd-dot"></span>Pressure Washing<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
+        <a href="facade-cleaning.html"><span class="dd-dot"></span>Façade Cleaning<span style="margin-left:auto;font-size:.6rem;font-weight:700;color:var(--accent);padding-left:12px">from $99</span></a>
       </div>
     </div>
+    <a href="spring-packages.html">Spring Packages</a>
     <a href="index.html#why">About Us</a>
     <a href="index.html#reviews">Reviews</a>
     <a href="contact.html">Contact</a>
@@ -302,12 +318,12 @@
     <div style="font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#0EA5E9;margin-top:4px">Mornington Peninsula</div>
   </div>
   <a href="index.html#services" class="ml">Services</a>
-  <a href="gutter-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Gutter Cleaning</a>
-  <a href="solar-panel-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Solar Panel Cleaning</a>
-  <a href="window-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Window Cleaning</a>
-  <a href="pressure-washing.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Pressure Washing</a>
-  <a href="facade-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Façade Cleaning</a>
-  <a href="interior-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">— Interior Cleaning</a>
+  <a href="gutter-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Gutter Cleaning</a>
+  <a href="solar-panel-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Solar Panel Cleaning</a>
+  <a href="window-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Window Cleaning</a>
+  <a href="pressure-washing.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Pressure Washing</a>
+  <a href="facade-cleaning.html" class="ml" style="padding-left:52px;font-size:.65rem;color:#888">Façade Cleaning</a>
+  <a href="spring-packages.html" class="ml">Spring Packages</a>
   <a href="index.html#why" class="ml">About Us</a>
   <a href="index.html#reviews" class="ml">Reviews</a>
   <a href="contact.html" class="ml">Contact</a>
@@ -321,11 +337,11 @@
   <div class="container hero-inner">
     <div class="hero-left">
       <h1>Mould on Your Exterior Walls Is <em>Destroying Your Home's Value</em></h1>
-      <p class="hero-sub">External mould and algae don't just look bad — they degrade render, paint and cladding over time. Our soft-wash system removes them completely, safely, without damaging your walls or stripping your paint.</p>
+      <p class="hero-sub">External mould and algae don't just look bad. They degrade render, paint and cladding over time. Our soft-wash system removes them completely, safely, without damaging your walls or stripping your paint.</p>
       <div class="hero-divider"></div>
       <div class="hero-trust-row">
         <div class="hero-trust-item"><i class="fi fi-sr-shield-check"></i>Safe for render, paint &amp; cladding</div>
-        <div class="hero-trust-item"><i class="fi fi-rr-water"></i>Soft-wash method — no surface damage</div>
+        <div class="hero-trust-item"><i class="fi fi-rr-water"></i>Soft-wash method, no surface damage</div>
         <div class="hero-trust-item"><i class="fi fi-rr-check-circle"></i>Mould &amp; algae removed completely</div>
         <div class="hero-trust-item"><i class="fi fi-rr-leaf"></i>Biodegradable cleaning solutions</div>
       </div>
@@ -344,7 +360,7 @@
       <div class="hfc-body">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:10px 14px;background:#FFFBEB;border:1px solid #FCD34D;border-radius:10px">
           <div style="display:flex;gap:2px;flex-shrink:0"><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i><i class="fi fi-sr-star" style="font-size:12px;color:#F59E0B"></i></div>
-          <span style="font-size:.75rem;font-weight:600;color:#92400E;line-height:1.3">"Amazing job. Pleasant and professional team, we would highly recommend." — Richard, Peninsula</span>
+          <span style="font-size:.75rem;font-weight:600;color:#92400E;line-height:1.3">"Amazing job. Pleasant and professional team, we would highly recommend." - Richard, Peninsula</span>
         </div>
         <div class="hfc-title">Get Your Free Facade Quote</div>
         <div class="hfc-sub">We'll call you back within the hour. Fixed price before we start.</div>
@@ -359,7 +375,7 @@
           <div class="hf-field"><label for="hName">Your Name</label><input type="text" id="hName" name="name" placeholder="Jane Smith" required autocomplete="name"/></div>
           <div class="hf-field"><label for="hPhone">Phone Number</label><input type="tel" id="hPhone" name="phone" placeholder="04xx xxx xxx" required autocomplete="tel"/></div>
           <div class="hf-field"><label for="hAddress">Property Address</label><input type="text" id="hAddress" name="address" placeholder="123 Beach Rd, Mornington" required autocomplete="street-address"/></div>
-          <button type="submit" class="hf-submit">Restore My Home's Exterior — Free Quote →</button>
+          <button type="submit" class="hf-submit">Restore My Home's Exterior: Free Quote →</button>
           <p class="hf-note">No commitment &nbsp;·&nbsp; Fixed price quote &nbsp;·&nbsp; We call within the hour</p>
         </form>
         <div class="hf-success" id="heroSuccess">
@@ -374,7 +390,7 @@
 
 <div class="trust-bar">
   <div class="container trust-bar-inner">
-    <div class="trust-item"><div class="trust-icon"><i class="fi fi-sr-shield-check"></i></div><div><div class="trust-label">Render Safe</div><div class="trust-sub">Soft-wash — no surface damage</div></div></div>
+    <div class="trust-item"><div class="trust-icon"><i class="fi fi-sr-shield-check"></i></div><div><div class="trust-label">Render Safe</div><div class="trust-sub">Soft-wash, no surface damage</div></div></div>
     <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-check-circle"></i></div><div><div class="trust-label">Mould Removed</div><div class="trust-sub">At the root, not just the surface</div></div></div>
     <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-shield"></i></div><div><div class="trust-label">Fully Insured</div><div class="trust-sub">$5M public liability</div></div></div>
     <div class="trust-item"><div class="trust-icon"><i class="fi fi-rr-leaf"></i></div><div><div class="trust-label">Biodegradable Products</div><div class="trust-sub">Safe for gardens &amp; plants</div></div></div>
@@ -412,7 +428,7 @@
     <div class="reviews-header" data-reveal>
       <div class="reviews-google-badge">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <span>Rated 5.0 stars on Google — 25+ five-star Peninsula reviews</span>
+        <span>Rated 5.0 stars on Google, 40+ five-star Peninsula reviews</span>
       </div>
       <span class="section-eyebrow">What Our Customers Say</span>
       <h2 class="section-title">Facade Cleaning Results</h2>
@@ -420,7 +436,7 @@
     <div class="reviews-grid">
       <div class="review-card" data-reveal data-d="1">
         <div class="review-stars"><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i></div>
-        <p class="review-text">"Lilli and Ben did an amazing job on our driveway and garden path. Lousy weather — wind and rain — but great result. Pleasant and professional team, we would highly recommend them."</p>
+        <p class="review-text">"Lilli and Ben did an amazing job on our driveway and garden path. Lousy weather, wind and rain, but great result. Pleasant and professional team, we would highly recommend them."</p>
         <div class="review-author"><div class="review-avatar">RB</div><div><div class="review-name">Richard Bosher</div><div class="review-suburb">Peninsula · Google Review</div></div></div>
       </div>
       <div class="review-card" data-reveal data-d="2">
@@ -430,7 +446,7 @@
       </div>
       <div class="review-card" data-reveal data-d="3">
         <div class="review-stars"><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i><i class="fi fi-sr-star"></i></div>
-        <p class="review-text">"L&amp;B Exterior Cleaning were engaged for spring cleaning of our property. Both are very professional — which to me is being high on integrity. Would highly recommend."</p>
+        <p class="review-text">"L&amp;B Exterior Cleaning were engaged for spring cleaning of our property. Both are very professional, which to me is being high on integrity. Would highly recommend."</p>
         <div class="review-author"><div class="review-avatar">SD</div><div><div class="review-name">Shamik Dasgupta</div><div class="review-suburb">Peninsula · Google Review</div></div></div>
       </div>
     </div>
@@ -450,7 +466,7 @@
         <div class="guarantee-badge-sub">Guaranteed</div>
       </div>
       <div>
-        <h3>Clean Exterior — Guaranteed</h3>
+        <h3>Clean Exterior: Guaranteed</h3>
         <p>If mould or algae visibly returns within 30 days of our treatment, we come back and re-treat at no charge. We use biodegradable solutions that keep working after we leave.</p>
       </div>
     </div>
@@ -462,7 +478,7 @@
     <div class="process-header" data-reveal>
       <span class="section-eyebrow">How It Works</span>
       <h2 class="section-title">Our Facade Cleaning Process</h2>
-      <p>The right method for every wall material — render, brick, cladding or painted surfaces.</p>
+      <p>The right method for every wall material, render, brick, cladding or painted surfaces.</p>
     </div>
     <div class="process-steps">
       <div class="process-step" data-reveal data-d="1"><div class="process-num">01</div><div class="process-title">Surface Assessment</div><div class="process-desc">We identify the wall material and type of contamination before selecting the appropriate cleaning method and products.</div></div>
@@ -480,14 +496,14 @@
       <h2 class="section-title">Servicing the Mornington Peninsula &amp; More</h2>
     </div>
     <div class="areas-grid" data-reveal data-d="1">
-      <div class="area-chip">Brighton</div><div class="area-chip">Hampton</div><div class="area-chip">Sandringham</div><div class="area-chip">Mentone</div><div class="area-chip">Mordialloc</div>
+      <div class="area-chip">Mentone</div><div class="area-chip">Mordialloc</div>
       <div class="area-chip">Aspendale</div><div class="area-chip">Chelsea</div><div class="area-chip">Carrum</div><div class="area-chip">Seaford</div><div class="area-chip">Frankston</div>
       <div class="area-chip">Frankston South</div><div class="area-chip">Mount Eliza</div><div class="area-chip">Mornington</div><div class="area-chip">Mount Martha</div><div class="area-chip">Safety Beach</div>
       <div class="area-chip">Dromana</div><div class="area-chip">Rosebud</div><div class="area-chip">Rye</div><div class="area-chip">Blairgowrie</div><div class="area-chip">Sorrento</div>
       <div class="area-chip">Portsea</div><div class="area-chip">Flinders</div><div class="area-chip">Red Hill</div><div class="area-chip">Somerville</div><div class="area-chip">Hastings</div>
       <div class="area-chip">Tyabb</div><div class="area-chip">Baxter</div>
     </div>
-    <p class="areas-note" data-reveal data-d="2">Located nearby? <a href="contact.html">Get in touch</a> — chances are we service your area.</p>
+    <p class="areas-note" data-reveal data-d="2">Located nearby? <a href="contact.html">Get in touch</a>. Chances are we service your area.</p>
   </div>
 </section>
 
@@ -499,8 +515,8 @@
       <p>Everything you need to know before booking.</p>
     </div>
     <div class="faq-list" data-reveal data-d="1">
-      <div class="faq-item"><button class="faq-question">Will facade cleaning damage my render or paint?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>No — we use a low-pressure soft-wash method specifically designed for render, painted surfaces and lightweight cladding. No high-pressure water is used on delicate surfaces.</p></div></div>
-      <div class="faq-item"><button class="faq-question">How do you treat mould and algae on external walls?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>We apply biodegradable cleaning solution before washing, which breaks down the mould and algae at the root — not just the surface — for longer-lasting results.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Will facade cleaning damage my render or paint?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>No, we use a low-pressure soft-wash method specifically designed for render, painted surfaces and lightweight cladding. No high-pressure water is used on delicate surfaces.</p></div></div>
+      <div class="faq-item"><button class="faq-question">How do you treat mould and algae on external walls?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>We apply biodegradable cleaning solution before washing, which breaks down the mould and algae at the root, not just the surface, for longer-lasting results.</p></div></div>
       <div class="faq-item"><button class="faq-question">Can you clean a multi-storey building?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>Yes. We have the equipment and experience to safely clean facades on two and three-storey properties.</p></div></div>
       <div class="faq-item"><button class="faq-question">How often should I have my facade cleaned?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>For most Peninsula properties, every 1–2 years keeps mould and coastal salt buildup under control. North-facing or shaded walls tend to accumulate more quickly.</p></div></div>
       <div class="faq-item"><button class="faq-question">Do your cleaning products harm gardens or plants?<i class="fi fi-rr-plus"></i></button><div class="faq-answer"><p>No. We use biodegradable solutions and take care around garden beds and landscaping. We rinse surrounding areas thoroughly after every job.</p></div></div>
@@ -515,10 +531,10 @@
       <h2>Don't Let Mould Eat Away at Your Home.</h2>
       <p>Book your facade clean today and we'll call you back within the hour. Same-week availability.</p>
       <div class="cta-actions">
-        <a class="btn btn-blue" href="tel:+61416551923"><i class="fi fi-rr-phone-call"></i>Call Lilli — 0416 551 923</a>
+        <a class="btn btn-blue" href="tel:+61416551923"><i class="fi fi-rr-phone-call"></i>Call Lilli: 0416 551 923</a>
         <a class="btn" href="#" data-quote style="background:rgba(15,28,46,.1);color:#0F1C2E;border:1.5px solid rgba(15,28,46,.2)"><i class="fi fi-rr-envelope"></i>Request a Quote</a>
       </div>
-      <div class="cta-note">No commitment required — free estimates always</div>
+      <div class="cta-note">No commitment required, free estimates always</div>
     </div>
   </div>
 </section>
@@ -544,7 +560,7 @@
           <li><a href="window-cleaning.html">Window Cleaning</a></li>
           <li><a href="pressure-washing.html">Pressure Washing</a></li>
           <li><a href="facade-cleaning.html">Façade Cleaning</a></li>
-          <li><a href="interior-cleaning.html">Interior &amp; Home Cleaning</a></li>
+          <li><a href="spring-packages.html">Spring Packages</a></li>
         </ul>
       </div>
       <div>
@@ -585,7 +601,7 @@
   <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
   <p class="modal-eyebrow">Free Quote</p>
   <h2 class="modal-title" id="modalTitle">Request a Quote</h2>
-  <p class="modal-sub">We'll call you back within the hour — fixed price before we start.</p>
+  <p class="modal-sub">We'll call you back within the hour, fixed price before we start.</p>
   <form id="quoteForm" novalidate>
     <div class="form-row">
       <div class="form-field"><label for="qName">Your Name</label><input type="text" id="qName" name="name" placeholder="Jane Smith" required></div>
@@ -598,7 +614,7 @@
   <div class="form-success" id="formSuccess">
     <div class="form-success-icon">✓</div>
     <h3>Request Sent!</h3>
-    <p>Thanks — Lilli will be in touch shortly.<br>Or call us directly on <strong>0416 551 923</strong>.</p>
+    <p>Thanks, Lilli will be in touch shortly.<br>Or call us directly on <strong>0416 551 923</strong>.</p>
   </div>
 </div>
 
