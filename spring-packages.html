@@ -217,6 +217,8 @@
     @media(max-width:1180px){.nav-logo-mark{font-size:.95rem!important;letter-spacing:.07em!important}.nav-left>a[href="spring-packages.html"]{padding:5px 8px!important}.nav-left>a,.nav-dropdown-wrap>a{padding:0 5px!important}.nav-cta{padding:8px 14px}}
     @media(max-width:1000px){.nav-left,.nav-right{display:none!important}.hamburger{display:flex!important}.nav{padding:0 20px;justify-content:space-between}.nav-logo{position:static!important;transform:none!important}}
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-5N5F66XZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-5N5F66XZ');gtag('config','AW-17970733561');</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -567,5 +569,12 @@
 });
 </script>
 
+<script>
+function gtag_report_conversion(url){var callback=function(){if(typeof(url)!='undefined'){window.location=url;}};gtag('event','conversion',{'send_to':'AW-17970733561/yPakCJ72npwcEPnDjvlC','value':1.0,'currency':'AUD','event_callback':callback});return false;}
+(function(){var API='https://exodia-seven.vercel.app/api/conversion-event';function getParam(name){return new URLSearchParams(window.location.search).get(name);}function gtagConversion(l,v){if(typeof gtag!=='function')return;gtag('event','conversion',{send_to:'AW-17970733561/'+l,value:v||1.0,currency:'AUD'});}function track(type,extra){fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign({type:type,page:window.location.pathname,source:getParam('utm_source')||(document.referrer?new URL(document.referrer).hostname:'direct'),medium:getParam('utm_medium')||'none',campaign:getParam('utm_campaign')||'none',gclid:getParam('gclid')||null},extra||{}))}).catch(function(){});}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="tel:"]');if(!a)return;gtag_report_conversion(a.href);gtagConversion('O61BCMO5nZkcEPnDjvlC',1.0);track('phone_call');});
+document.addEventListener('submit',function(e){var form=e.target,id=(form.id||form.className||'').toLowerCase(),action=(form.action||'').toLowerCase(),type;if(id.includes('quote')||id.includes('hero')||action.includes('quote')){type='quote_request';}else if(id.includes('book')||id.includes('appoint')||action.includes('book')){type='booking';}else{type='form_submission';}track(type);});
+window._lbTrack=function(type,opts){track(type,opts);if(type==='phone_call')gtagConversion('O61BCMO5nZkcEPnDjvlC',1.0);if(type==='form_submission'||type==='quote_request'||type==='booking')gtagConversion('G0fCCLHFnZkcEPnDjvlC',1.0);};})();
+</script>
 </body>
 </html>
